@@ -36,7 +36,10 @@ export default function Home() {
             {showcase.map((model) => (
               <a className="showcase-card" key={model.id} href={`${siteRoute("/archive")}#${model.id}`}>
                 <ModelThumb model={model} />
-                <h2>{model.name}</h2>
+                <div className="showcase-card-head">
+                  <h2>{model.name}</h2>
+                  {model.dof === null ? null : <em>{model.dof} DoF</em>}
+                </div>
                 <p>{model.maker}</p>
               </a>
             ))}
