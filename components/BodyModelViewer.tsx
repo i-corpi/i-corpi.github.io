@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from "react";
 import type { ModelRecord } from "../lib/models";
 import { sitePath } from "../lib/site-path";
 
@@ -72,6 +72,41 @@ const PROFILES: Record<string, { pose: string; shape: string; extras: string }> 
   star: { pose: "3 global + 69 body = 72 axis-angle values", shape: "SMPL-compatible β shape coefficients", extras: "Sparse, spatially local pose correctives" },
 };
 
+// SMPL's kinematic tree, in the model's own index order (see
+// vchoutas/smplx `joint_names.py`). Indices 0-21 are shared by SMPL, SMPL+H,
+// SMPL-X and STAR; 22/23 are the hand joints SMPL and STAR end on, where
+// SMPL-X instead continues into jaw, eyes and the MANO hand chains.
+// `control` names the proxy slider that moves this joint, where one exists —
+// the proxy drives mirrored pairs, so several joints share a slider.
+type BodyJoint = { index: number; name: string; x: number; y: number; control?: ParameterKey };
+
+const SMPL_BODY_JOINTS: BodyJoint[] = [
+  { index: 0, name: "pelvis", x: 50, y: 50, control: "rootYaw" },
+  { index: 1, name: "left_hip", x: 56, y: 53, control: "hipFlex" },
+  { index: 2, name: "right_hip", x: 44, y: 53, control: "hipFlex" },
+  { index: 3, name: "spine1", x: 50, y: 44, control: "spineBend" },
+  { index: 4, name: "left_knee", x: 57, y: 71, control: "kneeBend" },
+  { index: 5, name: "right_knee", x: 43, y: 71, control: "kneeBend" },
+  { index: 6, name: "spine2", x: 50, y: 37, control: "spineBend" },
+  { index: 7, name: "left_ankle", x: 58, y: 86 },
+  { index: 8, name: "right_ankle", x: 42, y: 86 },
+  { index: 9, name: "spine3", x: 50, y: 30, control: "spineBend" },
+  { index: 10, name: "left_foot", x: 59, y: 92 },
+  { index: 11, name: "right_foot", x: 41, y: 92 },
+  { index: 12, name: "neck", x: 50, y: 19 },
+  { index: 13, name: "left_collar", x: 57, y: 24 },
+  { index: 14, name: "right_collar", x: 43, y: 24 },
+  { index: 15, name: "head", x: 50, y: 11 },
+  { index: 16, name: "left_shoulder", x: 65, y: 27, control: "shoulderLift" },
+  { index: 17, name: "right_shoulder", x: 35, y: 27, control: "shoulderLift" },
+  { index: 18, name: "left_elbow", x: 65, y: 41, control: "elbowBend" },
+  { index: 19, name: "right_elbow", x: 35, y: 41, control: "elbowBend" },
+  { index: 20, name: "left_wrist", x: 65, y: 55 },
+  { index: 21, name: "right_wrist", x: 35, y: 55 },
+  { index: 22, name: "left_hand", x: 65, y: 61, control: "handCurl" },
+  { index: 23, name: "right_hand", x: 35, y: 61, control: "handCurl" },
+];
+
 const importBrowserModule = (url: string): Promise<Record<string, any>> =>
   Function("moduleUrl", "return import(moduleUrl)")(url) as Promise<Record<string, any>>;
 
@@ -89,6 +124,10 @@ export function BodyModelViewer({ model, compact = false }: { model: ModelRecord
   const resetViewRef = useRef<(() => void) | null>(null);
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
   const [values, setValues] = useState<ParameterValues>(ZERO_PARAMETERS);
+  const [activeJoint, setActiveJoint] = useState<number | null>(null);
+  const sliderRefs = useRef<Record<string, HTMLInputElement | null>>({});
+  const dragRef = useRef<{ index: number; x: number; y: number; value: number; pointerId: number; moved: boolean } | null>(null);
+  const suppressClickRef = useRef<number | null>(null);
 
   const controls = useMemo(() => {
     const available = [...BASE_CONTROLS];
@@ -335,16 +374,148 @@ export function BodyModelViewer({ model, compact = false }: { model: ModelRecord
     jaw.scale.x = .78 * (1 + values.expression * .06);
   }, [values, state]);
 
+  // SMPL and STAR end at 24 joints; SMPL+H and SMPL-X share the first 22 and
+  // continue into chains this proxy has no geometry for.
+  const bodyJoints = useMemo(
+    () => (model.id === "smpl" || model.id === "star" ? SMPL_BODY_JOINTS : SMPL_BODY_JOINTS.slice(0, 22)),
+    [model.id],
+  );
+  const controlFor = (joint: BodyJoint) =>
+    joint.control ? controls.find((control) => control.key === joint.control) : undefined;
+  const activeRecord = activeJoint === null ? null : bodyJoints.find((joint) => joint.index === activeJoint) ?? null;
+
+  const setControlValue = (control: ParameterControl, value: number) =>
+    setValues((current) => ({ ...current, [control.key]: Math.min(control.max, Math.max(control.min, value)) }));
+
+  const focusControl = (control: ParameterControl) => {
+    const input = sliderRefs.current[control.key];
+    input?.scrollIntoView({ behavior: "smooth", block: "center" });
+    input?.focus({ preventScroll: true });
+  };
+
+  const startMarkerDrag = (event: ReactPointerEvent<HTMLButtonElement>, joint: BodyJoint, control: ParameterControl) => {
+    dragRef.current = { index: joint.index, x: event.clientX, y: event.clientY, value: values[control.key], pointerId: event.pointerId, moved: false };
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setActiveJoint(joint.index);
+    event.preventDefault();
+  };
+
+  const moveMarker = (event: ReactPointerEvent<HTMLButtonElement>, joint: BodyJoint, control: ParameterControl) => {
+    const drag = dragRef.current;
+    if (!drag || drag.index !== joint.index || drag.pointerId !== event.pointerId) return;
+    const dx = event.clientX - drag.x;
+    const dy = event.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+    setControlValue(control, drag.value + ((dx - dy * .55) / 140) * (control.max - control.min));
+  };
+
+  const endMarkerDrag = (event: ReactPointerEvent<HTMLButtonElement>, joint: BodyJoint) => {
+    const drag = dragRef.current;
+    if (!drag || drag.index !== joint.index) return;
+    if (drag.moved) suppressClickRef.current = joint.index;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    dragRef.current = null;
+  };
+
+  const keyMarker = (event: ReactKeyboardEvent<HTMLButtonElement>, control: ParameterControl) => {
+    let next: number | null = null;
+    if (event.key === "ArrowRight" || event.key === "ArrowUp") next = values[control.key] + control.step;
+    if (event.key === "ArrowLeft" || event.key === "ArrowDown") next = values[control.key] - control.step;
+    if (event.key === "Home") next = control.min;
+    if (event.key === "End") next = control.max;
+    if (next === null) return;
+    event.preventDefault();
+    setControlValue(control, next);
+  };
+
   const resetParameters = () => setValues({ ...ZERO_PARAMETERS });
 
   return (
     <div className={`body-model-review${compact ? " compact" : ""}`}>
-      <div className={`body-model-stage${compact ? " compact" : ""}`}>
-        <canvas ref={canvasRef} aria-label={`Interactive 3D parameter proxy for ${model.name}`} />
-        <div className="viewer-status"><span className={state}>{state === "ready" ? "Interactive pose proxy" : state === "loading" ? "Preparing body model" : "Preview unavailable"}</span></div>
-        <button className="viewer-reset" type="button" onClick={() => resetViewRef.current?.()} disabled={state !== "ready"}>Reset view</button>
-        <p className="body-proxy-label">Procedural proxy · official weights not redistributed</p>
-        <p className="viewer-hint">Drag to rotate · scroll or pinch to zoom</p>
+      <div className={compact ? "" : "review-visuals"}>
+        <div className={`body-model-stage${compact ? " compact" : ""}`}>
+          <canvas ref={canvasRef} aria-label={`Interactive 3D parameter proxy for ${model.name}`} />
+          <div className="viewer-status"><span className={state}>{state === "ready" ? "Interactive pose proxy" : state === "loading" ? "Preparing body model" : "Preview unavailable"}</span></div>
+          <button className="viewer-reset" type="button" onClick={() => resetViewRef.current?.()} disabled={state !== "ready"}>Reset view</button>
+          <p className="body-proxy-label">Procedural proxy · official weights not redistributed</p>
+          <p className="viewer-hint">Drag to rotate · scroll or pinch to zoom</p>
+        </div>
+
+        {!compact && (
+          <section className="body-map" aria-label={`Numbered ${model.name} joint map`}>
+            <div className="body-map-plot">
+              <div className="body-map-status">
+                <span className={activeRecord ? "active" : ""} aria-live="polite">
+                  {activeRecord
+                    ? <><strong>{String(activeRecord.index).padStart(2, "0")}</strong>{activeRecord.name}</>
+                    : `Whole body · front view`}
+                </span>
+                <b><i>Body R</i><em>← facing you →</em><i>Body L</i></b>
+              </div>
+              <span className="body-part map-head" /><span className="body-part map-neck" /><span className="body-part map-torso" />
+              <span className="body-part map-arm left" /><span className="body-part map-arm right" />
+              <span className="body-part map-leg left" /><span className="body-part map-leg right" />
+              {bodyJoints.map((joint) => {
+                const control = controlFor(joint);
+                const label = `${joint.index}. ${joint.name}`;
+                if (!control) {
+                  return (
+                    <button
+                      className={`joint-marker static ${activeJoint === joint.index ? "active" : ""}`}
+                      key={joint.index}
+                      type="button"
+                      aria-label={`${label} · no proxy control`}
+                      title={`${label} · not driven by this proxy`}
+                      style={{ left: `${joint.x}%`, top: `${joint.y}%` }}
+                      onMouseEnter={() => setActiveJoint(joint.index)}
+                      onMouseLeave={() => setActiveJoint(null)}
+                      onFocus={() => setActiveJoint(joint.index)}
+                      onBlur={() => setActiveJoint(null)}
+                    >{String(joint.index).padStart(2, "0")}</button>
+                  );
+                }
+                const value = values[control.key];
+                const fill = ((value - control.min) / Math.max(control.max - control.min, Number.EPSILON)) * 100;
+                return (
+                  <button
+                    className={`joint-marker ${activeJoint === joint.index ? "active" : ""}`}
+                    key={joint.index}
+                    type="button"
+                    role="slider"
+                    aria-label={`${label} · ${control.label}`}
+                    aria-valuemin={control.min}
+                    aria-valuemax={control.max}
+                    aria-valuenow={value}
+                    aria-valuetext={formatValue(control, value)}
+                    title={`${label} · ${control.label} ${formatValue(control, value)}`}
+                    style={{ left: `${joint.x}%`, top: `${joint.y}%`, "--joint-fill": `${fill}%` } as Record<string, string>}
+                    onPointerDown={(event) => startMarkerDrag(event, joint, control)}
+                    onPointerMove={(event) => moveMarker(event, joint, control)}
+                    onPointerUp={(event) => endMarkerDrag(event, joint)}
+                    onPointerCancel={(event) => endMarkerDrag(event, joint)}
+                    onKeyDown={(event) => keyMarker(event, control)}
+                    onMouseEnter={() => setActiveJoint(joint.index)}
+                    onMouseLeave={() => setActiveJoint(null)}
+                    onFocus={() => setActiveJoint(joint.index)}
+                    onBlur={() => setActiveJoint(null)}
+                    onClick={() => {
+                      if (suppressClickRef.current === joint.index) {
+                        suppressClickRef.current = null;
+                        return;
+                      }
+                      focusControl(control);
+                    }}
+                  >{String(joint.index).padStart(2, "0")}</button>
+                );
+              })}
+              <p className="body-map-hint">
+                {model.joints && model.joints > bodyJoints.length
+                  ? `Body joints 00-${String(bodyJoints.length - 1).padStart(2, "0")} of ${model.joints} · dashed markers have no proxy control`
+                  : `Joint indices · dashed markers have no proxy control`}
+              </p>
+            </div>
+          </section>
+        )}
       </div>
 
       {!compact && (
@@ -366,7 +537,7 @@ export function BodyModelViewer({ model, compact = false }: { model: ModelRecord
                 return (
                   <label className="body-parameter-control" htmlFor={inputId} key={control.key}>
                     <span><em>{control.group}</em><strong>{control.label}</strong><code>{control.tensor}</code></span>
-                    <input id={inputId} type="range" min={control.min} max={control.max} step={control.step} value={values[control.key]} onChange={(event) => setValues((current) => ({ ...current, [control.key]: Number(event.target.value) }))} />
+                    <input id={inputId} ref={(node) => { sliderRefs.current[control.key] = node; }} type="range" min={control.min} max={control.max} step={control.step} value={values[control.key]} onChange={(event) => setValues((current) => ({ ...current, [control.key]: Number(event.target.value) }))} />
                     <output htmlFor={inputId}>{formatValue(control, values[control.key])}</output>
                   </label>
                 );

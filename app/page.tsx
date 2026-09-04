@@ -27,7 +27,7 @@ export default function Home() {
 
       <main>
         <section className="home-lede">
-          <h1>Humanoid models,<br />clearly indexed.</h1>
+          <h1>Humanoid models, clearly indexed.</h1>
           <p>{MODELS.length} records · {robotCount} robots · {bodyCount} bodies</p>
         </section>
 

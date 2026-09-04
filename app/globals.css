@@ -27,7 +27,7 @@ nav { display: flex; gap: 26px; margin-left: auto; }
 nav a { color: var(--faint); font-size: 12px; }
 nav a:hover, nav a.active { color: var(--ink); }
 .home-lede { max-width: 1380px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 66px) clamp(30px, 4vw, 46px); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 14px 40px; }
-.home-lede h1 { font-size: clamp(46px, 6.3vw, 88px); line-height: .9; letter-spacing: -.065em; }
+.home-lede h1 { font-size: clamp(27px, 2.9vw, 40px); line-height: 1.05; letter-spacing: -.04em; }
 .home-lede p { color: var(--faint); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .showcase { padding: 0 clamp(20px, 5vw, 66px) clamp(70px, 9vw, 116px); }
 .showcase-grid { max-width: 1380px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--strong-line); border-left: 1px solid var(--line); }
@@ -194,6 +194,9 @@ footer span { display: flex; align-items: center; gap: 8px; color: var(--ink); f
 .body-part.map-leg.right { left: 57%; margin-left: -12px; transform: rotate(-2deg); }
 .body-map-hint { position: absolute; z-index: 3; right: 10px; bottom: 10px; padding: 5px 7px; background: color-mix(in srgb, var(--paper) 86%, transparent); color: var(--faint); font-size: 8px; pointer-events: none; }
 .joint-marker { --joint-fill: 50%; position: absolute; z-index: 2; width: 24px; height: 24px; display: grid; place-items: center; padding: 0; border: 1px solid var(--ink); border-radius: 50%; background: linear-gradient(90deg, var(--accent) 0 var(--joint-fill), var(--surface) var(--joint-fill) 100%); color: var(--ink); font: 750 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace; transform: translate(-50%, -50%); touch-action: none; cursor: ew-resize; }
+.joint-marker.static { background: transparent; border-style: dashed; border-color: var(--strong-line); color: var(--faint); cursor: default; }
+.joint-marker.static:hover, .joint-marker.static:focus-visible, .joint-marker.static.active { background: var(--surface); border-color: var(--ink); color: var(--ink); }
+.review-visuals .body-model-stage { height: 560px; }
 .joint-marker:hover, .joint-marker:focus-visible, .joint-marker.active { z-index: 4; border-color: var(--accent); outline: 2px solid color-mix(in srgb, var(--accent) 32%, transparent); outline-offset: 2px; color: var(--accent); background: var(--surface); }
 .joint-map-list { overflow: visible; }
 .joint-group h4 { display: flex; justify-content: space-between; margin: 0; padding: 8px 13px; border-bottom: 1px solid var(--line); background: var(--paper); color: var(--faint); font-size: 9px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }

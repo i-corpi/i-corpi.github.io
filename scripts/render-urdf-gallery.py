@@ -18,13 +18,13 @@ MODELS = [
     ("unitree-g1", ROOT / "public/models/unitree-g1/model.urdf", ROOT / "public/models/unitree-g1", (48, 55, 51)),
     ("unitree-h1", ROOT / "public/models/unitree-h1/model.urdf", ROOT / "public/models/unitree-h1", (58, 63, 61)),
     ("unitree-h2", ROOT / "public/models/unitree-h2/model.urdf", ROOT / "public/models/unitree-h2", (61, 66, 64)),
+    ("engineai-pm01", ROOT / "public/models/engineai-pm01/model.urdf", ROOT / "public/models/engineai-pm01", (60, 64, 90)),
     ("robotis-op3", ROOT / "public/models/robotis-op3/model.urdf", ROOT / "public/models/robotis-op3", (48, 75, 87)),
     ("pal-talos", ROOT / "public/models/pal-talos/model.urdf", ROOT / "public/models/pal-talos", (66, 74, 75)),
     ("simple-humanoid", ROOT / "public/models/simple-humanoid/urdf/simple_humanoid.urdf", ROOT / "public/models/simple-humanoid", (65, 70, 65)),
     ("berkeley-humanoid", ROOT / "public/models/berkeley-humanoid/model.urdf", ROOT / "public/models/berkeley-humanoid", (43, 48, 45)),
     ("booster-t1", ROOT / "public/models/booster-t1/model.urdf", ROOT / "public/models/booster-t1", (57, 66, 69)),
     ("toddlerbot", ROOT / "public/models/toddlerbot/model.urdf", ROOT / "public/models/toddlerbot", (55, 68, 72)),
-    ("engineai-pm01", ROOT / "public/models/engineai-pm01/model.urdf", ROOT / "public/models/engineai-pm01", (60, 64, 90)),
 ]
 
 

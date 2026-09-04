@@ -32,18 +32,36 @@ const GROUP_ORDER = [
 const importBrowserModule = (url: string): Promise<Record<string, unknown>> =>
   Function("moduleUrl", "return import(moduleUrl)")(url) as Promise<Record<string, unknown>>;
 
+const SIDE_RULES: Array<[RegExp, "Left" | "Right"]> = [
+  // Whole words first ("left_hip", "arm_right_1"), then chain prefixes
+  // ("ll_haa", "l_sho_pitch", "LARM_ELBOW"), then a trailing token
+  // ("J00_HIP_PITCH_L"). Prefixes are tried before the suffix on purpose:
+  // Simple Humanoid writes its axis as the last token (RLEG_HIP_R is a roll
+  // axis, not a right side), and its LLEG/RARM prefix settles the side first.
+  [/(^|[_.-])left([_.-]|$)/, "Left"],
+  [/(^|[_.-])right([_.-]|$)/, "Right"],
+  [/^(ll|lleg|larm|lhand|l)[_.-]/, "Left"],
+  [/^(lr|rleg|rarm|rhand|r)[_.-]/, "Right"],
+  [/[_.-]l$/, "Left"],
+  [/[_.-]r$/, "Right"],
+];
+
 const jointGroup = (name: string) => {
   const key = name.toLowerCase();
-  const side = key.includes("left") || key.startsWith("l_") || key.startsWith("ll_")
-    ? "Left"
-    : key.includes("right") || key.startsWith("r_") || key.startsWith("lr_")
-      ? "Right"
-      : "";
-  if (/(finger|thumb|gripper|hand)/.test(key)) return side ? `${side} hand` : "Other";
-  if (/(shoulder|elbow|wrist|arm)/.test(key)) return side ? `${side} arm` : "Other";
-  if (/(hip|knee|ankle|leg|haa|hfe|kfe|ffe|faa|_hr)/.test(key)) return side ? `${side} leg` : "Other";
-  if (/(head|neck)/.test(key)) return "Head";
-  if (/(torso|waist|chest)/.test(key)) return "Torso";
+  const rule = SIDE_RULES.find(([pattern]) => pattern.test(key));
+  const side = rule?.[1] ?? "";
+  // Match the body part on what is left once the side marker is removed, so
+  // abbreviated chains ("l_el", "l_ank_roll") still land on the right limb.
+  const rest = rule ? key.replace(rule[0], "_") : key;
+  const tokens = rest.split(/[_.\-\d]+/).filter(Boolean);
+  const hasToken = (...words: string[]) => words.some((word) => tokens.includes(word));
+  const hasText = (...words: string[]) => words.some((word) => rest.includes(word));
+
+  if (hasText("finger", "thumb", "gripper", "palm") || hasToken("hand")) return side ? `${side} hand` : "Other";
+  if (hasText("shoulder", "elbow", "wrist") || hasToken("sho", "elb", "el", "arm")) return side ? `${side} arm` : "Other";
+  if (hasText("hip", "knee", "ankle", "thigh", "shin") || hasToken("ank", "leg", "haa", "hfe", "kfe", "ffe", "faa", "hr")) return side ? `${side} leg` : "Other";
+  if (hasText("head", "neck")) return "Head";
+  if (hasText("torso", "waist", "chest", "spine", "trunk")) return "Torso";
   return "Other";
 };
 
