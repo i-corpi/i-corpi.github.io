@@ -340,6 +340,8 @@ export const MODELS: ModelRecord[] = [
     licenseUrl: "https://smpl.is.tue.mpg.de/modellicense.html",
     sourceUrl: "https://smpl.is.tue.mpg.de/",
     note: "Full model weights are a personal, non-transferable research download and are not mirrored here. SMPL-Body exports have a separate CC BY 4.0 licence; confirm which asset class you hold.",
+    image: "/gallery/smpl.png",
+    imageAlt: "Rendered view of this archive's procedural body proxy, which stands in for the SMPL model — it is not the SMPL mesh",
   },
   {
     id: "smpl-h",

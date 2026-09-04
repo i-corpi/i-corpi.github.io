@@ -44,12 +44,12 @@ export function ModelFigure({ kind, index, compact = false }: { kind: "robot" | 
  * pinned locally, falling back to the abstract ModelFigure silhouette for
  * records with no hosted asset (e.g. account-gated SMPL-family bodies).
  */
-export function ModelThumb({ model, index, compact = false }: { model: ModelRecord; index: number; compact?: boolean }) {
-  if (!model.image) return <ModelFigure kind={model.kind} index={index} compact={compact} />;
+export function ModelThumb({ model, index, compact = false }: { model: ModelRecord; index?: number; compact?: boolean }) {
+  if (!model.image) return <ModelFigure kind={model.kind} index={index ?? 0} compact={compact} />;
   return (
     <div className={`figure ${model.kind === "body" ? "body" : "robot"} has-image${compact ? " compact" : ""}`} aria-hidden="true">
       <img src={sitePath(model.image)} alt="" loading="lazy" />
-      <b>{String(index + 1).padStart(2, "0")}</b>
+      {index === undefined ? null : <b>{String(index + 1).padStart(2, "0")}</b>}
     </div>
   );
 }
