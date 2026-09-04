@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package>
+  <name>simple_humanoid_description</name>
+  <version>1.2.0</version>
+  <description>
+    simple-humanoid URDF model and calibration data
+  </description>
+  <author>Maximilien Naveau</author>
+  <author>Olivier Stasse</author>
+  <maintainer email="guilhem.saurel@laas.fr">Guilhem Saurel</maintainer>
+  <license>BSD-2-Clause</license>
+  <url>https://github.com/laas/simple_humanoid</url>
+</package>
