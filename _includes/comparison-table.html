@@ -1,0 +1,9 @@
+<caption>{{ include.left.name | escape }} and {{ include.right.name | escape }} comparison</caption>
+<thead><tr><th scope="col">Attribute</th><th scope="col">{{ include.left.name | escape }}</th><th scope="col">{{ include.right.name | escape }}</th></tr></thead>
+<tbody>
+  {% assign fields = "family,formats,hostedFormats,dof,joints,vertices,heightM,weightKg,parameters,variants,license,accessLabel" | split: "," %}
+  {% assign labels = "Model class|Upstream formats|Hosted formats|Pose / movable DoF|Joints|Body mesh vertices|Height|Mass|Parametric space|Variants|Licence|Archive access" | split: "|" %}
+  {% for field in fields %}
+    <tr><th scope="row">{{ labels[forloop.index0] }}</th><td>{% include measurement.html model=include.left field=field %}</td><td>{% include measurement.html model=include.right field=field %}</td></tr>
+  {% endfor %}
+</tbody>

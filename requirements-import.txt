@@ -1,0 +1,6 @@
+# Only needed to reproduce Valkyrie's Collada-to-STL conversion.
+# Normal serving and builds use the checked-in converted files.
+numpy==2.0.2
+pycollada==0.9.3
+python-dateutil==2.9.0.post0
+six==1.17.0

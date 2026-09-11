@@ -1,0 +1,392 @@
+{
+  "repository": "kscalelabs/kscale-assets",
+  "revision": "f51d6ea19b8b824dd7661600c7a87f3691f770be",
+  "entrypoint": "upstream/kbot-v2/robot.urdf",
+  "meshPaths": {
+    "meshes/Torso_Side_Right.stl": "kbot-v2/meshes/Torso_Side_Right.stl",
+    "meshes/Torso_Side_Right.collision.stl": "kbot-v2/meshes/Torso_Side_Right.collision.stl",
+    "meshes/KC_C_104R_PitchHardstopDriven.stl": "kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.stl",
+    "meshes/KC_C_104R_PitchHardstopDriven.collision.stl": "kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.collision.stl",
+    "meshes/imu.stl": "kbot-v2/meshes/imu.stl",
+    "meshes/imu.collision.stl": "kbot-v2/meshes/imu.collision.stl",
+    "meshes/KC_C_104L_PitchHardstopDriven.stl": "kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.stl",
+    "meshes/KC_C_104L_PitchHardstopDriven.collision.stl": "kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.collision.stl",
+    "meshes/KC_D_102R_R_Hip_Yoke_Drive.stl": "kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.stl",
+    "meshes/KC_D_102R_R_Hip_Yoke_Drive.collision.stl": "kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.collision.stl",
+    "meshes/KC_D_102L_L_Hip_Yoke_Drive.stl": "kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.stl",
+    "meshes/KC_D_102L_L_Hip_Yoke_Drive.collision.stl": "kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.collision.stl",
+    "meshes/RS03_3.stl": "kbot-v2/meshes/RS03_3.stl",
+    "meshes/RS03_3.collision.stl": "kbot-v2/meshes/RS03_3.collision.stl",
+    "meshes/RS03_4.stl": "kbot-v2/meshes/RS03_4.stl",
+    "meshes/RS03_4.collision.stl": "kbot-v2/meshes/RS03_4.collision.stl",
+    "meshes/RS03_5.stl": "kbot-v2/meshes/RS03_5.stl",
+    "meshes/RS03_5.collision.stl": "kbot-v2/meshes/RS03_5.collision.stl",
+    "meshes/RS03_6.stl": "kbot-v2/meshes/RS03_6.stl",
+    "meshes/RS03_6.collision.stl": "kbot-v2/meshes/RS03_6.collision.stl",
+    "meshes/KC_C_202R.stl": "kbot-v2/meshes/KC_C_202R.stl",
+    "meshes/KC_C_202R.collision.stl": "kbot-v2/meshes/KC_C_202R.collision.stl",
+    "meshes/KC_C_202L.stl": "kbot-v2/meshes/KC_C_202L.stl",
+    "meshes/KC_C_202L.collision.stl": "kbot-v2/meshes/KC_C_202L.collision.stl",
+    "meshes/KC_D_301R_R_Femur_Lower_Drive.stl": "kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.stl",
+    "meshes/KC_D_301R_R_Femur_Lower_Drive.collision.stl": "kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.collision.stl",
+    "meshes/KC_D_301L_L_Femur_Lower_Drive.stl": "kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.stl",
+    "meshes/KC_D_301L_L_Femur_Lower_Drive.collision.stl": "kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.collision.stl",
+    "meshes/KC_C_401R_R_UpForearmDrive.stl": "kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.stl",
+    "meshes/KC_C_401R_R_UpForearmDrive.collision.stl": "kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.collision.stl",
+    "meshes/KC_C_401L_L_UpForearmDrive.stl": "kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.stl",
+    "meshes/KC_C_401L_L_UpForearmDrive.collision.stl": "kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.collision.stl",
+    "meshes/KC_D_401R_R_Shin_Drive.stl": "kbot-v2/meshes/KC_D_401R_R_Shin_Drive.stl",
+    "meshes/KC_D_401R_R_Shin_Drive.collision.stl": "kbot-v2/meshes/KC_D_401R_R_Shin_Drive.collision.stl",
+    "meshes/KC_D_401L_L_Shin_Drive.stl": "kbot-v2/meshes/KC_D_401L_L_Shin_Drive.stl",
+    "meshes/KC_D_401L_L_Shin_Drive.collision.stl": "kbot-v2/meshes/KC_D_401L_L_Shin_Drive.collision.stl",
+    "meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.stl": "kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.stl",
+    "meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.collision.stl": "kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.collision.stl",
+    "meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.stl": "kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.stl",
+    "meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.collision.stl": "kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.collision.stl",
+    "meshes/KB_D_501R_R_LEG_FOOT.stl": "kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.stl",
+    "meshes/KB_D_501R_R_LEG_FOOT.collision.stl": "kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.collision.stl",
+    "meshes/KB_D_501L_L_LEG_FOOT.stl": "kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.stl",
+    "meshes/KB_D_501L_L_LEG_FOOT.collision.stl": "kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.collision.stl"
+  },
+  "files": [
+    {
+      "path": "upstream/kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.collision.stl",
+      "sha256": "c3d3dedaabd519adc91749ca3c3f85f2be233e8b23d1c8b9d7c615a903f20430",
+      "gitBlob": "028f345ae2e6b1909cdc63be12a72c8939d5985d",
+      "lfsOid": "c3d3dedaabd519adc91749ca3c3f85f2be233e8b23d1c8b9d7c615a903f20430"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_C_501X_Left_Bayonet_Adapter_Hard_Stop.stl",
+      "sha256": "8be7684ec9646099255d9da67ee83dd655b8193fd8ebdc82419dbe42e8edae19",
+      "gitBlob": "3a4dc80108481765d55030a008482288a009fb73",
+      "lfsOid": "8be7684ec9646099255d9da67ee83dd655b8193fd8ebdc82419dbe42e8edae19"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.collision.stl",
+      "sha256": "70c777096670b1b43615d9e1c8a2ef912224f3dc9d881fac1382c74f9801b333",
+      "gitBlob": "daf8f91c736df18ee76950cc8400260d0cd657b4",
+      "lfsOid": "70c777096670b1b43615d9e1c8a2ef912224f3dc9d881fac1382c74f9801b333"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_C_501X_Right_Bayonet_Adapter_Hard_Stop.stl",
+      "sha256": "3eef07ec1713dce2a4188168dbf609d27f8b3d19ba664c0cc86c6cdb0d8b2474",
+      "gitBlob": "a6634712520cdcd98717863b4b2c3a8b76d9cc19",
+      "lfsOid": "3eef07ec1713dce2a4188168dbf609d27f8b3d19ba664c0cc86c6cdb0d8b2474"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.collision.stl",
+      "sha256": "ed8c9216d0e67061254f85727956c753253e619254924f184a49558e319f6681",
+      "gitBlob": "56a08c10ca0a03abd50dd8500b2fc3de0d46542a",
+      "lfsOid": "ed8c9216d0e67061254f85727956c753253e619254924f184a49558e319f6681"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_D_501L_L_LEG_FOOT.stl",
+      "sha256": "fe35812d241ae8e51be866fe5c6267eab3de85842c8fe024dafb43ce09d28f11",
+      "gitBlob": "f22c1aa61011b9a875b51653bebd499c5fc6851d",
+      "lfsOid": "fe35812d241ae8e51be866fe5c6267eab3de85842c8fe024dafb43ce09d28f11"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.collision.stl",
+      "sha256": "7a8fb421948a95eba10c5c5f428df2b908f2a44fab2e0bfde4838e7d6fb7ff34",
+      "gitBlob": "c63efc03424dbf9f9d7c4b8ad5c477d21520cd0a",
+      "lfsOid": "7a8fb421948a95eba10c5c5f428df2b908f2a44fab2e0bfde4838e7d6fb7ff34"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KB_D_501R_R_LEG_FOOT.stl",
+      "sha256": "176fb41a7eff97e127ef9790b358f77ebae694e6683953dd8332e3885eeffa9e",
+      "gitBlob": "65898da914807cff73bf1373482b879c8fc7ea6b",
+      "lfsOid": "176fb41a7eff97e127ef9790b358f77ebae694e6683953dd8332e3885eeffa9e"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.collision.stl",
+      "sha256": "cf45660c2030e4c80c7e72ac2d04ca71f94272ef3ab21987962ee3ddee8f2aa5",
+      "gitBlob": "af474173eab9536cf2c02b05d7308a01fc4bed58",
+      "lfsOid": "cf45660c2030e4c80c7e72ac2d04ca71f94272ef3ab21987962ee3ddee8f2aa5"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_104L_PitchHardstopDriven.stl",
+      "sha256": "e887beea7931ca9e5bd9b21739c14c2701179e3150737587c933d510ce538b29",
+      "gitBlob": "9dde1389d2ef2d1cfd663773a24fa5a0d3a1b318",
+      "lfsOid": "e887beea7931ca9e5bd9b21739c14c2701179e3150737587c933d510ce538b29"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.collision.stl",
+      "sha256": "9ff5d4354c523b025c6941455d038311e7fe5c909e5d207890c7b3b43587bf76",
+      "gitBlob": "8071be24dfb461c563a512364b8ca1cf0f9ded42",
+      "lfsOid": "9ff5d4354c523b025c6941455d038311e7fe5c909e5d207890c7b3b43587bf76"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_104R_PitchHardstopDriven.stl",
+      "sha256": "9662b247348a1eb7bce3cdee8ecf4ded31b47eee9f926fa96041c0cd5ec22e7e",
+      "gitBlob": "5ed39c68be70e6606ac008653efb575239c0aa9a",
+      "lfsOid": "9662b247348a1eb7bce3cdee8ecf4ded31b47eee9f926fa96041c0cd5ec22e7e"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_202L.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_202L.collision.stl",
+      "sha256": "bb55dc4d27541ad1e15d2acdd57863373b150a3e7682c8469787afb6f7031be1",
+      "gitBlob": "a3e7eb8ca4cc4687fec4ea5888d03cb918fe5dc4",
+      "lfsOid": "bb55dc4d27541ad1e15d2acdd57863373b150a3e7682c8469787afb6f7031be1"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_202L.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_202L.stl",
+      "sha256": "a63cd414574f74fc2cf518985fb7236e7b334716ef892752a4a0e8d59110e95b",
+      "gitBlob": "eb08ee6160ffc816c49cb3a7cbd531bd3436c794",
+      "lfsOid": "a63cd414574f74fc2cf518985fb7236e7b334716ef892752a4a0e8d59110e95b"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_202R.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_202R.collision.stl",
+      "sha256": "6447a72b5996f5dc7bdffa6f2450f4f267869a166e45d8066584d6b1f8067280",
+      "gitBlob": "854c45b98052b001774ba005132922fa68bafbd4",
+      "lfsOid": "6447a72b5996f5dc7bdffa6f2450f4f267869a166e45d8066584d6b1f8067280"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_202R.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_202R.stl",
+      "sha256": "d97c2a274964c2018f2bbda61ccb23642a8f6b68df0d89dc05ffa05b94bf6889",
+      "gitBlob": "5277d3a9f805545d29ebb2ea88e345a05da06f79",
+      "lfsOid": "d97c2a274964c2018f2bbda61ccb23642a8f6b68df0d89dc05ffa05b94bf6889"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.collision.stl",
+      "sha256": "8c7f3bdc734f100a75478b0f9d8af577c15b9198afba7d7c8fe1e952292e5627",
+      "gitBlob": "a3d9c5219817faeb36dcf154c696eca1d2ad7a9b",
+      "lfsOid": "8c7f3bdc734f100a75478b0f9d8af577c15b9198afba7d7c8fe1e952292e5627"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_401L_L_UpForearmDrive.stl",
+      "sha256": "c2c11d79675f306a5f7996e9b448e73a992b8dcc46953600a1911a385c7e83fe",
+      "gitBlob": "fd1c0024fad5e6042194377e21a512a8464d1d24",
+      "lfsOid": "c2c11d79675f306a5f7996e9b448e73a992b8dcc46953600a1911a385c7e83fe"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.collision.stl",
+      "sha256": "8e62498d2e1144789b53a5ea593a28b083f1f5b60f1b0ffafc92d8a78b59c527",
+      "gitBlob": "7a55aab90cadc54ebbb59c24fb788202fbf0b948",
+      "lfsOid": "8e62498d2e1144789b53a5ea593a28b083f1f5b60f1b0ffafc92d8a78b59c527"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_C_401R_R_UpForearmDrive.stl",
+      "sha256": "3f7de06e8924269e31e5b44ea3aaf1dfbccc986f8848bdfce0ce859f153f7504",
+      "gitBlob": "25edbf69db5ee22d37c1e9e7e847c4eb43701a54",
+      "lfsOid": "3f7de06e8924269e31e5b44ea3aaf1dfbccc986f8848bdfce0ce859f153f7504"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.collision.stl",
+      "sha256": "f057f86afab3888df86b38e0a6eed0d4a320eb31c171beb3f80eded04b067bcb",
+      "gitBlob": "13e01cdf6d0097cd6d464fc1240b62fb22b0b789",
+      "lfsOid": "f057f86afab3888df86b38e0a6eed0d4a320eb31c171beb3f80eded04b067bcb"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_102L_L_Hip_Yoke_Drive.stl",
+      "sha256": "b2890dd878f2b80386f0f189dd9d8df6d3b7a6c3f81641998f643fc6a7dcb1e8",
+      "gitBlob": "058de4ea67baf2b2c267d0fe76b4ed9725db874f",
+      "lfsOid": "b2890dd878f2b80386f0f189dd9d8df6d3b7a6c3f81641998f643fc6a7dcb1e8"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.collision.stl",
+      "sha256": "1ac51194927bdbf50f9a455186ca976ce2b33f6d95dfa28779830abe56e80bf3",
+      "gitBlob": "f8313f99ce78cf971860b2743adfbf6fc77de5c8",
+      "lfsOid": "1ac51194927bdbf50f9a455186ca976ce2b33f6d95dfa28779830abe56e80bf3"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_102R_R_Hip_Yoke_Drive.stl",
+      "sha256": "c496d3f884cf2b017d013549f7e33b768c863fb459038f5566ff3623ff1cad1e",
+      "gitBlob": "befe53ae90f9d5a588ca3041e692a2812adcdc1b",
+      "lfsOid": "c496d3f884cf2b017d013549f7e33b768c863fb459038f5566ff3623ff1cad1e"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.collision.stl",
+      "sha256": "b1daa100bfea51f39964792f860f7cac152ab49721c1f40af070749376f90bc2",
+      "gitBlob": "01f0f0b35c3dd47cffaf3ebc849d7a23e735b425",
+      "lfsOid": "b1daa100bfea51f39964792f860f7cac152ab49721c1f40af070749376f90bc2"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_301L_L_Femur_Lower_Drive.stl",
+      "sha256": "14b8aac3675d10e64238d3189859bf2b74e6c578cd421824934e1521f40199ef",
+      "gitBlob": "d5c769df32d5577fb05aed87aa27eadda5288b2a",
+      "lfsOid": "14b8aac3675d10e64238d3189859bf2b74e6c578cd421824934e1521f40199ef"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.collision.stl",
+      "sha256": "86a689bfe3072e57ad678fa429ac48c83f8deabdafbe1ee9f5129ab223114a06",
+      "gitBlob": "584d35817003ae9f2629c2198e460fdf0cc357eb",
+      "lfsOid": "86a689bfe3072e57ad678fa429ac48c83f8deabdafbe1ee9f5129ab223114a06"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_301R_R_Femur_Lower_Drive.stl",
+      "sha256": "27f51b393053e48b0b7c5231ec77bf45b06b6ade2d806c046b0629da32d88831",
+      "gitBlob": "fb7f02fcad6b16a85b8f9807b33dfa19a8bc269a",
+      "lfsOid": "27f51b393053e48b0b7c5231ec77bf45b06b6ade2d806c046b0629da32d88831"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_401L_L_Shin_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_401L_L_Shin_Drive.collision.stl",
+      "sha256": "e6fbf66e0ab9ddb08eed686732a35b8b4817e8ac362cc4a11b21d96b255afe65",
+      "gitBlob": "27e5f3eb4bc9a212fcb76683e44034720d7cbb3c",
+      "lfsOid": "e6fbf66e0ab9ddb08eed686732a35b8b4817e8ac362cc4a11b21d96b255afe65"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_401L_L_Shin_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_401L_L_Shin_Drive.stl",
+      "sha256": "8ffcc922becdffcf57da329a9f7447e9c04307cb2f40b6e9add8d0763d7280cd",
+      "gitBlob": "e942d233b395bb21ea32a329023b0a7a9feb3bf9",
+      "lfsOid": "8ffcc922becdffcf57da329a9f7447e9c04307cb2f40b6e9add8d0763d7280cd"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_401R_R_Shin_Drive.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_401R_R_Shin_Drive.collision.stl",
+      "sha256": "55ceba83225bbf663d8cdc1efc78e7fe8efa29e95914e371b30c691035505311",
+      "gitBlob": "c35067aa7bc340e3f1a8462c0b62eefb7aaf474e",
+      "lfsOid": "55ceba83225bbf663d8cdc1efc78e7fe8efa29e95914e371b30c691035505311"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/KC_D_401R_R_Shin_Drive.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/KC_D_401R_R_Shin_Drive.stl",
+      "sha256": "dce2a87332b16237acbfacb2d255f6be7e85229c88e9e25021e786c2ecc98de3",
+      "gitBlob": "d126c46b3f8fff167958b7980141c4880344cba8",
+      "lfsOid": "dce2a87332b16237acbfacb2d255f6be7e85229c88e9e25021e786c2ecc98de3"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_3.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_3.collision.stl",
+      "sha256": "21d206d3992cf57f0d8e5d5278d63ce394ade7f1cb5d815e68ff67f0a1987dce",
+      "gitBlob": "dff847e7f670f910e1739993b80aa47718ee67c2",
+      "lfsOid": "21d206d3992cf57f0d8e5d5278d63ce394ade7f1cb5d815e68ff67f0a1987dce"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_3.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_3.stl",
+      "sha256": "91465d123f27f8f78638da33eaabb3b43864fedcef6b9133ae9c0b966059d0ac",
+      "gitBlob": "5d36df39bcf2c59682b445bfd051a3df2263ad03",
+      "lfsOid": "91465d123f27f8f78638da33eaabb3b43864fedcef6b9133ae9c0b966059d0ac"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_4.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_4.collision.stl",
+      "sha256": "c747c7941a1a9d8875c722ac9a6620615ce0eadcb9a52c4237fee5e498e6cff5",
+      "gitBlob": "625e38e182665422fc3a8f364f41151898ce7d4f",
+      "lfsOid": "c747c7941a1a9d8875c722ac9a6620615ce0eadcb9a52c4237fee5e498e6cff5"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_4.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_4.stl",
+      "sha256": "ae761c8850180fdc489945c45fa49652afda06ae9b5b3b013ac3e7594d5ba07d",
+      "gitBlob": "b2e3d01d5252d075fd69bebfe898fd7265cf7787",
+      "lfsOid": "ae761c8850180fdc489945c45fa49652afda06ae9b5b3b013ac3e7594d5ba07d"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_5.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_5.collision.stl",
+      "sha256": "11d0c5e9250811426ba40812f36b1d002a8025c3d677a6b472dd1c6c1ba99021",
+      "gitBlob": "b174b096e3717d3b91178d614a2734a5da81d741",
+      "lfsOid": "11d0c5e9250811426ba40812f36b1d002a8025c3d677a6b472dd1c6c1ba99021"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_5.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_5.stl",
+      "sha256": "ea3290b487e931a964a2144a345ca4a9b6805ca8681eed80b905f5718a8b3989",
+      "gitBlob": "02c5143920224d290bde3d7813f3e32ad70e822b",
+      "lfsOid": "ea3290b487e931a964a2144a345ca4a9b6805ca8681eed80b905f5718a8b3989"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_6.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_6.collision.stl",
+      "sha256": "193596102a55ebe51aba380a7f64901ab055e68fceeecec58aac855ec84996ea",
+      "gitBlob": "9d46cbadb0ce1465c7cb0587869f5ee901d984c1",
+      "lfsOid": "193596102a55ebe51aba380a7f64901ab055e68fceeecec58aac855ec84996ea"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/RS03_6.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/RS03_6.stl",
+      "sha256": "e46567e2ba9a33c52fd3a95eb377b267213b2f4990bd9ffe440acd177df7250f",
+      "gitBlob": "4d36afa555cfd015bcac926ca6f790361bd6297b",
+      "lfsOid": "e46567e2ba9a33c52fd3a95eb377b267213b2f4990bd9ffe440acd177df7250f"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/Torso_Side_Right.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/Torso_Side_Right.collision.stl",
+      "sha256": "11363ebb88ea95f23620afb6b6d9a47218661c9e79fabf037bcc7a942d434e06",
+      "gitBlob": "6d0bc6f8371026fe20b004549426a84b74154c2e",
+      "lfsOid": "11363ebb88ea95f23620afb6b6d9a47218661c9e79fabf037bcc7a942d434e06"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/Torso_Side_Right.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/Torso_Side_Right.stl",
+      "sha256": "f540e88b5d1436b5d68ef1bed821c1fd503b640d82f203fefbba55d393fe6a23",
+      "gitBlob": "4b97052f241205d111b6e93ea80edd7799375fd7",
+      "lfsOid": "f540e88b5d1436b5d68ef1bed821c1fd503b640d82f203fefbba55d393fe6a23"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/imu.collision.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/imu.collision.stl",
+      "sha256": "c5b5283cab2bd71f183d06afe08dc0e31860f35874d504bb1dfce564c114b0ba",
+      "gitBlob": "8ba29f70e0561bbb9069eebaecec68c24a4321e3",
+      "lfsOid": "c5b5283cab2bd71f183d06afe08dc0e31860f35874d504bb1dfce564c114b0ba"
+    },
+    {
+      "path": "upstream/kbot-v2/meshes/imu.stl",
+      "url": "https://media.githubusercontent.com/media/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/meshes/imu.stl",
+      "sha256": "b1b8ed447bf98afaadc85a57247210591a720d31767c38d08a1e6cd0fab69ac1",
+      "gitBlob": "2fc72232913ea16510a5035a48413db89a9180d9",
+      "lfsOid": "b1b8ed447bf98afaadc85a57247210591a720d31767c38d08a1e6cd0fab69ac1"
+    },
+    {
+      "path": "upstream/kbot-v2/metadata.json",
+      "url": "https://raw.githubusercontent.com/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/metadata.json",
+      "sha256": "340f025d95ea4dbdc48b215a43ab5978cdc9510798f0712052c3182ee83ef054",
+      "gitBlob": "d894ac3833ea0dcbad6796666d5ffcca75a3db63"
+    },
+    {
+      "path": "upstream/kbot-v2/robot.urdf",
+      "url": "https://raw.githubusercontent.com/kscalelabs/kscale-assets/f51d6ea19b8b824dd7661600c7a87f3691f770be/kbot-v2/robot.urdf",
+      "sha256": "712b8e6c1734102c23ba6fecb3e89d7aa364acfa03227843d9f85a662fbe58d3",
+      "gitBlob": "772c6162de07af19a724003fb61f88ec16e687fd"
+    },
+    {
+      "path": "upstream/project/LICENSE-HW",
+      "url": "https://raw.githubusercontent.com/kscalelabs/kbot/76aba70e3372fecf3583ed6dbe5f379d44c8511c/LICENSE-HW",
+      "sha256": "253ad3f89603e728abfa60c36fbcaf8225cf55c1eab12725f19fb3d74d647f3a",
+      "gitBlob": "0f1092207caa645ff426e0cc40b7eaad69caecb1"
+    },
+    {
+      "path": "upstream/project/LICENSE",
+      "url": "https://raw.githubusercontent.com/kscalelabs/kbot/76aba70e3372fecf3583ed6dbe5f379d44c8511c/LICENSE",
+      "sha256": "7b4358f3d0d4450ac7fa2c1e3b8861d5ff65aa35cd1089ffa4e2b57f9340c1f7",
+      "gitBlob": "2f471c2cad53a8b6925c99d42a65f5985062232b"
+    },
+    {
+      "path": "upstream/project/README.md",
+      "url": "https://raw.githubusercontent.com/kscalelabs/kbot/76aba70e3372fecf3583ed6dbe5f379d44c8511c/README.md",
+      "sha256": "301185e637d412a273aed19035e8adb156ad8cba957a7a2ce6a63a6a9d54d4b2",
+      "gitBlob": "601a685606037d6b7d0c5d873fcdb5a2b2c6ccec"
+    }
+  ],
+  "licenseNote": "The K-Bot project README assigns hardware components to CERN-OHL-S-2.0 and software to GPL v3. The separate kscale-assets repository has no license file. This model is a K-Bot hardware description; the project declaration and both texts are preserved. No MIT license is claimed for these assets."
+}

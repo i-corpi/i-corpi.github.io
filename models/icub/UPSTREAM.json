@@ -1,0 +1,300 @@
+{
+  "repository": "robotology/icub-models",
+  "revision": "dca8c618c264be70ce285bad38040411725e3551",
+  "entrypoint": "upstream/iCub/robots/iCubGazeboV2_7/model.urdf",
+  "meshPaths": {
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl",
+    "package://iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl": "iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl"
+  },
+  "files": [
+    {
+      "path": "upstream/LICENSE",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/LICENSE",
+      "sha256": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "gitBlob": "3b7b82d0da2db857eda1a798dbd908ea136f07b5"
+    },
+    {
+      "path": "upstream/README.md",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/README.md",
+      "sha256": "823ddab5d8ba31dfc4f5ae5c44444a4335c52c8df1d9eec4591efd047b44be93",
+      "gitBlob": "8a3aa6b1279008d70911e9bcb982ad54fe3d619d"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_chest_bb_prt-binary.stl",
+      "sha256": "bf86d8c74eb7bd7fd54c61db2a9c55b4960f14e8172f4d3fcaeb971a040a3f98",
+      "gitBlob": "ed8f19972f7e24d7c284888bf5b1dc0f861bcacc"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_head_prt-binary.stl",
+      "sha256": "5f936b7c3efdcc33d7a89fd2dfce22948891e3391adb4b72fad828810d3585ed",
+      "gitBlob": "6852ebb9adac0704e075be84a568acf7adbbd98b"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_ankle_prt-binary.stl",
+      "sha256": "b1cacbcd8c0d28b2e364842eedd30ae76e40086d24aa51475d962a88045e5737",
+      "gitBlob": "fd28a92222ea304ed3223219cb8a7c4f4db5655a"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prosup_prt-binary.stl",
+      "sha256": "fd77a36d323acca6d2f417bce212e60458bef71a1a097ac5e90c129c14ccbf17",
+      "gitBlob": "35178cac42883c3728f1d68ca0c45133b6035674"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_elbow_prt-binary.stl",
+      "sha256": "37ed514f9d72910545cb05cefb099a9f2f9592ce1333af41f4413f0fde877fbd",
+      "gitBlob": "062217c716bcf8d70a13a91fecc41fad249441a6"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_foot_prt-binary.stl",
+      "sha256": "eaf55a9ebaa4742156dd2b96499c822621c821a11e2ca6ee60a8575c635f6bec",
+      "gitBlob": "272c07333e328dbf7bc0457cd4a226f27f2252a1"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_forearm_prt-binary.stl",
+      "sha256": "2000de57ce85f979778f0553cf12a1408577061ef8f9d8be5edd4ae5ebd62294",
+      "gitBlob": "788d3e524b07e6b228285adb787e4e9d5a0d941f"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_hand_prt-binary.stl",
+      "sha256": "a1d1baa17f9f633d84c888f8be2c098ab8c67267575160eca91329b55dfdd2fe",
+      "gitBlob": "bff96722c54fea4ddcd483b0f6fd0652f8d032e3"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_hip_1_prt-binary.stl",
+      "sha256": "af0992beed9f1a21b5ff0c390cf1193d707d08358f6dd1c8e0f78a293f57d0a3",
+      "gitBlob": "013dbd132ca6eaf2af5576034db96f12509ea0c4"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_hip_2_prt-binary.stl",
+      "sha256": "0c8ede85fbe1acfbe8f95fc925c567d5f070129d44c87b7ecdb3dca2027b422e",
+      "gitBlob": "78b5f1d11ff97c811d5b24bfeaa76a502ad8b130"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_shank_prt-binary.stl",
+      "sha256": "3e18d934931fce61f885b0fccc28bf3fffd29e6ad045fa8f6ee64a4759622b38",
+      "gitBlob": "c867eacfd1697aded6ac1f0a6c16bc0f00fc178d"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_1_prt-binary.stl",
+      "sha256": "51f8bee98eb76b56330f9b977caa467fdceae0abdc15c0ef9fadf04a26b3f632",
+      "gitBlob": "47f9f4bd3c083fea788ddbc333498355686c670a"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_shoulder_2_prt-binary.stl",
+      "sha256": "276a2dcadfc3547b916265e78c6617cd5180652d5fcfe3a143e6a623d381c66c",
+      "gitBlob": "008fa7fa0e6c677702b02cff7fff029b41f2d681"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_sole_prt-binary.stl",
+      "sha256": "396c5c38381dcfecdc30c95730563a161a21ff645fa0d02d3e39f7b809a753b3",
+      "gitBlob": "2d65d9d6aac68b87209f8ef43ce6409f4a49e8c4"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_thigh_prt-binary.stl",
+      "sha256": "8e2d0ddc3523fa85b579d0a222954ff7dd2408f56fe0f0a86d43e130d9504f72",
+      "gitBlob": "c45b96a3c2454f88714ecb409b16a44bc06bdcd8"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_upper_arm_prt-binary.stl",
+      "sha256": "d07574da0bdcd66656aaa99eedef220317d02676162014fc7701462707f19579",
+      "gitBlob": "268cc9122d47872c10bbcd7a4998c3d3c0eaff31"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_upper_thigh_prt-binary.stl",
+      "sha256": "93b24da30fec37356bfe108ef9e6ab3973d3345c5c1b93ad8b646b4a2b48ffd7",
+      "gitBlob": "e02013059dfd44be1c5be58cbd8fdb87985a67c9"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_l_wrist_pitch_prt-binary.stl",
+      "sha256": "ec6661114542e25f410d95ac72624d01b823fd4309fdac98b3689af6fdbae271",
+      "gitBlob": "da3b4d6332f0de49e463131695cce337f764cf55"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_1_prt-binary.stl",
+      "sha256": "ad70212ad512b1e1b1fe6be9da3d6b4d81c0346eb8a8bf441475682b56b126ae",
+      "gitBlob": "7c9f46b7a79481a07c503bff2a8d45fee53a8120"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_lap_belt_2_prt-binary.stl",
+      "sha256": "3f44eb3379a033bbf784d145583c7b72d779e0c1c194b336fe88f0d7c28b44b6",
+      "gitBlob": "07807d30054c3ad16121385cfbb05e5efa4ac407"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_neck_1_prt-binary.stl",
+      "sha256": "da5b3ef2f823a35b2ab20987e42d467bbfdc0d9331a74bbf07661e9beb5ecf7d",
+      "gitBlob": "d915b3e3e254617a291c60f27dd4b49e08d29b77"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_neck_2_prt-binary.stl",
+      "sha256": "f26027abdf1cfa2a611d8e30bf9b21a0e66b901b2a6df01b617c337fe0652e51",
+      "gitBlob": "42ab7dfe210dfe93ad043bc37da0bfcf958e9ca4"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_ankle_prt-binary.stl",
+      "sha256": "d4bb716eba64cb312788a14d6dfd21c91a7358ced87ab6abe5719489596a0b05",
+      "gitBlob": "4abc511731a8bf08d6c2cdb2b67edbf8da7a38dd"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prosup_prt-binary.stl",
+      "sha256": "d78f4269e8c5e594aefb357395c18568a7e246cbf8e447e595a4daa2f6bb6c2b",
+      "gitBlob": "1f6ce72b5044ab86de709b3cc18edc75c1e62459"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_elbow_prt-binary.stl",
+      "sha256": "7e255e05ece4a0fa3f2a3392d874bba2878fc86564727eccff85090a71f4269a",
+      "gitBlob": "a94336a9b6072f66e0ee39c1587465dfa824daed"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_foot_prt-binary.stl",
+      "sha256": "9bda0600c4d02d962ac63534e0327232ebefe27172718b666dd9e49e2db67879",
+      "gitBlob": "3ab96ccd799813c2aa0f7ae6e03375438c4d119e"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_forearm_prt-binary.stl",
+      "sha256": "66336e5ccfc958fd950c3d4eb85826b1caebf70f4d8f3cfe0569d99f3cc254a9",
+      "gitBlob": "bbe3b87187e7573ca59a6614ae6bfa75884f6d64"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_hand_prt-binary.stl",
+      "sha256": "5a3c42a20d49c79406233dc3ec2e6f7e749a4a3b80d7c704e855de5f361da419",
+      "gitBlob": "9ddabd4e81c5bbc70a31fb8c5615e77ea8a880f2"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_hip_1_prt-binary.stl",
+      "sha256": "8a9cdb94fb34a612a52c8b42e3e34b39d25cf8af6bb45b6ae739195d86fad6e1",
+      "gitBlob": "05fd9dce94036b60abe596d7dc04d48b1e7a04b5"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_hip_2_prt-binary.stl",
+      "sha256": "ab6da414f1668380db48d992eac9269e36b128f37968f1a09374d8e7a55043da",
+      "gitBlob": "faa39b82f076fc148f9f498addbf8174d64bfbd2"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_shank_prt-binary.stl",
+      "sha256": "9ffc22c761699180371f94a98a7ee0f2efc087f2c2befa99fa2cb936cc9d892c",
+      "gitBlob": "c6d697420cf477ec773dc3f74510a805b3ac009a"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_1_prt-binary.stl",
+      "sha256": "34a3fe7a51d1fcc2d2287f724d250d1064628521a5ac7701cfee26ecfdba46be",
+      "gitBlob": "0003327e0b3e5dda5fb01241e96496d82a4e3fe7"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_shoulder_2_prt-binary.stl",
+      "sha256": "03e8d928d5dccbf64c9b277e6fcb2a3278f81b1b5792362e104961fdee032005",
+      "gitBlob": "4d498564e09a79cd63de5d5363e26df8529d0049"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_sole_prt-binary.stl",
+      "sha256": "90349c8febae625d123e8fd2be6373df54148e13b8e36f3f9f8164d284ac2286",
+      "gitBlob": "c33705138a0808089baaf13131377a2fbc69599c"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_thigh_prt-binary.stl",
+      "sha256": "49030d73df930674c723805521c44ff6e85ea45c7c519e94cba18aba0f0eb13c",
+      "gitBlob": "a7ab7184753e531d714046e44021b65f96facaf9"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_upper_arm_prt-binary.stl",
+      "sha256": "d81c024a1743166ff56a09c6e90b0601c0bba4660c3f6d07cdb65942d25a68a7",
+      "gitBlob": "5d2e3404ab6397363a45f23bee3c5bcd82c00ce6"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_upper_thigh_prt-binary.stl",
+      "sha256": "89f9bae171dd7a1f4777142ef26afc26734ec7ccd75cb8e506a445b6958b62d1",
+      "gitBlob": "b5f0e6cb67add30c6dd80d5e2d2a356056a1ed66"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_r_wrist_pitch_prt-binary.stl",
+      "sha256": "6b9fc73de65015484a66733cbf9a0f61e548b81a27e298d5ea5db0fe70b04c61",
+      "gitBlob": "749e691f6a0e32f4cedc0b5da6a0ede7b92b995a"
+    },
+    {
+      "path": "upstream/iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/meshes/simmechanics/sim_sea_2-5_root_link_prt-binary.stl",
+      "sha256": "aef904a438d484ad5d9a57792f0e6233b3ff87bc42771dcabe0fc8af3da09150",
+      "gitBlob": "ed84cccbb257aea17f4fc1b9e30c61549504dc54"
+    },
+    {
+      "path": "upstream/iCub/robots/iCubGazeboV2_7/model.urdf",
+      "url": "https://raw.githubusercontent.com/robotology/icub-models/dca8c618c264be70ce285bad38040411725e3551/iCub/robots/iCubGazeboV2_7/model.urdf",
+      "sha256": "8c736d0460e1d3b81d149a27c05641aa7bc9112211fe9f5171bb4eecd0412ec6",
+      "gitBlob": "59de473bbd00bcca15c2f533da6c2dcd232e5614"
+    }
+  ]
+}

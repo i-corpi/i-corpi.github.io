@@ -1,0 +1,1354 @@
+[
+  {
+    "id": "unitree-g1",
+    "name": "G1",
+    "maker": "Unitree Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "General-purpose humanoid",
+    "year": 2024,
+    "tagline": "A compact research humanoid with official descriptions for both 23- and 29-actuator configurations.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 29,
+    "joints": 29,
+    "vertices": null,
+    "heightM": 1.32,
+    "weightKg": 35,
+    "parameters": null,
+    "variants": "23 DoF · 29 DoF · hands",
+    "modelUrl": "/models/unitree-g1/model.urdf",
+    "hostedPath": "/models/unitree-g1/model.urdf",
+    "licenseUrl": "/models/unitree-g1/LICENSE",
+    "sourceUrl": "https://github.com/unitreerobotics/unitree_ros",
+    "note": "Pinned at upstream revision 80b9643. This review package preserves Unitree's 29-DoF URDF and mirrors only its referenced STL meshes.",
+    "image": "/gallery/unitree-g1.png",
+    "imageAlt": "Rendered zero-pose view of the Unitree G1 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "Xacro",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "Xacro",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-g1/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-g1/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-g1/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-g1/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "retrievedAt": "2026-08-27",
+      "recordPath": "/models/unitree-g1/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/unitreerobotics/unitree_ros/tree/80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "transformations": [
+        "URDF unchanged; only referenced meshes mirrored."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "unitree-h1",
+    "name": "H1",
+    "maker": "Unitree Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "Full-size humanoid",
+    "year": 2023,
+    "tagline": "A full-size, high-speed humanoid with an official mesh-backed URDF and inertial model.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 19,
+    "joints": 19,
+    "vertices": null,
+    "heightM": 1.805,
+    "weightKg": 47,
+    "parameters": null,
+    "variants": "H1 · H1-2 · hands",
+    "modelUrl": "/models/unitree-h1/model.urdf",
+    "hostedPath": "/models/unitree-h1/model.urdf",
+    "packageMap": {
+      "h1_description": "/models/unitree-h1"
+    },
+    "licenseUrl": "/models/unitree-h1/LICENSE",
+    "sourceUrl": "https://github.com/unitreerobotics/unitree_ros",
+    "note": "Pinned at upstream revision 80b9643. Package-relative mesh paths are resolved locally without changing the official H1 model data.",
+    "image": "/gallery/unitree-h1.png",
+    "imageAlt": "Rendered zero-pose view of the Unitree H1 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-h1/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-h1/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-h1/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-h1/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "retrievedAt": "2026-08-27",
+      "recordPath": "/models/unitree-h1/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/unitreerobotics/unitree_ros/tree/80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "transformations": [
+        "URDF unchanged; package references resolved by the browser."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "unitree-h2",
+    "name": "H2",
+    "maker": "Unitree Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "Full-size general-purpose humanoid",
+    "year": 2025,
+    "tagline": "A full-size 31-DoF humanoid with articulated head, waist, seven-axis arms, and six-axis legs.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 31,
+    "joints": 31,
+    "vertices": null,
+    "heightM": 1.82,
+    "weightKg": 70,
+    "parameters": null,
+    "variants": "H2 · H2 EDU · H2 Plus",
+    "modelUrl": "/models/unitree-h2/model.urdf",
+    "hostedPath": "/models/unitree-h2/model.urdf",
+    "licenseUrl": "/models/unitree-h2/LICENSE",
+    "sourceUrl": "https://github.com/unitreerobotics/unitree_ros/tree/80b96438bcbc673379b5f35e767c40611f7e0af1/robots/h2_description",
+    "note": "Pinned at Unitree's upstream revision 80b9643. The official 31-DoF URDF and its referenced STL meshes are hosted together for browser review.",
+    "image": "/gallery/unitree-h2.png",
+    "imageAlt": "Rendered zero-pose view of the Unitree H2 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-h2/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/unitree-h2/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-h2/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/unitree-h2/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "retrievedAt": "2026-08-27",
+      "recordPath": "/models/unitree-h2/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/unitreerobotics/unitree_ros/tree/80b96438bcbc673379b5f35e767c40611f7e0af1",
+      "transformations": [
+        "H2.urdf renamed to model.urdf; geometry and joint limits preserved."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "engineai-pm01",
+    "name": "PM01",
+    "maker": "EngineAI Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "General-purpose humanoid",
+    "year": 2024,
+    "tagline": "A 40 kg research humanoid with optical motion-capture-driven gait replication and a 320-degree rotating waist.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 23,
+    "joints": 23,
+    "vertices": null,
+    "heightM": 1.38,
+    "weightKg": 40,
+    "parameters": null,
+    "variants": "Serial (AMP training)",
+    "modelUrl": "/models/engineai-pm01/model.urdf",
+    "hostedPath": "/models/engineai-pm01/model.urdf",
+    "licenseUrl": "/models/engineai-pm01/LICENSE",
+    "sourceUrl": "https://github.com/engineai-robotics/engineai_amp",
+    "note": "Pinned at upstream revision 83ba64b. This is the training-oriented serial URDF the upstream file recommends over the native SDK's version. Its 25 COLLADA meshes were losslessly converted to STL for the browser viewer; modeled link masses total 40.9 kg.",
+    "image": "/gallery/engineai-pm01.png",
+    "imageAlt": "Rendered zero-pose view of the EngineAI PM01 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "COLLADA"
+    ],
+    "formats": [
+      "URDF",
+      "COLLADA"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/engineai-pm01/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/engineai-pm01/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/engineai-pm01/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/engineai-pm01/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "83ba64bbb58a02e14483e52adce5f893f3f31cdf",
+      "retrievedAt": null,
+      "recordPath": "/models/engineai-pm01/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/engineai-robotics/engineai_amp/tree/83ba64bbb58a02e14483e52adce5f893f3f31cdf",
+      "transformations": [
+        "COLLADA geometry converted to STL without decimation; mesh paths rewritten."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "unitree-r1",
+    "name": "R1",
+    "maker": "Unitree Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "Compact general-purpose humanoid",
+    "year": 2025,
+    "tagline": "Unitree's smaller research and developer platform, published in both 20- and 26-joint robot-description variants.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 26,
+    "joints": 26,
+    "vertices": null,
+    "heightM": 1.23,
+    "weightKg": 29,
+    "parameters": null,
+    "variants": "R1, 26 DoF",
+    "modelUrl": "/models/unitree-r1/model.urdf",
+    "licenseUrl": "/models/unitree-r1/LICENSE",
+    "sourceUrl": "https://github.com/unitreerobotics/unitree_ros",
+    "note": "Unitree R1: 26 independent joints, including the original linkage geometry.",
+    "upstreamFormats": [
+      "URDF",
+      "MJCF",
+      "STL"
+    ],
+    "formats": [
+      "URDF",
+      "MJCF",
+      "STL"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/unitree-r1/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/unitree-r1/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ],
+    "hostedPath": "/models/unitree-r1/model.urdf",
+    "image": "/gallery/unitree-r1.png",
+    "imageAlt": "Rendered zero-pose R1 R1, 26 DoF",
+    "provenance": {
+      "revision": "7d6075f7f58588b189b940130e3edab3c839b2df",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/unitree-r1/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/unitreerobotics/unitree_ros/tree/7d6075f7f58588b189b940130e3edab3c839b2df",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships.",
+        "Removed the MuJoCo-only compiler extension from the hosted URDF because its meshdir no longer matches the portable layout; it remains in the original source."
+      ]
+    }
+  },
+  {
+    "id": "fourier-gr1",
+    "name": "GR-1",
+    "maker": "Fourier Intelligence",
+    "country": "Singapore",
+    "kind": "robot",
+    "family": "Full-size rehabilitation and research humanoid",
+    "year": 2023,
+    "tagline": "A full-size humanoid with official simulation packages spanning the GR-1, GR-1L, and Pro configurations.",
+    "license": "GPL-3.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 44,
+    "joints": 44,
+    "vertices": null,
+    "heightM": 1.65,
+    "weightKg": 55,
+    "parameters": null,
+    "variants": "GR1T1 with Fourier six-DoF hands",
+    "modelUrl": "/models/fourier-gr1/model.urdf",
+    "licenseUrl": "/models/fourier-gr1/LICENSE",
+    "sourceUrl": "https://github.com/FFTAI/Wiki-GRx-Models",
+    "note": "GR1T1 with both Fourier six-DoF hands: 44 independent joints and 10 additional mimic joints.",
+    "upstreamFormats": [
+      "URDF",
+      "MJCF",
+      "STL"
+    ],
+    "formats": [
+      "URDF",
+      "MJCF",
+      "STL"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/fourier-gr1/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/fourier-gr1/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ],
+    "hostedPath": "/models/fourier-gr1/model.urdf",
+    "image": "/gallery/fourier-gr1.png",
+    "imageAlt": "Rendered zero-pose GR-1 GR1T1 with Fourier six-DoF hands",
+    "provenance": {
+      "revision": "7d96c758f048fe1bf92b3258864d94771ae0c093",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/fourier-gr1/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/FFTAI/Wiki-GRx-Models/tree/7d96c758f048fe1bf92b3258864d94771ae0c093",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships."
+      ]
+    }
+  },
+  {
+    "id": "icub",
+    "name": "iCub",
+    "maker": "Istituto Italiano di Tecnologia",
+    "country": "Italy",
+    "kind": "robot",
+    "family": "Child-sized cognitive humanoid",
+    "year": 2004,
+    "tagline": "A long-running open humanoid research platform with detailed whole-body models maintained by the Robotology community.",
+    "license": "CC-BY-SA-4.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 32,
+    "joints": 32,
+    "vertices": null,
+    "heightM": 1.04,
+    "weightKg": 33,
+    "parameters": null,
+    "variants": "iCubGazeboV2_7",
+    "modelUrl": "/models/icub/model.urdf",
+    "licenseUrl": "/models/icub/LICENSE",
+    "sourceUrl": "https://github.com/robotology/icub-models",
+    "note": "iCub v2.7 Gazebo variant: 32 independent joints. This upstream simulation model has rigid hands and simulation-adjusted inertias; the count differs from the complete physical robot.",
+    "upstreamFormats": [
+      "URDF",
+      "SDF",
+      "STL"
+    ],
+    "formats": [
+      "URDF",
+      "SDF",
+      "STL"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/icub/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/icub/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ],
+    "hostedPath": "/models/icub/model.urdf",
+    "image": "/gallery/icub.png",
+    "imageAlt": "Rendered zero-pose iCub iCubGazeboV2_7",
+    "provenance": {
+      "revision": "dca8c618c264be70ce285bad38040411725e3551",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/icub/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/robotology/icub-models/tree/dca8c618c264be70ce285bad38040411725e3551",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships."
+      ]
+    },
+    "viewer": {
+      "yawDegrees": 180
+    }
+  },
+  {
+    "id": "valkyrie",
+    "name": "Valkyrie",
+    "maker": "NASA Johnson Space Center",
+    "country": "United States",
+    "kind": "robot",
+    "family": "Disaster-response humanoid",
+    "year": 2013,
+    "tagline": "NASA's full-size humanoid research platform, represented by a public ROS description and mesh package.",
+    "license": "NASA-1.3",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 43,
+    "joints": 43,
+    "vertices": null,
+    "heightM": 1.87,
+    "weightKg": 129,
+    "parameters": null,
+    "variants": "IHMC valkyrie_sim, with fingers and Hokuyo scanner",
+    "modelUrl": "/models/valkyrie/model.urdf",
+    "licenseUrl": "/models/valkyrie/LICENSE",
+    "sourceUrl": "https://github.com/ihmcrobotics/valkyrie",
+    "note": "IHMC-maintained Valkyrie simulation description: 43 independent joints, including the Hokuyo scanner, plus 16 mimic joints. Collada geometry is converted to STL for the viewer; original textured assets remain in the package.",
+    "upstreamFormats": [
+      "URDF",
+      "Xacro",
+      "DAE"
+    ],
+    "formats": [
+      "URDF",
+      "Xacro",
+      "DAE"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/valkyrie/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/valkyrie/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL",
+      "DAE"
+    ],
+    "hostedPath": "/models/valkyrie/model.urdf",
+    "image": "/gallery/valkyrie.png",
+    "imageAlt": "Rendered zero-pose Valkyrie IHMC valkyrie_sim, with fingers and Hokuyo scanner",
+    "provenance": {
+      "revision": "45e0e5195fd1e2fc849248e5bcb51a87771edbe4",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/valkyrie/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/ihmcrobotics/valkyrie/tree/45e0e5195fd1e2fc849248e5bcb51a87771edbe4",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships.",
+        "Converted every Collada scene instance to binary STL in metres without reducing triangles; scene transforms are baked into geometry.",
+        "STL previews omit Collada textures and materials. Original DAE files and all referenced textures are retained, with two whiteTexture filenames matched to the spelling used by upstream DAE references."
+      ]
+    }
+  },
+  {
+    "id": "kbot",
+    "name": "K-Bot",
+    "maker": "K-Scale Labs",
+    "country": "United States",
+    "kind": "robot",
+    "family": "Open-source general-purpose humanoid",
+    "year": 2025,
+    "tagline": "An open humanoid platform whose mechanical design, simulation assets, firmware, and software are developed in public.",
+    "license": "CERN-OHL-S-2.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 20,
+    "joints": 20,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": null,
+    "variants": "K-Bot v2, no-hands description",
+    "modelUrl": "/models/kbot/model.urdf",
+    "licenseUrl": "/models/kbot/LICENSE",
+    "sourceUrl": "https://github.com/kscalelabs/kscale-assets",
+    "note": "K-Scale K-Bot v2 no-hands description: 20 independent joints. Hardware licensing follows the K-Bot project declaration; kscale-assets has no separate license file. Actual Git LFS meshes are included.",
+    "upstreamFormats": [
+      "URDF",
+      "MJCF",
+      "STEP"
+    ],
+    "formats": [
+      "URDF",
+      "MJCF",
+      "STEP"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/kbot/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/kbot/SOURCE.md"
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ],
+    "hostedPath": "/models/kbot/model.urdf",
+    "image": "/gallery/kbot.png",
+    "imageAlt": "Rendered zero-pose K-Bot K-Bot v2, no-hands description",
+    "provenance": {
+      "revision": "f51d6ea19b8b824dd7661600c7a87f3691f770be",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/kbot/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/kscalelabs/kscale-assets/tree/f51d6ea19b8b824dd7661600c7a87f3691f770be",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships.",
+        "Resolved Git LFS pointers to their actual STL contents and verified LFS SHA-256 and size."
+      ]
+    }
+  },
+  {
+    "id": "openloong",
+    "name": "QingLoong",
+    "maker": "OpenLoong Community",
+    "country": "China",
+    "kind": "robot",
+    "family": "Open full-size humanoid",
+    "year": 2024,
+    "tagline": "An open whole-body humanoid platform with public dynamics, control, hardware, and simulation projects.",
+    "license": "Apache-2.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 31,
+    "joints": 31,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": null,
+    "variants": "AzureLoong full URDF, 31 DoF",
+    "modelUrl": "/models/openloong/model.urdf",
+    "licenseUrl": "/models/openloong/LICENSE",
+    "sourceUrl": "https://github.com/loongOpen/OpenLoong-Dyn-Control",
+    "note": "QingLoong / AzureLoong full URDF: 31 independent joints. Both upstream package-name aliases resolve locally; the simplified URDF is not used.",
+    "upstreamFormats": [
+      "URDF",
+      "MJCF",
+      "STEP"
+    ],
+    "formats": [
+      "URDF",
+      "MJCF",
+      "STEP"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/openloong/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent revolute, continuous, and prismatic joints in the pinned URDF; mimic and fixed joints excluded.",
+        "url": "/models/openloong/SOURCE.md"
+      }
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ],
+    "hostedPath": "/models/openloong/model.urdf",
+    "image": "/gallery/openloong.png",
+    "imageAlt": "Rendered zero-pose QingLoong AzureLoong full URDF, 31 DoF",
+    "provenance": {
+      "revision": "4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e",
+      "retrievedAt": "2026-09-11",
+      "recordPath": "/models/openloong/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/loongOpen/OpenLoong-Dyn-Control/tree/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e",
+      "transformations": [
+        "Regenerated the hosted URDF with portable relative mesh paths; retained every referenced visual and collision mesh and the unmodified source URDF.",
+        "Preserved joint definitions, limits, inertias, and mimic relationships.",
+        "Removed the MuJoCo-only compiler extension from the hosted URDF because its meshdir no longer matches the portable layout; it remains in the original source."
+      ]
+    }
+  },
+  {
+    "id": "robotis-op3",
+    "name": "ROBOTIS OP3",
+    "maker": "ROBOTIS",
+    "country": "South Korea",
+    "kind": "robot",
+    "family": "Small research humanoid",
+    "year": 2017,
+    "tagline": "A small ROS-native humanoid whose full Xacro structure and part meshes are openly published.",
+    "license": "Apache-2.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 20,
+    "joints": 20,
+    "vertices": null,
+    "heightM": 0.51,
+    "weightKg": 3.5,
+    "parameters": null,
+    "variants": "OP3",
+    "modelUrl": "/models/robotis-op3/model.urdf",
+    "hostedPath": "/models/robotis-op3/model.urdf",
+    "packageMap": {
+      "op3_description": "/models/robotis-op3"
+    },
+    "licenseUrl": "/models/robotis-op3/LICENSE",
+    "sourceUrl": "https://emanual.robotis.com/docs/en/platform/op3/robotis_ros_packages/",
+    "note": "Pinned at upstream revision 0780e54. The browser-ready URDF is a mechanical Xacro 2.1.1 expansion of ROBOTIS's official package.",
+    "image": "/gallery/robotis-op3.png",
+    "imageAlt": "Rendered zero-pose view of the ROBOTIS OP3 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "Xacro",
+      "STL"
+    ],
+    "formats": [
+      "URDF",
+      "Xacro",
+      "STL"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/robotis-op3/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/robotis-op3/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/robotis-op3/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/robotis-op3/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "0780e54c2064a42089b0cf970d716ae44fec9233",
+      "retrievedAt": "2026-08-27",
+      "recordPath": "/models/robotis-op3/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/ROBOTIS-GIT/ROBOTIS-OP3-Common/tree/0780e54c2064a42089b0cf970d716ae44fec9233",
+      "transformations": [
+        "Expanded upstream Xacro with xacro 2.1.1; model constants preserved."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "pal-talos",
+    "name": "TALOS",
+    "maker": "PAL Robotics",
+    "country": "Spain",
+    "kind": "robot",
+    "family": "Torque-controlled humanoid",
+    "year": 2017,
+    "tagline": "A torque-controlled research platform with public URDF/Xacro and community-ready MuJoCo descriptions.",
+    "license": "LGPL-3.0 + embedded model notice",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 32,
+    "joints": 32,
+    "vertices": null,
+    "heightM": 1.75,
+    "weightKg": 95,
+    "parameters": null,
+    "variants": "TALOS · TALOS V2",
+    "modelUrl": "/models/pal-talos/model.urdf",
+    "hostedPath": "/models/pal-talos/model.urdf",
+    "packageMap": {
+      "talos_data": "/models/pal-talos"
+    },
+    "licenseUrl": "/models/pal-talos/LICENSE",
+    "sourceUrl": "https://github.com/stack-of-tasks/talos-data",
+    "note": "Pinned to the plain full-v2 URDF recorded by Stack of Tasks at revision dc636c9. The embedded PAL model notice is preserved alongside the repository licence.",
+    "image": "/gallery/pal-talos.png",
+    "imageAlt": "Rendered zero-pose view of the PAL Robotics TALOS URDF",
+    "upstreamFormats": [
+      "URDF",
+      "Xacro",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "Xacro",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/pal-talos/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/pal-talos/SOURCE.md"
+      },
+      "heightM": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/pal-talos/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/pal-talos/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "dc636c94d307fa51322ebc0ea86b72b5df109724",
+      "retrievedAt": "2026-08-27",
+      "recordPath": "/models/pal-talos/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/stack-of-tasks/talos-data/tree/dc636c94d307fa51322ebc0ea86b72b5df109724",
+      "transformations": [
+        "Plain URDF and embedded model notice preserved; package references resolved by the browser."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "simple-humanoid",
+    "name": "Simple Humanoid",
+    "maker": "LAAS-CNRS",
+    "country": "France",
+    "kind": "robot",
+    "family": "Abstract rigid-body humanoid",
+    "year": 2025,
+    "tagline": "A compact, mesh-free 29-DoF reference model for kinematics, dynamics, and collision planning.",
+    "license": "BSD-2-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 29,
+    "joints": 29,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": null,
+    "variants": "Default · classical",
+    "modelUrl": "/models/simple-humanoid/urdf/simple_humanoid.urdf",
+    "hostedPath": "/models/simple-humanoid/urdf/simple_humanoid.urdf",
+    "licenseUrl": "/models/simple-humanoid/LICENSE",
+    "sourceUrl": "https://github.com/laas/simple_humanoid_description",
+    "note": "Pinned locally at upstream revision 4e859ae. The model deliberately has no meshes: URDF supplies the rigid-body model and SRDF supplies collision pairs and the half-sitting configuration.",
+    "image": "/gallery/simple-humanoid.png",
+    "imageAlt": "Rendered zero-pose view of the Simple Humanoid URDF",
+    "upstreamFormats": [
+      "URDF",
+      "SRDF"
+    ],
+    "formats": [
+      "URDF",
+      "SRDF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/simple-humanoid/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/simple-humanoid/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "4e859aed7df3c29954c9cca2a1ecb94069f7cfce",
+      "retrievedAt": "2026-08-26",
+      "recordPath": "/models/simple-humanoid/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/laas/simple_humanoid_description/tree/4e859aed7df3c29954c9cca2a1ecb94069f7cfce",
+      "transformations": [
+        "Model content unchanged; development-only files excluded."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "SRDF"
+    ]
+  },
+  {
+    "id": "berkeley-humanoid",
+    "name": "Berkeley Humanoid",
+    "maker": "Hybrid Robotics",
+    "country": "United States",
+    "kind": "robot",
+    "family": "Locomotion research humanoid",
+    "year": 2024,
+    "tagline": "A compact, legs-first research platform whose official description exposes a focused 12-joint locomotion chain.",
+    "license": "BSD-3-Clause",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 12,
+    "joints": 12,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": 16.1,
+    "parameters": null,
+    "variants": "Locomotion configuration",
+    "modelUrl": "/models/berkeley-humanoid/model.urdf",
+    "hostedPath": "/models/berkeley-humanoid/model.urdf",
+    "packageMap": {
+      "berkeley_humanoid_description": "/models/berkeley-humanoid"
+    },
+    "licenseUrl": "/models/berkeley-humanoid/package.xml",
+    "sourceUrl": "https://github.com/HybridRobotics/berkeley_humanoid_description",
+    "note": "Pinned at upstream revision d0d13d3. The official URDF, referenced STL meshes, and package manifest are preserved together; the modeled link masses total 16.1 kg.",
+    "image": "/gallery/berkeley-humanoid.png",
+    "imageAlt": "Rendered zero-pose view of the Berkeley Humanoid URDF",
+    "upstreamFormats": [
+      "URDF",
+      "STL"
+    ],
+    "formats": [
+      "URDF",
+      "STL"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/berkeley-humanoid/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/berkeley-humanoid/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/berkeley-humanoid/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "d0d13d3f81d795480e25ed1910eaf83d5f0a1d0b",
+      "retrievedAt": null,
+      "recordPath": "/models/berkeley-humanoid/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/HybridRobotics/berkeley_humanoid_description/tree/d0d13d3f81d795480e25ed1910eaf83d5f0a1d0b",
+      "transformations": [
+        "URDF and geometry unchanged; package references resolved by the browser."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "booster-t1",
+    "name": "Booster T1",
+    "maker": "Booster Robotics",
+    "country": "China",
+    "kind": "robot",
+    "family": "General-purpose humanoid",
+    "year": 2024,
+    "tagline": "A 23-joint humanoid model with head, arms, waist, and full six-axis leg chains published for simulation research.",
+    "license": "Apache-2.0",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 23,
+    "joints": 23,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": 31.6,
+    "parameters": null,
+    "variants": "T1 serial · locomotion",
+    "modelUrl": "/models/booster-t1/model.urdf",
+    "hostedPath": "/models/booster-t1/model.urdf",
+    "licenseUrl": "/models/booster-t1/LICENSE",
+    "sourceUrl": "https://github.com/BoosterRobotics/booster_gym",
+    "note": "Pinned at upstream revision da396a0. The T1 serial URDF and its referenced STL geometry are mirrored with the repository's Apache-2.0 licence; modeled link masses total 31.6 kg.",
+    "image": "/gallery/booster-t1.png",
+    "imageAlt": "Rendered zero-pose view of the Booster T1 URDF",
+    "upstreamFormats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/booster-t1/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/booster-t1/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/booster-t1/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "da396a06d6eed99e2de72d7749c48ee8748950f9",
+      "retrievedAt": null,
+      "recordPath": "/models/booster-t1/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/BoosterRobotics/booster_gym/tree/da396a06d6eed99e2de72d7749c48ee8748950f9",
+      "transformations": [
+        "URDF and referenced meshes unchanged."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "toddlerbot",
+    "name": "ToddlerBot 2XC",
+    "maker": "Stanford TML",
+    "country": "United States",
+    "kind": "robot",
+    "family": "Open-source loco-manipulation humanoid",
+    "year": 2025,
+    "tagline": "A low-cost open humanoid with a detailed 30-joint whole-body URDF spanning neck, waist, legs, arms, and wrists.",
+    "license": "MIT",
+    "access": "local",
+    "accessLabel": "Review ready",
+    "dof": 30,
+    "joints": 30,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": 3.5,
+    "parameters": null,
+    "variants": "2XC · 2XM",
+    "modelUrl": "/models/toddlerbot/model.urdf",
+    "hostedPath": "/models/toddlerbot/model.urdf",
+    "licenseUrl": "/models/toddlerbot/LICENSE",
+    "sourceUrl": "https://github.com/hshi74/toddlerbot",
+    "note": "Pinned at upstream revision e337f3b. This review package preserves ToddlerBot 2XC's detailed URDF and the 45 referenced STL assets under the repository's MIT licence.",
+    "image": "/gallery/toddlerbot.png",
+    "imageAlt": "Rendered zero-pose view of the ToddlerBot 2XC URDF",
+    "upstreamFormats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "formats": [
+      "URDF",
+      "STL",
+      "MJCF"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/toddlerbot/SOURCE.md"
+      },
+      "joints": {
+        "basis": "Independent movable joints in the pinned URDF",
+        "url": "/models/toddlerbot/SOURCE.md"
+      },
+      "weightKg": {
+        "basis": "Existing catalog value; see source record for available context",
+        "url": "/models/toddlerbot/SOURCE.md"
+      }
+    },
+    "provenance": {
+      "revision": "e337f3b177b4b53abff70b31d1695a7b66cc6d2e",
+      "retrievedAt": null,
+      "recordPath": "/models/toddlerbot/SOURCE.md",
+      "pinnedSourceUrl": "https://github.com/hshi74/toddlerbot/tree/e337f3b177b4b53abff70b31d1695a7b66cc6d2e",
+      "transformations": [
+        "URDF and referenced meshes unchanged."
+      ]
+    },
+    "hostedFormats": [
+      "URDF",
+      "STL"
+    ]
+  },
+  {
+    "id": "smpl",
+    "name": "SMPL",
+    "maker": "Max Planck Institute",
+    "country": "Germany",
+    "kind": "body",
+    "family": "Parametric human body",
+    "year": 2015,
+    "tagline": "The foundational skinned human body model: compact pose, shape, and pose-dependent deformation.",
+    "license": "SMPL-Model licence",
+    "access": "restricted",
+    "accessLabel": "Registration required",
+    "dof": 72,
+    "joints": 24,
+    "vertices": 6890,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": "10–300 shape components",
+    "variants": "Female · male · neutral",
+    "modelUrl": "https://smpl.is.tue.mpg.de/",
+    "licenseUrl": "https://smpl.is.tue.mpg.de/modellicense.html",
+    "sourceUrl": "https://smpl.is.tue.mpg.de/",
+    "note": "Full model weights are a personal, non-transferable research download and are not mirrored here. SMPL-Body exports have a separate CC BY 4.0 licence; confirm which asset class you hold.",
+    "image": "/gallery/smpl.png",
+    "imageAlt": "SMPL procedural pose demonstrator; authored geometry, not the licensed body mesh",
+    "upstreamFormats": [
+      "PKL",
+      "FBX",
+      "OBJ"
+    ],
+    "formats": [
+      "PKL",
+      "FBX",
+      "OBJ"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "24 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "joints": {
+        "basis": "24 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "vertices": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "Procedural preview",
+      "JSON pose export"
+    ],
+    "posePreview": "smpl24",
+    "previewLabel": "24-joint SMPL layout · procedural illustration",
+    "previewNote": "This demonstrator uses authored geometry and rest frames. It does not load SMPL model weights, learned shape or pose correctives."
+  },
+  {
+    "id": "smpl-h",
+    "name": "SMPL+H",
+    "maker": "Max Planck Institute",
+    "country": "Germany",
+    "kind": "body",
+    "family": "Body + articulated hands",
+    "year": 2017,
+    "tagline": "SMPL extended with MANO hands for coordinated full-body and detailed hand motion.",
+    "license": "MANO/SMPL+H licence",
+    "access": "restricted",
+    "accessLabel": "Registration required",
+    "dof": 156,
+    "joints": 52,
+    "vertices": 6890,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": "Body shape + hand PCA",
+    "variants": "Female · male · neutral",
+    "modelUrl": "https://mano.is.tue.mpg.de/",
+    "licenseUrl": "https://mano.is.tue.mpg.de/license.html",
+    "sourceUrl": "https://mano.is.tue.mpg.de/",
+    "note": "The model is available for research after account registration and licence acceptance. The archive links to the rights holder instead of republishing weights.",
+    "upstreamFormats": [
+      "PKL",
+      "Python"
+    ],
+    "formats": [
+      "PKL",
+      "Python"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "52 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "joints": {
+        "basis": "52 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "vertices": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "Procedural preview",
+      "JSON pose export"
+    ],
+    "posePreview": "smplh52",
+    "previewLabel": "SMPL+H layout or SMPL-layout body with Sharpa Wave hands · procedural demonstrator",
+    "previewNote": "This demonstrator uses authored geometry and rest frames. It does not load SMPL+H model weights, learned shape or pose correctives. Sharpa mode attaches two copies of the right-hand URDF from las manos; the left placement is mirrored. Its robot commands are separate from native SMPL+H human hand parameters.",
+    "image": "/gallery/smpl-h.png",
+    "imageAlt": "SMPL+H procedural pose demonstrator with Sharpa Wave robot hands, including a mirrored left placement; authored geometry, not the licensed body mesh"
+  },
+  {
+    "id": "smpl-x",
+    "name": "SMPL-X",
+    "maker": "Max Planck Institute",
+    "country": "Germany",
+    "kind": "body",
+    "family": "Expressive body, hands + face",
+    "year": 2019,
+    "tagline": "A unified expressive mesh with articulated body, hands, jaw, eyes, and facial blend shapes.",
+    "license": "SMPL-X Model licence",
+    "access": "restricted",
+    "accessLabel": "Registration required",
+    "dof": 165,
+    "joints": 55,
+    "vertices": 10475,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": "Shape + expression + pose",
+    "variants": "Female · male · neutral",
+    "modelUrl": "https://smpl-x.is.tue.mpg.de/",
+    "licenseUrl": "https://smpl-x.is.tue.mpg.de/modellicense.html",
+    "sourceUrl": "https://smpl-x.is.tue.mpg.de/",
+    "note": "Download requires sign-up and licence acceptance. Code is public, but model data and weights remain governed by the separate model licence.",
+    "upstreamFormats": [
+      "NPZ",
+      "PKL",
+      "Python"
+    ],
+    "formats": [
+      "NPZ",
+      "PKL",
+      "Python"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "55 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "joints": {
+        "basis": "55 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py"
+      },
+      "vertices": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "Procedural preview",
+      "JSON pose export"
+    ],
+    "posePreview": "smplx55",
+    "previewLabel": "55-joint SMPL-X layout · procedural hands, jaw, eyes and illustrative expressions",
+    "previewNote": "This demonstrator uses authored geometry and rest frames. It does not load SMPL-X model weights, learned shape or pose correctives. Blink and smile are illustrative controls, not learned SMPL-X expression coefficients.",
+    "image": "/gallery/smpl-x.png",
+    "imageAlt": "SMPL-X procedural pose demonstrator; authored geometry, not the licensed body mesh"
+  },
+  {
+    "id": "star",
+    "name": "STAR",
+    "maker": "Max Planck Institute",
+    "country": "Germany",
+    "kind": "body",
+    "family": "Sparse parametric body",
+    "year": 2020,
+    "tagline": "A compact SMPL-compatible body model using sparse, spatially local pose correctives.",
+    "license": "STAR Model licence",
+    "access": "restricted",
+    "accessLabel": "Registration required",
+    "dof": 72,
+    "joints": 24,
+    "vertices": 6890,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": "20% of SMPL pose-corrective parameters",
+    "variants": "Female · male · neutral",
+    "modelUrl": "https://star.is.tue.mpg.de/",
+    "licenseUrl": "https://star.is.tue.mpg.de/license.html",
+    "sourceUrl": "https://star.is.tue.mpg.de/",
+    "note": "STAR is designed as a drop-in replacement for SMPL, but access still requires an account and agreement to the model licence.",
+    "upstreamFormats": [
+      "NPZ",
+      "PKL",
+      "Python"
+    ],
+    "formats": [
+      "NPZ",
+      "PKL",
+      "Python"
+    ],
+    "measurementSources": {
+      "dof": {
+        "basis": "24 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://star.is.tue.mpg.de/"
+      },
+      "joints": {
+        "basis": "24 pose joints, each represented by three local rotation parameters; includes root orientation. These are pose parameters, not independent robot actuators. Procedural previews do not reproduce the learned model.",
+        "url": "https://star.is.tue.mpg.de/"
+      },
+      "vertices": {
+        "basis": "Existing catalog value; exact measurement citation not recorded",
+        "url": null
+      }
+    },
+    "hostedFormats": [
+      "Procedural preview",
+      "JSON pose export"
+    ],
+    "posePreview": "star24",
+    "previewLabel": "24-joint STAR-compatible layout · procedural illustration",
+    "previewNote": "This demonstrator uses authored geometry and rest frames. It does not load STAR model weights, learned shape or pose correctives.",
+    "image": "/gallery/star.png",
+    "imageAlt": "STAR procedural pose demonstrator; authored geometry, not the licensed body mesh"
+  },
+  {
+    "id": "olaf",
+    "name": "Olaf",
+    "maker": "i corpi rig · Disney character",
+    "country": "Not applicable",
+    "kind": "character",
+    "family": "Procedural snowman character",
+    "year": 2026,
+    "authoredCharacter": true,
+    "tagline": "An authored snowman rig with twig arms, a carrot nose, pose controls and an expressive face.",
+    "license": "No asset reuse licence specified",
+    "access": "source",
+    "accessLabel": "Procedural demonstrator",
+    "dof": 48,
+    "joints": 16,
+    "vertices": null,
+    "heightM": null,
+    "weightKg": null,
+    "parameters": "Authored proportions · pose · blink and smile",
+    "variants": "Original procedural interpretation",
+    "modelUrl": "/assets/js/olaf-rig.js",
+    "sourceUrl": "https://video.disney.com/olaf",
+    "licenseUrl": "/characters/olaf/ATTRIBUTION.md",
+    "note": "Olaf is a Disney character. This unofficial procedural interpretation uses geometry and a rig authored for this archive. No Disney mesh, animation rig, motion data or robot description is included. Joint numbering and proportions belong to this demonstration.",
+    "formats": [
+      "Procedural",
+      "JSON"
+    ],
+    "upstreamFormats": [
+      "Character reference"
+    ],
+    "hostedFormats": [
+      "Procedural preview",
+      "JSON pose export"
+    ],
+    "posePreview": "olaf16",
+    "previewLabel": "16-joint Olaf character rig · 48 local rotation controls",
+    "previewNote": "Original procedural character study with front/side pivot maps, forward walking, foot placement, pose presets and blink/smile controls. Feet translate as well as rotate; the rig has no hips or knees. This is not an official Disney model or robot.",
+    "measurementSources": {
+      "joints": {
+        "basis": "16 joints in this archive’s authored character rig; not official Disney rig data.",
+        "url": "/assets/js/olaf-rig.js"
+      },
+      "dof": {
+        "basis": "Three local rotation controls per authored joint: 16 × 3 = 48. Whole-rig translation and animated foot-placement offsets are separate.",
+        "url": "/assets/js/olaf-rig.js"
+      },
+      "vertices": {
+        "basis": "Generated primitive geometry; no fixed learned template topology.",
+        "url": "/assets/js/olaf-rig.js"
+      }
+    },
+    "image": "/gallery/olaf.png",
+    "imageAlt": "Original procedural Olaf snowman study with snow body segments, twig arms, carrot nose and coal buttons; not a Disney production asset"
+  }
+]

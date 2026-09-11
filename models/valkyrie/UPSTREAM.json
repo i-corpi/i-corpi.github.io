@@ -1,0 +1,539 @@
+{
+  "repository": "ihmcrobotics/valkyrie",
+  "revision": "45e0e5195fd1e2fc849248e5bcb51a87771edbe4",
+  "entrypoint": "upstream/src/main/resources/models/val_description/urdf/valkyrie_sim.urdf",
+  "meshPaths": {
+    "package://val_description/model/meshes/pelvis/pelvis.dae": "src/main/resources/models/val_description/model/meshes/pelvis/pelvis.dae",
+    "package://val_description/model/meshes/torso/torsoyaw.dae": "src/main/resources/models/val_description/model/meshes/torso/torsoyaw.dae",
+    "package://val_description/model/meshes/torso/torsopitch.dae": "src/main/resources/models/val_description/model/meshes/torso/torsopitch.dae",
+    "package://val_description/model/meshes/torso/torso.dae": "src/main/resources/models/val_description/model/meshes/torso/torso.dae",
+    "package://val_description/model/meshes/head/neckj1.dae": "src/main/resources/models/val_description/model/meshes/head/neckj1.dae",
+    "package://val_description/model/meshes/head/neckj2.dae": "src/main/resources/models/val_description/model/meshes/head/neckj2.dae",
+    "package://val_description/model/meshes/head/head_multisense_no_visor.dae": "src/main/resources/models/val_description/model/meshes/head/head_multisense_no_visor.dae",
+    "package://val_description/model/meshes/multisense/head_camera.dae": "src/main/resources/models/val_description/model/meshes/multisense/head_camera.dae",
+    "package://val_description/model/meshes/legs/lj1_right.dae": "src/main/resources/models/val_description/model/meshes/legs/lj1_right.dae",
+    "package://val_description/model/meshes/legs/lj3_right.dae": "src/main/resources/models/val_description/model/meshes/legs/lj3_right.dae",
+    "package://val_description/model/meshes/legs/lj4_right.dae": "src/main/resources/models/val_description/model/meshes/legs/lj4_right.dae",
+    "package://val_description/model/meshes/legs/lj5.dae": "src/main/resources/models/val_description/model/meshes/legs/lj5.dae",
+    "package://val_description/model/meshes/legs/foot.dae": "src/main/resources/models/val_description/model/meshes/legs/foot.dae",
+    "package://val_description/model/meshes/legs/lj1_left.dae": "src/main/resources/models/val_description/model/meshes/legs/lj1_left.dae",
+    "package://val_description/model/meshes/legs/lj3_left.dae": "src/main/resources/models/val_description/model/meshes/legs/lj3_left.dae",
+    "package://val_description/model/meshes/legs/lj4_left.dae": "src/main/resources/models/val_description/model/meshes/legs/lj4_left.dae",
+    "package://val_description/model/meshes/arms/aj1_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj1_right.dae",
+    "package://val_description/model/meshes/arms/aj2_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj2_right.dae",
+    "package://val_description/model/meshes/arms/aj3_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj3_right.dae",
+    "package://val_description/model/meshes/arms/aj4_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj4_right.dae",
+    "package://val_description/model/meshes/arms/aj5_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj5_right.dae",
+    "package://val_description/model/meshes/arms/aj6_right.dae": "src/main/resources/models/val_description/model/meshes/arms/aj6_right.dae",
+    "package://val_description/model/meshes/arms/palm_right.dae": "src/main/resources/models/val_description/model/meshes/arms/palm_right.dae",
+    "package://val_description/model/meshes/fingers/thumbj1_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj1_right.dae",
+    "package://val_description/model/meshes/fingers/thumbj2_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj2_right.dae",
+    "package://val_description/model/meshes/fingers/thumbj3_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj3_right.dae",
+    "package://val_description/model/meshes/fingers/thumbj4_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj4_right.dae",
+    "package://val_description/model/meshes/fingers/indexj1_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj1_right.dae",
+    "package://val_description/model/meshes/fingers/indexj2_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj2_right.dae",
+    "package://val_description/model/meshes/fingers/indexj3_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj3_right.dae",
+    "package://val_description/model/meshes/fingers/middlej1_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej1_right.dae",
+    "package://val_description/model/meshes/fingers/middlej2_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej2_right.dae",
+    "package://val_description/model/meshes/fingers/middlej3_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej3_right.dae",
+    "package://val_description/model/meshes/fingers/pinkyj1_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_right.dae",
+    "package://val_description/model/meshes/fingers/pinkyj2_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_right.dae",
+    "package://val_description/model/meshes/fingers/pinkyj3_right.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_right.dae",
+    "package://val_description/model/meshes/arms/aj1_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj1_left.dae",
+    "package://val_description/model/meshes/arms/aj2_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj2_left.dae",
+    "package://val_description/model/meshes/arms/aj3_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj3_left.dae",
+    "package://val_description/model/meshes/arms/aj4_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj4_left.dae",
+    "package://val_description/model/meshes/arms/aj5_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj5_left.dae",
+    "package://val_description/model/meshes/arms/aj6_left.dae": "src/main/resources/models/val_description/model/meshes/arms/aj6_left.dae",
+    "package://val_description/model/meshes/arms/palm_left.dae": "src/main/resources/models/val_description/model/meshes/arms/palm_left.dae",
+    "package://val_description/model/meshes/fingers/thumbj1_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj1_left.dae",
+    "package://val_description/model/meshes/fingers/thumbj2_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj2_left.dae",
+    "package://val_description/model/meshes/fingers/thumbj3_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj3_left.dae",
+    "package://val_description/model/meshes/fingers/thumbj4_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/thumbj4_left.dae",
+    "package://val_description/model/meshes/fingers/indexj1_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj1_left.dae",
+    "package://val_description/model/meshes/fingers/indexj2_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj2_left.dae",
+    "package://val_description/model/meshes/fingers/indexj3_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/indexj3_left.dae",
+    "package://val_description/model/meshes/fingers/middlej1_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej1_left.dae",
+    "package://val_description/model/meshes/fingers/middlej2_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej2_left.dae",
+    "package://val_description/model/meshes/fingers/middlej3_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/middlej3_left.dae",
+    "package://val_description/model/meshes/fingers/pinkyj1_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_left.dae",
+    "package://val_description/model/meshes/fingers/pinkyj2_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_left.dae",
+    "package://val_description/model/meshes/fingers/pinkyj3_left.dae": "src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_left.dae"
+  },
+  "files": [
+    {
+      "path": "upstream/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "gitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/README.md",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/README.md",
+      "sha256": "82f5fa1f31cf5d9ffd5d7d85897182c3aced3a06676b83246a538c5d2f4d12be",
+      "gitBlob": "a6d092df6372fd44c7bdc0fe3f69b9181065c688"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj1_left.dae",
+      "sha256": "349dd22458c54cf3f30b171cbb39bcb660b8795b3c75b04a1a9cf38c9b3fab97",
+      "gitBlob": "091a11a03931259a90271fa8fb9fdb4ce9c89829"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj1_right.dae",
+      "sha256": "8af7be27870f665e677e9945e3cd1faa05ef481f83f81e44b688b024334298b4",
+      "gitBlob": "f10a40cfae5861a03e2c504e038fe96372b1199f"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj2_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj2_left.dae",
+      "sha256": "8a23e133f3c04b9732d27fe4b48d50e98af7701181bb794986713b177db18700",
+      "gitBlob": "80c4f80167b69f5b36b3861b9020d4a4b5cf8bca"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj2_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj2_right.dae",
+      "sha256": "02dbff04f5157f5257fe1c6780603d5a4122af6d36dcd0d3e8abe91933cc79c0",
+      "gitBlob": "5ec85c6559bd537e1069e688f455f6ab44e99eee"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj3_left.dae",
+      "sha256": "7ab05236fd32cc1ab70dc045af6fa5c9c4796e4b088e84e372fa120152d3ced9",
+      "gitBlob": "2c6d851fc4e05e1211e86a1443de48b1a31fab9e"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj3_right.dae",
+      "sha256": "e6fc648616e3ce76a3b116f93d218aab41b7f801c190433d99738d7838eed614",
+      "gitBlob": "16d57582fe9a4657f66dc74a1f01219bf2b6ea9b"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj4_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj4_left.dae",
+      "sha256": "07888dc96b929027d4b2d4eda67eb6640377abc6d9d88e403e22899582549565",
+      "gitBlob": "d74190bc77ee11f1c51f4c1e67c67547b5a18708"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj4_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj4_right.dae",
+      "sha256": "c5fe6ac3e0f37eae3aa035b87a328a324b74ab5b27a54179146773141a091a4e",
+      "gitBlob": "0d9256b10fa9fb385efeb937ec182207570b8f94"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj5_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj5_left.dae",
+      "sha256": "d67acbeee08b5aeafe5b98fc6e23b013de86f4af8d8d9f148379f76f1518fe59",
+      "gitBlob": "a65d01fc87b9264e46dfc49171a6be63aa4cdfb3"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj5_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj5_right.dae",
+      "sha256": "324e439d8a3d0f3d4a6aa6becbafa856dbf4567d428fa553711297ee1c758f11",
+      "gitBlob": "d1784080cba5acf75be58832caf04e660d3e61ab"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj6_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj6_left.dae",
+      "sha256": "5dd56376d743a1e1b6f058d882ddc277804b9e8031cfd7449cea037225f60246",
+      "gitBlob": "0338777bff395dc7b62af59630ca21513c343307"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/aj6_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/aj6_right.dae",
+      "sha256": "8ce4a41c58ee4d3eb7b43eb66cf6fbc0af74e7e4dc199622501d1b304e06cbfc",
+      "gitBlob": "43230fc6e4d0014af5f8230ff44251fe4e96de20"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/palm_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/palm_left.dae",
+      "sha256": "0d1dcd124988fb9748c1af779111d1793eea5c5f44c298a3310badf65d707d86",
+      "gitBlob": "1c002ae68199ea7536e37750194ac6993549a622"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/palm_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/palm_right.dae",
+      "sha256": "2af2d074d425768636209f87b32837be112ef26ee6d99d760b69d993b25292e7",
+      "gitBlob": "778310921a07d13bddbcd342fd94170e5700f77f"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj1_left.dae",
+      "sha256": "164be7104ac729d7a56f50421401e52b6242a100392bfc71f7ccc2e69b691474",
+      "gitBlob": "6b3595a7fc6b01226c6f73baaaacad56dee1528f"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj1_right.dae",
+      "sha256": "93d4d5d8df8aaeec339fc92b55a1fa143a304836b397d2a54d7be962647569c2",
+      "gitBlob": "fb9dc4c5bbe8f7bebe75d76807c373f50d43dd3a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj2_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj2_left.dae",
+      "sha256": "d5dce353ef8a7ff4f51e899f644af78a6a5fd43d1c1d0e9f7d244e56045b1079",
+      "gitBlob": "f2b88e2f4ec09baffd9d6d3c117434619d590155"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj2_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj2_right.dae",
+      "sha256": "1c84372b3d39f9b930cdeda270089b4782fe27ba63049b21fdc71296378e83b5",
+      "gitBlob": "6ec46118659d0f65109e15081ae741d242693ccc"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj3_left.dae",
+      "sha256": "0b69153b37dc042833f244ffdddd5353e4d60e38c31c35ee229af52ff50fafff",
+      "gitBlob": "212f7764a2f0d1123ca3aca8544a0c32a429dab5"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/indexj3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/indexj3_right.dae",
+      "sha256": "7fdb3bfff3f7df6c376a76a8733192643ea25c84570f8361c5c5f3d5c7122daa",
+      "gitBlob": "a1823f6333b4f777460e03818e9379e1fe24d029"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej1_left.dae",
+      "sha256": "050ddab53e3448bd89be8a1debeb225988eab73ffb63ab06b99d17af84016390",
+      "gitBlob": "0855690b21a0a98d768a8fdcea2d01808ee29ae7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej1_right.dae",
+      "sha256": "afe8aebf67cf8fb7c38a5d1156a7d8fc5816f060fb0c2bd38e7f1461d29f0a61",
+      "gitBlob": "f492fcc4044b696dd917b6036dbdf8e676c033dc"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej2_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej2_left.dae",
+      "sha256": "d09cc9ba106eabc0db45c6e73e00a97997f3540e2db7e0ae6fed44063ec54fc6",
+      "gitBlob": "7d0c36d0aeac6628fa120e055ef18b6897b45384"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej2_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej2_right.dae",
+      "sha256": "67ddcddfef506f2a09b462da9a7dd4f57d29602d2cf5be61fe337811e2fe0842",
+      "gitBlob": "be0c6d340aaeca73b35ed1e5471b9646083c91dc"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej3_left.dae",
+      "sha256": "5f387c9c8a6bc40680390007fa130d703cf6f659adcff30ae10845a685d859b6",
+      "gitBlob": "d1cdec6d3ab7f015eee58432a560688db15a3ade"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/middlej3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/middlej3_right.dae",
+      "sha256": "d938c6c58877faa8305089849d415ded5b451e856209d7b31165d56b865353ec",
+      "gitBlob": "55c9896ace5aea7dfa500fa27fc905847fc59bf2"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_left.dae",
+      "sha256": "65fa415f6297035359a4cf1ae835cb83eebf06d7e4bb85cd3636b458f8337a96",
+      "gitBlob": "efd5710405c0843b79a7102d325d4e84653c07a2"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj1_right.dae",
+      "sha256": "88aae40db2489ce977684cdfa5839c8a8f40cbdbcdabc668b9ed15d7016a840b",
+      "gitBlob": "de5b595ce32208abff429a80e919914a70e2f784"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_left.dae",
+      "sha256": "dd52312bf073958be3b8adf4b5fac0c6cac20c5b7b6956bb0abdfae52c6c8893",
+      "gitBlob": "43bd113bd4ba3c87096e2203d3054171e8c76903"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj2_right.dae",
+      "sha256": "73d1ac8d73c10f10f0a317e703159879638a0f4b97af3eae7fb7ba01e6a4d576",
+      "gitBlob": "8ac4216ed6d55f3fcfa3c332c40a1a127ad2ce81"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_left.dae",
+      "sha256": "1ece02d1082c7480ae9d50efc225a47333f6a530abcd230f8c88524cd32e2301",
+      "gitBlob": "52b31ac52bcbd5eda007abd1dd56cc9430858339"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/pinkyj3_right.dae",
+      "sha256": "6763ad21c5ff082a18bd839f2d3751f4621d6df5ba2085969bce61641b9c7df1",
+      "gitBlob": "2b148fb5ff42b888c6bf2ab21de97c1cc132394d"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj1_left.dae",
+      "sha256": "58a6aa3719641d5e247d50544dff261a2b12454a13a647f81aec5c70f610c4b8",
+      "gitBlob": "1bef30a972a7cdf1fa7103314871bd3c14e0c5d1"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj1_right.dae",
+      "sha256": "52f4d9ec5941468990798653bf70182925f99118ed3976e5b74ccefb27a99965",
+      "gitBlob": "6a607e75ecbda974459d5b9b3bce49709f4e8e2f"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj2_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj2_left.dae",
+      "sha256": "11c895561bfe547c1edfe2e1fc54206478e3b329c770bda6d21f1e3facd9c421",
+      "gitBlob": "c22999ac1e04ec870dc4b8429529d16f75b478ed"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj2_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj2_right.dae",
+      "sha256": "4eea34a9f0a61c387ff4cc3ab0f82b09be286819fc7633e857becd2bf2399dff",
+      "gitBlob": "f443534b5e8c105688ddb776b66a3d1fa325720a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj3_left.dae",
+      "sha256": "fb810828d8c2c771bbb848b7bf82428fa489b0d8b1259f5763cb6099948685e2",
+      "gitBlob": "9b3430eee0ad0a837c864ecea41e72e0dca6ea4b"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj3_right.dae",
+      "sha256": "1f1c8fc660008bcf8d9b48762843cef0711c412bd1a7f43f79edd5c5fe881368",
+      "gitBlob": "c068f1676c66669260ec3971f1ee56fe8f96c262"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj4_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj4_left.dae",
+      "sha256": "b310bd6fc437c05ad0d3e941d64174e0599078294c91eca40761b66e7d85a2e5",
+      "gitBlob": "cea95192e7daa9529946b8a67b86565c949a16f7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/thumbj4_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/thumbj4_right.dae",
+      "sha256": "ae6147902bd0ba70bd59a0c42d1eca060871c425ed288989d154e5360efc0610",
+      "gitBlob": "3d20e4d65ccd4ec2486c976aae5e39a428cc7a83"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/head/head_multisense_no_visor.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/head/head_multisense_no_visor.dae",
+      "sha256": "f46d91b39da05e4846fb7c069b249b53824b3c1893cec4f9e0985ff1bf288d8f",
+      "gitBlob": "2540dda21686d3827c6d4f5a626d6bf070796fec"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/head/neckj1.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/head/neckj1.dae",
+      "sha256": "ca244cade8f93e89e533a0e3336215fcfc3d7eec3ffc39b19bfb628f48833d20",
+      "gitBlob": "d2215be100d353ce3a824d64beb5a27582ada236"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/head/neckj2.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/head/neckj2.dae",
+      "sha256": "41fb3b74cd875a12743410767f15393119b0367dd476a71392d60137695a82b6",
+      "gitBlob": "ed2bdd9dc93d1043b01ee0dc7b3f951973814cd6"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/foot.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/foot.dae",
+      "sha256": "21b077426f6cc0f3e5b103f7887f8431ec7eb14e94dd6c0fbe4ba08fae7c8df3",
+      "gitBlob": "341dcf1d162d8e305178ccc8938a34853f25cd85"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj1_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj1_left.dae",
+      "sha256": "69cbf72ee485178488944df40704daf5296f2f464fdf46132532e8a0ba3f83b5",
+      "gitBlob": "bcbc36c21ebca6086e2a43532ead6eb1b74c1e03"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj1_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj1_right.dae",
+      "sha256": "8160f33d39b2e1496b8f7e057a97c990a050e7eb11236bccded51ec11595728c",
+      "gitBlob": "f2abc57363fb6716eea72f8ff7c00203075e0a96"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj3_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj3_left.dae",
+      "sha256": "70d4cf5d3bd86db63040ed240d91dcee35ef4cced81df7dd85b6a4be678f3f8a",
+      "gitBlob": "0392f66cf1ff4da0b8ba837fad5f66b771ab07a1"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj3_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj3_right.dae",
+      "sha256": "02c2da97d19bc215b949dfd92da2806707c76e5a1bfaf86fe75f9037d9e48010",
+      "gitBlob": "116dfa68616474eba7801fcdbdffcf4de9b3156d"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj4_left.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj4_left.dae",
+      "sha256": "22785cee84d50acc9a8a024efa6a813d431bdd3bc3d026d3bd03304fb6050459",
+      "gitBlob": "48c496631742841e78da9ea870b30e2c9134d85f"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj4_right.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj4_right.dae",
+      "sha256": "ec91cb2522cc62baf645d71e991a95c2a28207caacb423f77a8d82418bd146bf",
+      "gitBlob": "ee796f1bfed0469626d4e4fdad65dbedb56a262d"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj5.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj5.dae",
+      "sha256": "8053654731bb30a462b339b09f995a839e546dbac9d89c715defbe8e15186066",
+      "gitBlob": "9f0c93a50081403e931607bb5577087ba16c1cfb"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/multisense/head_camera.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/multisense/head_camera.dae",
+      "sha256": "4d5c8b1ceec5287dcc60cf1ad23ba9ad82b555d1b81f1d50e224f48c1b10231f",
+      "gitBlob": "eb5658f7c9f0e875151b1b2d746ac2403e9b3483"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/pelvis/pelvis.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/pelvis/pelvis.dae",
+      "sha256": "2218f1e8708334fe8b6e1fe186a786ed44232caa09eff06b6eed076f314d66e8",
+      "gitBlob": "0afb0fb9ea3e595a5648349cd0436eaf28ffcaaf"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/torso/torso.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/torso/torso.dae",
+      "sha256": "9ad7c1560157947327b9d1212cc05d4bae63ab3de2e5b7d96db7cc6b37bf5a61",
+      "gitBlob": "9ca6396ee00c3c944a3b2559956e62881717ffa2"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/torso/torsopitch.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/torso/torsopitch.dae",
+      "sha256": "877c727b01befb4d16b50f08da09e919fbc1882d041c3b9e065617806f5de244",
+      "gitBlob": "4aa47a7091dfbf01f7924419494c99b61d360fd1"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/torso/torsoyaw.dae",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/torso/torsoyaw.dae",
+      "sha256": "04f11e0945c90dc1cc97433d66608cd9cb1bcff9c6783040543feb1fcff59c95",
+      "gitBlob": "2d316923ba78b95fdc883a1f25ce071de93c44d7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/package.xml",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/package.xml",
+      "sha256": "17bf7a748cec7bad3256327514416ccafd3edb527309fd36a1df632c1d9091b4",
+      "gitBlob": "b63241b1132e8ffd91e91b9651a6bbef6bee4ae7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/urdf/valkyrie_sim.urdf",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/urdf/valkyrie_sim.urdf",
+      "sha256": "044445db2064d7dd922bc749f6a10fe54e3982aac9d3a7249ac4faf60d1b0fbe",
+      "gitBlob": "c3d7ba5eae1d908a9a830e7b42cf5d19c5a7f89c"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/materials/textures/head_diffuse.jpg",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/materials/textures/head_diffuse.jpg",
+      "sha256": "60e45f46867a591d59a368c8733375fc39b5e50db14a8f6208caec1bc48e27f7",
+      "gitBlob": "37df77ac9f4f676c2a3687131c3f5b23b09a83d9"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/fingers/images/WhiteTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/fingers/images/WhiteTexture.png",
+      "sha256": "f30fabefe29796bf27d36ac932c1f1e218bed3b9424c2de3aa5fbfde7a6711e0",
+      "gitBlob": "43d0010021ef742906feac332bf2bcaddf76bc0a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/head/images/0_HeadTextureMultisense.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/head/images/0_HeadTextureMultisense.png",
+      "sha256": "fbc80e6604da47d64570e8376e4ed1003ecc36a3612abd4d742028fae1597c00",
+      "gitBlob": "0f2249aa715c069c07f7f543ca0924d0615f1994"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/footTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/footTexture.png",
+      "sha256": "76c73c0afaa208048821e1fc588266b743f5150787d5a1ca78e211e4a3e703b5",
+      "gitBlob": "4d8b688d56b652f6abb1420b141ec1600b51d7f8"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj3Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj3Texture.png",
+      "sha256": "b49641e028b1fc733e0708723cff3bcdb316e1d60c442a79b059744649d91679",
+      "gitBlob": "db8e81f7be022cb28d7b5d198cf0eb3357fa5ab1"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/lj4Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/lj4Texture.png",
+      "sha256": "9a6b864c6ca055c21c00084e11e0a8045e6915b0adfeb67bcc89773914d6d096",
+      "gitBlob": "da142809e7663ab1d3b1287ff421aa4b5bb101b6"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/whiteTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/WhiteTexture.png",
+      "sha256": "f30fabefe29796bf27d36ac932c1f1e218bed3b9424c2de3aa5fbfde7a6711e0",
+      "gitBlob": "43d0010021ef742906feac332bf2bcaddf76bc0a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/legs/copperTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/legs/copperTexture.png",
+      "sha256": "3ea92e1cb0f38882a0f6342e4eaf2f3a1b7bee926edb72aa067b21e72a19d0e5",
+      "gitBlob": "8279bfd9de57fa990832c39cdb988771f4d35e52"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/torso/images/0_TrunkTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/torso/images/0_TrunkTexture.png",
+      "sha256": "bb3d605265def335e0483c9dca3780cbabf69e2c7eff2ee8289df95dae76158a",
+      "gitBlob": "59c2a0d830bb51de2eaaa33f9864f027459a56f7"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/torso/images/WhiteTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/torso/images/WhiteTexture.png",
+      "sha256": "f30fabefe29796bf27d36ac932c1f1e218bed3b9424c2de3aa5fbfde7a6711e0",
+      "gitBlob": "43d0010021ef742906feac332bf2bcaddf76bc0a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/0_aj2Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/0_aj2Texture.png",
+      "sha256": "86c4675eb1a4ca0d058f3a6864c5e8c9a7f59bf5336f4e0fe3c4b333b927160c",
+      "gitBlob": "c959edd774f2d62137140a391883766b5d735487"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/0_aj3Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/0_aj3Texture.png",
+      "sha256": "762f56588cae11947275ab1551c07aedb3983e76cf629cf543b71e534a85f43c",
+      "gitBlob": "861e0683d13b6b660322c4acb8df63c352b66899"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/0_aj4Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/0_aj4Texture.png",
+      "sha256": "214ce210b693bb77c5e5b7115959c6d947a0c53b35a256f8afd756d29de1b801",
+      "gitBlob": "65e82594092974ede7f7062a56ee7586cba01290"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/0_aj5Texture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/0_aj5Texture.png",
+      "sha256": "e8eebec0a98c194b91673bfb44c300a14cea3d99112cbe1980835832c23b8fbf",
+      "gitBlob": "96f824a5186cc059fdb1f1e59ba1be04c2068dcb"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/0_PalmTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/0_PalmTexture.png",
+      "sha256": "064d831b6633707c6d4e3464e2d8e12f33aed6a14c35633a15387fa24dd10908",
+      "gitBlob": "85c293f1b337219c4462ffd673256ab6dd5f3c3a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/whiteTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/WhiteTexture.png",
+      "sha256": "f30fabefe29796bf27d36ac932c1f1e218bed3b9424c2de3aa5fbfde7a6711e0",
+      "gitBlob": "43d0010021ef742906feac332bf2bcaddf76bc0a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/arms/images/WhiteTexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/arms/images/WhiteTexture.png",
+      "sha256": "f30fabefe29796bf27d36ac932c1f1e218bed3b9424c2de3aa5fbfde7a6711e0",
+      "gitBlob": "43d0010021ef742906feac332bf2bcaddf76bc0a"
+    },
+    {
+      "path": "upstream/src/main/resources/models/val_description/model/meshes/pelvis/images/0_pelvistexture.png",
+      "url": "https://raw.githubusercontent.com/ihmcrobotics/valkyrie/45e0e5195fd1e2fc849248e5bcb51a87771edbe4/src/main/resources/models/val_description/model/meshes/pelvis/images/0_pelvistexture.png",
+      "sha256": "dd8e62a83e72513e61264e4092fd19cf30b558c0da12f1805de56d97204f7e05",
+      "gitBlob": "09ae3f92569fecac64277461fc264728cb3561c9"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/NASA-1.3.txt",
+      "sha256": "fe59e577293a15d0e8e732068b759272a11beb70868b7c8baaf4351442b64893"
+    }
+  ],
+  "licenseNote": "NASA-1.3 is declared in val_description/package.xml and README.md. LICENSE contains the standard NASA-1.3 text from SPDX v3.27.0; the enclosing IHMC repository Apache-2.0 license is preserved separately under upstream/LICENSE.txt."
+}

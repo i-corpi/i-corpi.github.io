@@ -1,0 +1,22 @@
+{% assign robots = site.data.models | where: "kind", "robot" %}
+{% assign bodies = site.data.models | where: "kind", "body" %}
+{% assign characters = site.data.models | where: "kind", "character" %}
+<footer>
+  <div class="footer-brand">
+    <span><i></i> i corpi</span>
+    <p>A source-first reference for humanoid robots, human body models and character rigs.</p>
+  </div>
+  <div class="footer-nav">
+    <p>Explore</p>
+    <a href="{{ '/archive/' | relative_url }}">Archive</a>
+    <a href="{{ '/gallery/' | relative_url }}">Gallery</a>
+    <a href="{{ '/compare/' | relative_url }}">Compare</a>
+    <a href="{{ '/learn/' | relative_url }}">Bodies to behavior</a>
+    <a href="{{ '/about/' | relative_url }}">Method</a>
+  </div>
+  <div class="footer-meta">
+    <p>{{ site.data.models | size }} records · {{ robots | size }} robots · {{ bodies | size }} bodies · {{ characters | size }} character</p>
+    <p>Every file keeps its own licence and provenance.</p>
+    <p>Independent archive · 2026</p>
+  </div>
+</footer>

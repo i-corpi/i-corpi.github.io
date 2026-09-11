@@ -1,0 +1,13 @@
+{%- assign model = include.model -%}
+{%- assign field = include.field -%}
+{%- if field == "formats" or field == "hostedFormats" -%}
+  {%- if model[field].size > 0 -%}{{ model[field] | join: " · " }}{%- else -%}Metadata only{%- endif -%}
+{%- elsif model.kind == "robot" and field == "vertices" or model.kind == "robot" and field == "parameters" -%}
+  Not applicable
+{%- elsif model.kind == "body" and field == "heightM" or model.kind == "body" and field == "weightKg" -%}
+  Not applicable
+{%- elsif model[field] == nil -%}
+  Not published
+{%- else -%}
+  {{ model[field] | escape }}{% if field == "heightM" %} m{% elsif field == "weightKg" %} kg{% endif %}
+{%- endif -%}

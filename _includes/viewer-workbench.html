@@ -1,0 +1,29 @@
+<div class="review-workbench" data-viewer-workbench hidden>
+  <div class="viewer-toolbar">
+    <p role="status" id="viewer-status" data-viewer-part="viewer-status">Loading 3D model…</p>
+    <button type="button" data-close-viewer>Close 3D</button>
+  </div>
+  <div class="review-visuals">
+    <div class="urdf-stage" id="urdf-stage" data-viewer-part="urdf-stage">
+      <canvas aria-label="Interactive 3D view of {{ include.model.name | escape }}"></canvas>
+      <button class="viewer-reset" id="viewer-reset" data-viewer-part="viewer-reset" type="button" disabled>Reset view</button>
+      <p class="viewer-hint">Drag to orbit · wheel to zoom</p>
+    </div>
+    <section class="body-map" aria-label="Numbered whole-body joint map">
+      <div class="body-map-plot" id="body-map-plot" data-viewer-part="body-map-plot">
+        <div class="body-map-status">
+          <span id="body-map-active" data-viewer-part="body-map-active" aria-live="polite">Joint pivots · front view</span>
+          <b><i>R</i><em>← facing you →</em><i>L</i></b>
+        </div>
+        <svg id="joint-skeleton" data-viewer-part="joint-skeleton" class="joint-skeleton" aria-hidden="true"></svg>
+        <div id="joint-markers" data-viewer-part="joint-markers"></div>
+        <p class="body-map-hint">Dots mark pivots · lines connect their numbered controls</p>
+      </div>
+    </section>
+  </div>
+  <aside class="joint-map" aria-label="Joint controls">
+    <div class="joint-map-head"><div><p class="eyebrow">Articulation</p><h3>Joint controls</h3></div><button id="joint-reset" data-viewer-part="joint-reset" type="button" disabled>Zero all joints</button></div>
+    <p class="joint-numbering-hint">Robot numbers are local display labels; human body numbers follow their pose-array indices; character indices are authored with their rig. <a href="{{ '/learn/#joint-numbering' | relative_url }}">Numbering conventions →</a></p>
+    <div class="joint-map-list" id="joint-controls" data-viewer-part="joint-controls"><p class="joint-map-empty">Joint controls appear after the model loads.</p></div>
+  </aside>
+</div>

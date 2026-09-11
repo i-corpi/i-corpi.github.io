@@ -1,0 +1,111 @@
+{
+  "source": "https://las-manos.github.io/archive/#sharpa-wave",
+  "repository": "las-manos/las-manos.github.io",
+  "revision": "6c330aa5a2900f25495c1e38226db07067a6b10d",
+  "upstreamRevision": "6eea427eb24189519f32b9f21674cd534d3f973c",
+  "retrievedAt": "2026-09-11",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "f6a348fca3d77ddf60e66a3288b060e09b12afdebeabc6fc490b272ecfa10e43",
+      "bytes": 556,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/LICENSE"
+    },
+    {
+      "path": "NOTICE.txt",
+      "sha256": "bee17b99ba47b327197e75f2d62e3fadbff246f6e4b84e15550afe12fbd2f3d6",
+      "bytes": 842,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/NOTICE.txt"
+    },
+    {
+      "path": "SOURCE.txt",
+      "sha256": "812e7afc6bc6d70d81a8a8a2b050792f98d4868a749c02ddfe1049685df04eb4",
+      "bytes": 608,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/SOURCE.txt"
+    },
+    {
+      "path": "meshes/DP_Visual_HB1_TH.glb",
+      "sha256": "82ca9db614857af76da5d74f8c6a2c06a34cffa06dbc6394ce46d4f7e37556fc",
+      "bytes": 121928,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/DP_Visual_HB1_TH.glb"
+    },
+    {
+      "path": "meshes/DP_visual_HB1_4F.glb",
+      "sha256": "87e1849b2ec8ab3ad39775d4a83855bf293591e20545b6ff47e7cba55e5e0e35",
+      "bytes": 144352,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/DP_visual_HB1_4F.glb"
+    },
+    {
+      "path": "meshes/elastomer_HB1_4F.glb",
+      "sha256": "ae1939c1d64cdcddb22e6a3ec95fda5f40b6bc66932d176b5215025360aefc2d",
+      "bytes": 54792,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/elastomer_HB1_4F.glb"
+    },
+    {
+      "path": "meshes/elastomer_HB1_TH.glb",
+      "sha256": "5eab3f54a03f80d8b9ecd8989f251d0ff75b8e547bd78b8f61f42f5e802661b5",
+      "bytes": 76932,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/elastomer_HB1_TH.glb"
+    },
+    {
+      "path": "meshes/right_MCP_VL_visual.glb",
+      "sha256": "3691f656725733fb94efba6bac0a9e4406120dbeb9929ce47ba18cebfd9db63c",
+      "bytes": 117376,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_MCP_VL_visual.glb"
+    },
+    {
+      "path": "meshes/right_MP_visual.glb",
+      "sha256": "d1b2d9cca010b65f00689daef7309b6ce4c6487ff8ebc180b9e37e047d39d955",
+      "bytes": 137640,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_MP_visual.glb"
+    },
+    {
+      "path": "meshes/right_PP_visual.glb",
+      "sha256": "5391c69d4bc2068bb964cfe701ced5978f88a8b9fa720d9566ceba7f946635e2",
+      "bytes": 214464,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_PP_visual.glb"
+    },
+    {
+      "path": "meshes/right_hand_C_MC_visual.glb",
+      "sha256": "b1c9d2462bf4056a42c90d792dc47d46785852d3cb5275cf1b8b015065dc51f4",
+      "bytes": 250100,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_hand_C_MC_visual.glb"
+    },
+    {
+      "path": "meshes/right_pinky_MC_visual.glb",
+      "sha256": "c554776c482adb4a708eef6b6515c12ca615b78255aa4b707b77d5f1460166ee",
+      "bytes": 79500,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_pinky_MC_visual.glb"
+    },
+    {
+      "path": "meshes/right_thumb_CMC_VL_visual.glb",
+      "sha256": "3405bd496ebcf7bbb6869f1095872864ce421f65158e1ebd8b90cb70e657f931",
+      "bytes": 115716,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_thumb_CMC_VL_visual.glb"
+    },
+    {
+      "path": "meshes/right_thumb_MCP_VL_visual.glb",
+      "sha256": "0b12fec8fb54f31f7dc609d8fd6167d6531786f3f432f38d33db217bb9671d52",
+      "bytes": 109564,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_thumb_MCP_VL_visual.glb"
+    },
+    {
+      "path": "meshes/right_thumb_MC_visual.glb",
+      "sha256": "6df269b0c1b01a6e7e9e8d532010932b3fa243c40e7085529180d536205c4db4",
+      "bytes": 239904,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_thumb_MC_visual.glb"
+    },
+    {
+      "path": "meshes/right_thumb_PP_visual.glb",
+      "sha256": "8abbdfb5586f0e8f788efc420909831908f9a3c74c99a5f5750f64903dc12ed4",
+      "bytes": 276568,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/meshes/right_thumb_PP_visual.glb"
+    },
+    {
+      "path": "model.urdf",
+      "sha256": "e2f72ca5b069437408c2004ee1cbe137606cb08069ea8dd81b930969bf261104",
+      "bytes": 24678,
+      "source": "https://raw.githubusercontent.com/las-manos/las-manos.github.io/6c330aa5a2900f25495c1e38226db07067a6b10d/models/sharpa-wave/model.urdf"
+    }
+  ]
+}

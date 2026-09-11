@@ -1,0 +1,8 @@
+{% assign model = include.model %}
+{% if model.image %}
+  <img src="{{ model.image | relative_url }}"
+    {% if model.assets.images %}srcset="{{ model.assets.images['400'] | relative_url }} 400w, {{ model.assets.images['800'] | relative_url }} 800w" sizes="{{ include.sizes | default: '(max-width: 600px) 100vw, 50vw' }}"{% endif %}
+    width="800" height="800" alt="{{ model.imageAlt | escape }}" decoding="async"{% if include.lazy %} loading="lazy"{% endif %}>
+{% else %}
+  <span class="head"></span><span class="torso"></span><span class="arm left"></span><span class="arm right"></span><span class="leg left"></span><span class="leg right"></span>
+{% endif %}

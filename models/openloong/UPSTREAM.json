@@ -1,0 +1,257 @@
+{
+  "repository": "loongOpen/OpenLoong-Dyn-Control",
+  "revision": "4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e",
+  "entrypoint": "upstream/models/AzureLoong.urdf",
+  "meshPaths": {
+    "package://AzureLoong/meshes/base_link.STL": "models/meshes/base_link.STL",
+    "package://AzureDragon/meshes/Link_head_yaw.STL": "models/meshes/Link_head_yaw.STL",
+    "package://AzureDragon/meshes/Link_head_pitch.STL": "models/meshes/Link_head_pitch.STL",
+    "package://AzureLoong/meshes/Link_arm_r_01.STL": "models/meshes/Link_arm_r_01.STL",
+    "package://AzureLoong/meshes/Link_arm_r_02.STL": "models/meshes/Link_arm_r_02.STL",
+    "package://AzureLoong/meshes/Link_arm_r_03.STL": "models/meshes/Link_arm_r_03.STL",
+    "package://AzureLoong/meshes/Link_arm_r_04.STL": "models/meshes/Link_arm_r_04.STL",
+    "package://AzureLoong/meshes/Link_arm_r_05.STL": "models/meshes/Link_arm_r_05.STL",
+    "package://AzureLoong/meshes/Link_arm_r_06.STL": "models/meshes/Link_arm_r_06.STL",
+    "package://AzureLoong/meshes/Link_arm_r_07.STL": "models/meshes/Link_arm_r_07.STL",
+    "package://AzureLoong/meshes/Link_arm_l_01.STL": "models/meshes/Link_arm_l_01.STL",
+    "package://AzureLoong/meshes/Link_arm_l_02.STL": "models/meshes/Link_arm_l_02.STL",
+    "package://AzureLoong/meshes/Link_arm_l_03.STL": "models/meshes/Link_arm_l_03.STL",
+    "package://AzureLoong/meshes/Link_arm_l_04.STL": "models/meshes/Link_arm_l_04.STL",
+    "package://AzureLoong/meshes/Link_arm_l_05.STL": "models/meshes/Link_arm_l_05.STL",
+    "package://AzureLoong/meshes/Link_arm_l_06.STL": "models/meshes/Link_arm_l_06.STL",
+    "package://AzureLoong/meshes/Link_arm_l_07.STL": "models/meshes/Link_arm_l_07.STL",
+    "package://AzureLoong/meshes/Link_waist_pitch.STL": "models/meshes/Link_waist_pitch.STL",
+    "package://AzureLoong/meshes/Link_waist_roll.STL": "models/meshes/Link_waist_roll.STL",
+    "package://AzureLoong/meshes/Link_waist_yaw.STL": "models/meshes/Link_waist_yaw.STL",
+    "package://AzureLoong/meshes/Link_hip_r_roll.STL": "models/meshes/Link_hip_r_roll.STL",
+    "package://AzureLoong/meshes/Link_hip_r_yaw.STL": "models/meshes/Link_hip_r_yaw.STL",
+    "package://AzureLoong/meshes/Link_hip_r_pitch.STL": "models/meshes/Link_hip_r_pitch.STL",
+    "package://AzureLoong/meshes/Link_knee_r_pitch.STL": "models/meshes/Link_knee_r_pitch.STL",
+    "package://AzureLoong/meshes/Link_ankle_r_pitch.STL": "models/meshes/Link_ankle_r_pitch.STL",
+    "package://AzureLoong/meshes/Link_ankle_r_roll.STL": "models/meshes/Link_ankle_r_roll.STL",
+    "package://AzureLoong/meshes/Link_hip_l_roll.STL": "models/meshes/Link_hip_l_roll.STL",
+    "package://AzureLoong/meshes/Link_hip_l_yaw.STL": "models/meshes/Link_hip_l_yaw.STL",
+    "package://AzureLoong/meshes/Link_hip_l_pitch.STL": "models/meshes/Link_hip_l_pitch.STL",
+    "package://AzureLoong/meshes/Link_knee_l_pitch.STL": "models/meshes/Link_knee_l_pitch.STL",
+    "package://AzureLoong/meshes/Link_ankle_l_pitch.STL": "models/meshes/Link_ankle_l_pitch.STL",
+    "package://AzureLoong/meshes/Link_ankle_l_roll.STL": "models/meshes/Link_ankle_l_roll.STL"
+  },
+  "files": [
+    {
+      "path": "upstream/NOTICE",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/NOTICE",
+      "sha256": "7ef8b02dad6d3d00bc6918569d23d5941f0cf9991e9322293024677485aa5079",
+      "gitBlob": "73f7627ca14e2c73c50fdb79cdf0f86b0865c0e9"
+    },
+    {
+      "path": "upstream/README.md",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/README.md",
+      "sha256": "323efc15db6801c999b701838838bc9b65e34f32f7e9eaea1e79be8c0af6400f",
+      "gitBlob": "951f1fe6860ee0817930618d25b6dfdfa47335de"
+    },
+    {
+      "path": "upstream/license",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/license",
+      "sha256": "81ea4388c463c00d6fc4d2dbcdaa0f755fe6ecd5d53e0818da0aee639b88b24c",
+      "gitBlob": "8b1acbf015037165369cdc1b64b1ac88e7ccee94"
+    },
+    {
+      "path": "upstream/models/AzureLoong.urdf",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/AzureLoong.urdf",
+      "sha256": "c167a06bcab11953b565696948c7b7a37426e9f211be90e04039bf05e98f4400",
+      "gitBlob": "34c02e90f9fc8bb78ee0e1e98d8c5557899b51ab"
+    },
+    {
+      "path": "upstream/models/meshes/Link_ankle_l_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_ankle_l_pitch.STL",
+      "sha256": "b82d5beec9cca74d41453632641f11d4dbb6d1a4dbe4db5833e0ccf01d70c87e",
+      "gitBlob": "47b9c3859b660355ce071271b3317c28f8795257"
+    },
+    {
+      "path": "upstream/models/meshes/Link_ankle_l_roll.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_ankle_l_roll.STL",
+      "sha256": "165a987a5b363b7762b02fd43626a4328e55329e87a09616317cd60dd93e477c",
+      "gitBlob": "6973f9e205c90ce1b0d5cdcd7ef963ea420f1cf9"
+    },
+    {
+      "path": "upstream/models/meshes/Link_ankle_r_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_ankle_r_pitch.STL",
+      "sha256": "10241e674de16f6ef628f3d63e06e124c704978b824be3bb1aad47200e8c0149",
+      "gitBlob": "7120b9d32268170fcc039f755e4d1fa50e9a2736"
+    },
+    {
+      "path": "upstream/models/meshes/Link_ankle_r_roll.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_ankle_r_roll.STL",
+      "sha256": "a308bab27adfd026925278513a861c0b9e615cd99a8a505aaee789a3b420b2a3",
+      "gitBlob": "c0d10ab3c1b2c44acf3af32146c6697528db5048"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_01.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_01.STL",
+      "sha256": "1223c84ae8a144fb774e773ae2c762a3df2d1b6a10c089c98c97c1f3c97f3543",
+      "gitBlob": "0285bbad9f057c2898e75073d7c7edf2d133b3f7"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_02.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_02.STL",
+      "sha256": "923e3d4b0f9c1dfd65a8355c072a328c79156c11e961c4848d38d31a64b9e4d1",
+      "gitBlob": "d1e7f9ecc5b3b3ddaa04d2be75d47561b83cc110"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_03.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_03.STL",
+      "sha256": "6592626ed3a215a4b37c631df9c7d89febdbf4cc4550db0239d6c5e7321228e0",
+      "gitBlob": "cd11223a18cbe157b2841a571a8ebab19dc147cf"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_04.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_04.STL",
+      "sha256": "0d8c51849edc6b58e8a856fb1833029284fc513e43b8423797bc55dd48227694",
+      "gitBlob": "928f8fd8f4d3a6b3ed82f9881e7243da4e44ca93"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_05.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_05.STL",
+      "sha256": "27f0bb9ae1acce3c8794cef9b104e4a552b2c04aaf153bc6dc12fd7b1c3049a4",
+      "gitBlob": "b2625fa225e54af70f8f842fbe467b29aecaf72b"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_06.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_06.STL",
+      "sha256": "71a93de20f430e311dac297071bd589209213fb5a3784ac0b4c8eb1ca32e0820",
+      "gitBlob": "29162987ceeef3ef053305de190784d783875985"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_l_07.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_l_07.STL",
+      "sha256": "62df50af85496b6021d730a4f5299e2cefe4c6fe3e82fb7df0231c60531ed68a",
+      "gitBlob": "541bfc214917bfc50ebf6ceec48e515a8fcdc4ff"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_01.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_01.STL",
+      "sha256": "49bf35a9006418ae7a771f1b7077748ae0aa9ebc0de76b8fc501195b157a8c7f",
+      "gitBlob": "faee9b57e2d0055cb81e6417a84a7d201c1f8b6d"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_02.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_02.STL",
+      "sha256": "0bddc81a6a3ad310da6415495bc83d3be124ec837e308310207b515ca6224efd",
+      "gitBlob": "ce9ee5f71a8a684792b20b6e367c876bf83c0214"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_03.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_03.STL",
+      "sha256": "51b7a75e507f96e250049cb1405f8d7b6efc972e70d0d35ee1824ec1482bbd7b",
+      "gitBlob": "d12496c7e30f4494295700bd53d51c67f23c8042"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_04.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_04.STL",
+      "sha256": "5d637aa39c9723cec951e21c630a944ba5be6166631e2b3beb9d707ef99c36cc",
+      "gitBlob": "b14af165e1f880b17d5a0fda4e9f156d607d21ed"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_05.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_05.STL",
+      "sha256": "5953bd5d195dd192a090bf3baf92f91114af6de5fe89017363dacc5d0404f30b",
+      "gitBlob": "677d58092011cb7e51c08acf97f1b1d13a1e3fc4"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_06.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_06.STL",
+      "sha256": "f102a8f2988a0e94e71003ff4b57f869ebfef65ab735d09d54eef6f7c9db24bb",
+      "gitBlob": "d2c650f40496774d92c3c28398444e057fecceb6"
+    },
+    {
+      "path": "upstream/models/meshes/Link_arm_r_07.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_arm_r_07.STL",
+      "sha256": "4bfe40238cb6958d461e8f1d7262e5decf3b8661bf177f11c227187a9e062bfd",
+      "gitBlob": "9e7e0d6bdb10688354068a9ed8ef359a46abf6f8"
+    },
+    {
+      "path": "upstream/models/meshes/Link_head_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_head_pitch.STL",
+      "sha256": "7234c4baf3f88cc394f13b0fea65f5cbc06ea78c33d0e51682bca5382865e8d8",
+      "gitBlob": "c39fbd758a0d376f0613b8a72b20376dd47bb436"
+    },
+    {
+      "path": "upstream/models/meshes/Link_head_yaw.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_head_yaw.STL",
+      "sha256": "2590d308e5321a3985216c0880546e6993a8ae66b3104cf2d18914e9c685fabe",
+      "gitBlob": "2318d2a26ad3653b607826c1e7fb602315e33f97"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_l_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_l_pitch.STL",
+      "sha256": "a0368c230c97bf356a8c3be3806b7c2b966d0d7b98a9c5c099b2877ddef4ff50",
+      "gitBlob": "5b7b6698f07bbc93b6da7c50babc8c3ed0d33023"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_l_roll.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_l_roll.STL",
+      "sha256": "0acafe7974e359aa2f3344a749983e50e75c9183e44438769dc3378d5a93c3a2",
+      "gitBlob": "21dd6cf08ae469ff945a399d1f1e4425a3b0d16d"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_l_yaw.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_l_yaw.STL",
+      "sha256": "187dec20a2098684e873f57f227487b43f242638fe21207f5938160731ddf4dc",
+      "gitBlob": "75402baeae44374903ad69a6cf0644d55d0c7850"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_r_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_r_pitch.STL",
+      "sha256": "b506f4d7115050a45b3a35819e4364b91b8096d2f36497b341fdcf294b788d64",
+      "gitBlob": "c9ea4853323260c6546246a5f62b9d1d5fbaa9e3"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_r_roll.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_r_roll.STL",
+      "sha256": "c0d14dfad5a0b3517a8618165af494f830b9a30ee98924ebe99f347f6b774aa4",
+      "gitBlob": "188e5f829e1a6c12af61dc043dc94913b7f1c0c5"
+    },
+    {
+      "path": "upstream/models/meshes/Link_hip_r_yaw.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_hip_r_yaw.STL",
+      "sha256": "82e7e30f5c14a82449a29dde1ade8296d399b2ed0faf21db92c6b07b72dec58b",
+      "gitBlob": "b3ea0790295ba73c177a4e37e8473b7d73504c17"
+    },
+    {
+      "path": "upstream/models/meshes/Link_knee_l_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_knee_l_pitch.STL",
+      "sha256": "15e4a28ec5152639d9476d52c0af4d44f90704e6358f4317a1da46ca43327b93",
+      "gitBlob": "80c6cc474125b27a8e610965b82f6659d12150be"
+    },
+    {
+      "path": "upstream/models/meshes/Link_knee_r_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_knee_r_pitch.STL",
+      "sha256": "773c898a9da8aefa8bb78681c3b034a1ab4f6ce5603ef8e0770798feb23c844d",
+      "gitBlob": "1bee3dfd5b02c5f76e34e88863288062eeba975e"
+    },
+    {
+      "path": "upstream/models/meshes/Link_waist_pitch.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_waist_pitch.STL",
+      "sha256": "f3f2afc390f2db7f96a66c05dc25c0148b3fa6b61f060768819e2b1d1db3aab6",
+      "gitBlob": "e5ebd9c3fd0176ae4978ce4ee08ced6632a29cd8"
+    },
+    {
+      "path": "upstream/models/meshes/Link_waist_roll.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_waist_roll.STL",
+      "sha256": "ee8a68e700e56b14bb3638db2d49159e2062b22634c01797ae9bc3edb1754851",
+      "gitBlob": "f380ab06dbef55015f367f5e3aa01d85ff3557e1"
+    },
+    {
+      "path": "upstream/models/meshes/Link_waist_yaw.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/Link_waist_yaw.STL",
+      "sha256": "ba31d60f52870634183e7765b8ef410e82d5fcbd3c56fcb744194140eb3ad14e",
+      "gitBlob": "59076c7dd32fdc0aab748631ef3b547e9a49fb12"
+    },
+    {
+      "path": "upstream/models/meshes/base_link.STL",
+      "url": "https://raw.githubusercontent.com/loongOpen/OpenLoong-Dyn-Control/4dd7a7e42a9cfd588afc78f3e429998ed8a30f4e/models/meshes/base_link.STL",
+      "sha256": "9ba3d7c2541361cb10086381921c02e5adda16eedc535b09a5ee5d6ae76ee581",
+      "gitBlob": "3bddf5d171bbb3b794a8315f8b8bf099d392a24b"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+model: sharpa-wave (right hand, base configuration)
+licence: Apache-2.0
+upstream: https://github.com/sharpa-robotics/sharpa-urdf-usd-xml
+commit: 6eea427eb24189519f32b9f21674cd534d3f973c
+source: wave_01/right_sharpa_wave/right_sharpa_wave.urdf
+
+This directory contains third-party robot description files, redistributed
+under the licence above. They are NOT covered by the las manos MIT licence.
+
+local modifications:
+  - collision geometry removed from the browser bundle
+  - visual STL meshes converted to glTF; meshes over 24,000 faces decimated
+  - package:// mesh paths rewritten as local relative paths

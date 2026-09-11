@@ -1,0 +1,440 @@
+{
+  "repository": "FFTAI/Wiki-GRx-Models",
+  "revision": "7d96c758f048fe1bf92b3258864d94771ae0c093",
+  "entrypoint": "upstream/GRX/GR1/gr1t1/urdf/gr1t1_fourier_hand_6dof.urdf",
+  "meshPaths": {
+    "../meshes/gr1t1/base_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/base_link.STL",
+    "../meshes/gr1t1/left_thigh_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_roll_link.STL",
+    "../meshes/gr1t1/left_thigh_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_yaw_link.STL",
+    "../meshes/gr1t1/left_thigh_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_pitch_link.STL",
+    "../meshes/gr1t1/left_shank_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_shank_pitch_link.STL",
+    "../meshes/gr1t1/left_foot_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_foot_pitch_link.STL",
+    "../meshes/gr1t1/left_foot_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_foot_roll_link.STL",
+    "../meshes/gr1t1/right_thigh_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_roll_link.STL",
+    "../meshes/gr1t1/right_thigh_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_yaw_link.STL",
+    "../meshes/gr1t1/right_thigh_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_pitch_link.STL",
+    "../meshes/gr1t1/right_shank_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_shank_pitch_link.STL",
+    "../meshes/gr1t1/right_foot_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_foot_pitch_link.STL",
+    "../meshes/gr1t1/right_foot_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_foot_roll_link.STL",
+    "../meshes/gr1t1/waist_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/waist_yaw_link.STL",
+    "../meshes/gr1t1/waist_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/waist_pitch_link.STL",
+    "../meshes/gr1t1/waist_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/waist_roll_link.STL",
+    "../meshes/gr1t1/torso_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/torso_link.STL",
+    "../meshes/gr1t1/left_upper_arm_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_pitch_link.STL",
+    "../meshes/gr1t1/left_upper_arm_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_roll_link.STL",
+    "../meshes/gr1t1/left_upper_arm_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_yaw_link.STL",
+    "../meshes/gr1t1/left_lower_arm_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_lower_arm_pitch_link.STL",
+    "../meshes/gr1t1/left_hand_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_hand_yaw_link.STL",
+    "../meshes/gr1t1/left_hand_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_hand_roll_link.STL",
+    "../meshes/gr1t1/left_hand_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/left_hand_pitch_link.STL",
+    "../meshes/gr1t1/right_upper_arm_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_pitch_link.STL",
+    "../meshes/gr1t1/right_upper_arm_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_roll_link.STL",
+    "../meshes/gr1t1/right_upper_arm_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_yaw_link.STL",
+    "../meshes/gr1t1/right_lower_arm_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_lower_arm_pitch_link.STL",
+    "../meshes/gr1t1/right_hand_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_hand_yaw_link.STL",
+    "../meshes/gr1t1/right_hand_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_hand_roll_link.STL",
+    "../meshes/gr1t1/right_hand_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/right_hand_pitch_link.STL",
+    "../meshes/gr1t1/head_yaw_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/head_yaw_link.STL",
+    "../meshes/gr1t1/head_roll_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/head_roll_link.STL",
+    "../meshes/gr1t1/head_pitch_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/head_pitch_link.STL",
+    "../meshes/gr1t1/IMU_link.STL": "GRX/GR1/gr1t1/meshes/gr1t1/IMU_link.STL",
+    "../meshes/fourier_hand_6dof/L_hand_base_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_hand_base_link.STL",
+    "../meshes/fourier_hand_6dof/L_thumb_proximal_yaw_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_yaw_link.STL",
+    "../meshes/fourier_hand_6dof/L_thumb_proximal_pitch_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_pitch_link.STL",
+    "../meshes/fourier_hand_6dof/L_thumb_distal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_distal_link.STL",
+    "../meshes/fourier_hand_6dof/L_index_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/L_index_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/L_middle_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/L_middle_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/L_ring_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/L_ring_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/L_pinky_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/L_pinky_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/R_hand_base_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_hand_base_link.STL",
+    "../meshes/fourier_hand_6dof/R_thumb_proximal_yaw_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_yaw_link.STL",
+    "../meshes/fourier_hand_6dof/R_thumb_proximal_pitch_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_pitch_link.STL",
+    "../meshes/fourier_hand_6dof/R_thumb_distal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_distal_link.STL",
+    "../meshes/fourier_hand_6dof/R_index_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/R_index_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/R_middle_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/R_middle_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/R_ring_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/R_ring_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_intermediate_link.STL",
+    "../meshes/fourier_hand_6dof/R_pinky_proximal_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_proximal_link.STL",
+    "../meshes/fourier_hand_6dof/R_pinky_intermediate_link.STL": "GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_intermediate_link.STL"
+  },
+  "files": [
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_hand_base_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_hand_base_link.STL",
+      "sha256": "4f359bc30a65d5fafc689a4ffbf28be83cab836bef9db8b230c29a7fe638e77f",
+      "gitBlob": "eecff421488bfa5747c80fd77e587536466476e9"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_intermediate_link.STL",
+      "sha256": "12ff3aa83289611c6246c863e17d7094a8337c74b8f719d2452413205d48d677",
+      "gitBlob": "8c11c6ec20887c27c57a7a562db46273028af5e4"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_index_proximal_link.STL",
+      "sha256": "4eefa8be944c03546451e642cf38243d821916c0934bbeff8e8ede92354125b9",
+      "gitBlob": "91f9dea4cb8784bccdaa2c48e3b5f5b9a8a93d01"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_intermediate_link.STL",
+      "sha256": "62305ce31619c4256a18dcbf6ccc59e188e5dbce0dcba9cfb4fb6cbefbfbbe17",
+      "gitBlob": "ad4c2bcc400973b74fe96fc8c1a30cab330f0f4e"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_middle_proximal_link.STL",
+      "sha256": "9300c4b6bcd611d3b909dcea603bca93419817132ad07bc4b26475370908a8da",
+      "gitBlob": "154a1a2f2f6630bd87f2a103d0d8b5e799b551eb"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_intermediate_link.STL",
+      "sha256": "a937a0e1b6a37cbf34d20a8a42bcbc1cc3e18db1d9fe2ba686654d9c65bfee39",
+      "gitBlob": "536e7dbc95a7ec6e7a0334153bed5c76e2925cc3"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_pinky_proximal_link.STL",
+      "sha256": "2d73db193b6c0c7b9a2ce248eda9a214709fee31f9a3bed99768143690ba0c5f",
+      "gitBlob": "1dd93e3fde1ea230be294bbd1d2fc438212eb889"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_intermediate_link.STL",
+      "sha256": "23111e34432105993240b09f67817c54f8995771e6688ce8583c10b230ab7d09",
+      "gitBlob": "fae5c90f3e0fc134bddb746d9d526a7c5ed6084d"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_ring_proximal_link.STL",
+      "sha256": "c49e27f44db558ebd13d757011abb0c9b07bb359f0790b011ab66918baa92bbb",
+      "gitBlob": "ce31654eaea3b6f1a08b79e3ba6e97971808bc1f"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_distal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_distal_link.STL",
+      "sha256": "4dd4990188e9c4470fd1d00eb5e66c5fe445d44ea6f84bd4a72d27ce9c94a2d1",
+      "gitBlob": "36a3493084e5db7c86bdb53218d976a38c008bea"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_pitch_link.STL",
+      "sha256": "46c56584cdb26a2c3988c7b5021e7321738edd983d3f319dfa58d1af925c05e0",
+      "gitBlob": "02e371c9c41c942eaa7301472582f1e4e74fb2cc"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/L_thumb_proximal_yaw_link.STL",
+      "sha256": "96a421592aa59335fb47c4147fa6521940c1640201002def1b55a7eea5fb1c26",
+      "gitBlob": "becec8d67cac8c408c0d78984edbc2741909fe1c"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_hand_base_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_hand_base_link.STL",
+      "sha256": "fff5b258641f456092347ee54fb2cf585092fc3a8e885a1c665ac747bb4b1b4d",
+      "gitBlob": "b91dfe5b183485c719cff5ebaeae07cc9c2c2248"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_intermediate_link.STL",
+      "sha256": "7432776a477366302eff9d65382fbab55d80c9b899fe3d566ea9be5675c40e55",
+      "gitBlob": "f2b25828ffca11de798f8c79382e2c20ccca52ec"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_index_proximal_link.STL",
+      "sha256": "7b710e8fefa757851281cb341016ae8c7b07790debd4b710ddcef7ca4468905c",
+      "gitBlob": "ddf6e471000505f078768f57e035a6aa519b4061"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_intermediate_link.STL",
+      "sha256": "1acb01ed1a206bef8890670eed9aa2b8591ce4adb6d3bb55885fa22bfdeeb96e",
+      "gitBlob": "b6cbf5c22a57a1446bc29b0733eb342ed950b783"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_middle_proximal_link.STL",
+      "sha256": "69827e9455007127679d6c3b598a9125dbb2f95e2704f5cab6cf8e7f1d8a79b3",
+      "gitBlob": "09d15feecaa74a384e0d98b2ffb78819ada84b56"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_intermediate_link.STL",
+      "sha256": "3a6c3edf608fc5a545b57e64f0f43da2b27ea5c1a419c24940be0144dc604f51",
+      "gitBlob": "c9c83d2e77a8858febf966d73d78dcdacb1a681a"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_pinky_proximal_link.STL",
+      "sha256": "7060eec7b232d8f022011dd8571dea78009c8b12286ed30f6c2f10aaedd21d02",
+      "gitBlob": "c3306addd49d5d0c2a12ac1c7bce38bf139d185c"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_intermediate_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_intermediate_link.STL",
+      "sha256": "ae72d8710afa1fc3324472ffe614e42363a0d1440c12453a86e4f8d641484679",
+      "gitBlob": "de5e43bf7687657f618977b52e3664fa88f04ef7"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_proximal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_ring_proximal_link.STL",
+      "sha256": "bd88d5c94deccf87076f218ebe976b9e49cd94a666d3cd37e97fa7f342cee13f",
+      "gitBlob": "e4a0fe79782b6799493a0ec9276d9cf68906e78d"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_distal_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_distal_link.STL",
+      "sha256": "99739aad6823cfdcf5f0de18d71716c4e230619e6e595fa964aa29ff3537c0f0",
+      "gitBlob": "4b4936611d2d8850002f0166c129a323d148cac5"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_pitch_link.STL",
+      "sha256": "f3cb9b0ebd3e7688ac0cec52e8535606377869aefe0ce5e68944ecdd3e36d365",
+      "gitBlob": "0f68a35eef036cbf7bf78319a519ce31246d30da"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/fourier_hand_6dof/R_thumb_proximal_yaw_link.STL",
+      "sha256": "a40df6a53723a6c0c8c5944abb32937bd1f11561bd6c9876ee32ccdcaaf45c11",
+      "gitBlob": "87e01137038e44c0a3e97e2bca97a591fbbedda9"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/IMU_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/IMU_link.STL",
+      "sha256": "603f4d69e44065a071e5f76c73d0dc5075891aefd4dcccbaeeb07540102373d9",
+      "gitBlob": "8b6339dcb93f7cc3a0ca8fe2e859808b2abdab2d"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/base_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/base_link.STL",
+      "sha256": "677eebf6ca3f3a8df5cba86de8e511205426b1df5adeccc9411de4216da07003",
+      "gitBlob": "492399c5c908fa676ad3a840c489938c17769db5"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/head_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/head_pitch_link.STL",
+      "sha256": "f07d58daa82ef8c4cfaf7d1e2ed2343c2e434819f5857b20b6406f9eb5c9b553",
+      "gitBlob": "60e7e84d9a8eb0d33e00b01c3d0571b92c1b0c76"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/head_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/head_roll_link.STL",
+      "sha256": "620690830228caed91530b00ec997ba4b5f7a20ca003ea14c3563a96ca0e885d",
+      "gitBlob": "49671e922937466e3673b633db4228dda61970ef"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/head_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/head_yaw_link.STL",
+      "sha256": "32fba24565696ea56477a942bc9285edb112eed6e0fac5cd6b7eba59de0f7f87",
+      "gitBlob": "052e3a84189fa6c0fc10a03ace0cfafe124c7c1c"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_foot_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_foot_pitch_link.STL",
+      "sha256": "d6b8315da0e5885af4b47a8190210827c43c54b1317ebc03efc20abf45ba5c85",
+      "gitBlob": "caf9998778e935f950dd9b6761d71d10f161fea6"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_foot_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_foot_roll_link.STL",
+      "sha256": "e02318187bc04a588493796b033d109ddbc51155912a63762dd8f0627f4430d5",
+      "gitBlob": "193a8f6e33fd9ea786dc45d1ad57b3929d8a278a"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_pitch_link.STL",
+      "sha256": "2e04b1393e8909ebb171c84e186865e5402e1abb6c9d32dfa6381561213a10b5",
+      "gitBlob": "3429a41c39d94193422f1b3d19ed2377e74deab1"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_roll_link.STL",
+      "sha256": "4449ab0db4ec8347c5b91fc1b4f817f7382c88bbd19c3e882f08349a225646b3",
+      "gitBlob": "e555999545a466670c825c923a94c0df2ff9d6bb"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_hand_yaw_link.STL",
+      "sha256": "689f11a5592169ea18cfb7e610b23453bf64ab4112a00d5141d20c0b9f36f3c3",
+      "gitBlob": "56589413f6b13dcd29ab95c8efeff3f3c388a229"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_lower_arm_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_lower_arm_pitch_link.STL",
+      "sha256": "59b2c03b50036c805631814ff07c989383a88d7110f1ea13879e92c2111d318e",
+      "gitBlob": "8b48b1ae7e04d0e0022eb398c12739e689a397b1"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_shank_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_shank_pitch_link.STL",
+      "sha256": "b79d32b65cc207679b8caa5c3a603459c44c6ac3a36b17524b8967edbf5b4fa8",
+      "gitBlob": "38c22ca6bb7f367761a8f7d4f97a74e4cb82f200"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_pitch_link.STL",
+      "sha256": "eda5313afe79a2121c77dd6c1f6a592b78813a2226e62c4342cd8552c4c7cacf",
+      "gitBlob": "db9e1f3b1ba2f9149364c8a57e006982abc01240"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_roll_link.STL",
+      "sha256": "52bc8ff52b4d50f8632c763651a5097b5bb4305dd0007e236dc4aa312b793c22",
+      "gitBlob": "9bddef930bdd918f5d3bd51b974519e353c21b86"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_thigh_yaw_link.STL",
+      "sha256": "061684bf63fa5483a76362266d57437bb8aae0adf41c25826ed551c1e7de5b19",
+      "gitBlob": "87394c783757b7500682e69e2811423939a6e58a"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_pitch_link.STL",
+      "sha256": "2a28d150e085c19fce2e2ef82e693577a65319524a57aae2402ebcc5d264f6c2",
+      "gitBlob": "b43cdbbe65c68c8b3b9adbb298962b33ede42204"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_roll_link.STL",
+      "sha256": "e4e78816dd26925c4c4dc1b769558486f40803c8d555a2955b27ce3cf8e90895",
+      "gitBlob": "e858e9fbb91fc8636506d1b2a34db26c573f03fb"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/left_upper_arm_yaw_link.STL",
+      "sha256": "88f81c82218c1d9b177353a1282211ea287af686b1ac536d31ede1aeebc03c57",
+      "gitBlob": "a5366d68f74abfd4fe3b4e84bd59839b26c7ccc0"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_foot_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_foot_pitch_link.STL",
+      "sha256": "b86ff035b3932b043768b5cede9009cc8700296920fe28488ff781962bc32534",
+      "gitBlob": "31529a81739d5408ab10c258d00fff81633101b2"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_foot_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_foot_roll_link.STL",
+      "sha256": "c601cefd8d0b76efd20dca174955c7dfc237b10d7f9061a771e5895fecc979a7",
+      "gitBlob": "c968814ba0ab84aa8e1eeecc9ec40a626de6ea3e"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_pitch_link.STL",
+      "sha256": "e0724b15baeb5907e71f081494d28b7c5037547edac198b59d5d67eeb9bc9d3d",
+      "gitBlob": "c576fe30c9b5ea9aba8528476dcf1309f8680aaf"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_roll_link.STL",
+      "sha256": "b542ce73757f3f5f462349c3788ab9620470561fd90391532e021a4574a6f06e",
+      "gitBlob": "dd0c3dad399d6ef0b65bd4a97f50b793028536ec"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_hand_yaw_link.STL",
+      "sha256": "5aa9ef71219082c5f164c2938ed65bd9a01368873add23f79a1fb8e65c9cd00b",
+      "gitBlob": "29f4ecf73da9b3d1e04b0bdac58c9d91110915b2"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_lower_arm_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_lower_arm_pitch_link.STL",
+      "sha256": "9bf80d920ef05ae164012c2c71a875154a2b7ea7253030c5c088ea36290be508",
+      "gitBlob": "7b6942bd8fcc2dd45a92920fdb2b25da88cb40bd"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_shank_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_shank_pitch_link.STL",
+      "sha256": "9422364b53d29a57159756171e3e0cf2a861c097b9964583f11bff009e7fc5ac",
+      "gitBlob": "4b5a1509832b7b86a2ee833e11e77e236ade386d"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_pitch_link.STL",
+      "sha256": "37312599a99e3960e5ede0e6f3ff096dd16356986b022ef04fce4457f45531b0",
+      "gitBlob": "cb26ba9fe40eca3f8fdb534fd8e38399f58cec51"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_roll_link.STL",
+      "sha256": "d3895acea97fb7409dd262e08ac4a2bf0c7cc4aa69a4013e1a73608ca43bc361",
+      "gitBlob": "73ea15ccf25cf0847f8bccbc63495e5b6c614fed"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_thigh_yaw_link.STL",
+      "sha256": "c5bed0b5e931ca14a9cb779aa0df46b047363adbbb62904b09b66f324af774e4",
+      "gitBlob": "c4b5ebafab954f0bb19ab87dd7c3774fc9b3ba43"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_pitch_link.STL",
+      "sha256": "e6468d27ada77492819f24867f15a26f2196e66ca5904c0c5bc54cc58c63b80f",
+      "gitBlob": "6f222a6a14c38ad9bcba8cb06061304e9104d268"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_roll_link.STL",
+      "sha256": "d2903f912b9f546af5570da6e6dfd7cb0828e859eae52d53a726feea3f1b5d7d",
+      "gitBlob": "01a4903e07b8f8121093543939e7648bce30a256"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/right_upper_arm_yaw_link.STL",
+      "sha256": "f54eb496895f879f50e8267b6c4252c5cd893db83cccec2519a71cce6d98a375",
+      "gitBlob": "2934eeca29c5786c164b2089d0865ba52902dd3c"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/torso_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/torso_link.STL",
+      "sha256": "102043135d066b03fa493f9538e6085f6fc425c4d950ab1878d46456b96806e3",
+      "gitBlob": "09a7237906b65b12af6f539630c501126f883444"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/waist_pitch_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/waist_pitch_link.STL",
+      "sha256": "84794ecbcd7bc30e2b2b19d9571fe0a91e0518630d7a18c302a58a9d0ab23fb8",
+      "gitBlob": "287e091006cc7b5f5f31344e00e74447868f4ced"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/waist_roll_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/waist_roll_link.STL",
+      "sha256": "f34abcf88a03ad416066e0fd642d561e8175b656ad314bf4508cebd082b82c85",
+      "gitBlob": "f3dd5886f8e79af9aeea0e0043299cff1fe297c2"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/meshes/gr1t1/waist_yaw_link.STL",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/meshes/gr1t1/waist_yaw_link.STL",
+      "sha256": "eeaaf76cff309304ac9aae350058aa896f4703bac6c4e7234060bfa965babdfc",
+      "gitBlob": "1288446bc9c1897627dcbe9b68188295f01931d6"
+    },
+    {
+      "path": "upstream/GRX/GR1/gr1t1/urdf/gr1t1_fourier_hand_6dof.urdf",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/GRX/GR1/gr1t1/urdf/gr1t1_fourier_hand_6dof.urdf",
+      "sha256": "fc4a03e2102872941087460f76c216424df0d929078b23b402ae0cf1e505ddc7",
+      "gitBlob": "4cc3559f2e3bd8bcd0740e28d9904da43f760eb7"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/LICENSE",
+      "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b",
+      "gitBlob": "818433ecc0e094a4db1023c68b33f24344643ad8"
+    },
+    {
+      "path": "upstream/README.md",
+      "url": "https://raw.githubusercontent.com/FFTAI/Wiki-GRx-Models/7d96c758f048fe1bf92b3258864d94771ae0c093/README.md",
+      "sha256": "a6a799c046f97e77e1de8c0236b5e59800bc10f73056bbd2923fe44049128653",
+      "gitBlob": "a9764eb67a1d495a24d1b4db4c99228abbe70acb"
+    }
+  ]
+}

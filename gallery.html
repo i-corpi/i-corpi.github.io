@@ -1,0 +1,41 @@
+---
+layout: default
+title: Robot gallery
+nav: gallery
+permalink: /gallery/
+scripts:
+  - /assets/js/gallery.js
+description: A 16-angle visual gallery of every review-ready humanoid robot in the i corpi archive.
+---
+{% assign robots = site.data.models | where: "kind", "robot" %}
+{% assign local_robots = robots | where: "access", "local" %}
+<main class="page-wrap wide" id="main-content">
+  <section class="page-intro">
+    <div><p class="eyebrow">Robot gallery · {{ local_robots | size }}</p><h1>Every machine,<br>from every side.</h1></div>
+    <p>Drag each plate through a 16-angle turntable rendered from the pinned local URDF—not a marketing photograph—then open the model to rotate and control every joint.</p>
+  </section>
+
+  <section class="gallery-grid" aria-label="Humanoid robot gallery">
+    {% for model in local_robots %}
+      {% if model.image %}
+        <article class="gallery-card" data-turntable="{{ model.id }}" data-frames="{{ model.assets.frames | jsonify | escape }}">
+          <div class="gallery-image turntable-stage" role="slider" tabindex="0" aria-label="{{ model.name }} 360 degree turntable" aria-valuemin="1" aria-valuemax="16" aria-valuenow="1">
+            <img src="{{ model.assets.frames.first | relative_url }}" width="800" height="800" alt="{{ model.imageAlt }}" draggable="false" decoding="async"{% if forloop.index > 3 %} loading="lazy"{% endif %}>
+            <span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            <b>16-angle URDF</b>
+            <div class="turntable-controls" aria-hidden="true"><i>Drag to rotate</i><em>01 / 16</em></div>
+          </div>
+          <div class="turntable-buttons">
+            <button type="button" data-step="-1" aria-label="Previous angle of {{ model.name }}">←</button>
+            <span aria-hidden="true">360° turntable</span>
+            <button type="button" data-step="1" aria-label="Next angle of {{ model.name }}">→</button>
+          </div>
+          <div class="gallery-card-head"><p class="eyebrow">{{ model.family }}</p><em>{{ model.dof }} DoF</em></div>
+          <h2>{{ model.name }}</h2>
+          <p>{{ model.maker }} · {{ model.country }}</p>
+          <a class="gallery-open" href="{{ '/archive/' | append: model.id | append: '/' | relative_url }}">Open model and joint controls →</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </section>
+</main>

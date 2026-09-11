@@ -1,0 +1,37 @@
+{% assign initial = include.model | default: site.data.models.first %}
+<main class="page-wrap wide" id="main-content">
+  <div class="page-intro">
+    <div><p class="eyebrow">01 · Archive</p><h1>{% if page.model %}{{ initial.name | escape }}{% else %}Inspect every model.{% endif %}</h1></div>
+    <p>Browse robots, human body models and character rigs, then open a 3D preview to inspect their geometry and joint controls.</p>
+  </div>
+  <section class="archive-shell" aria-label="Model archive">
+    <aside class="archive-list">
+      <div class="list-tools">
+        <label for="model-search">Search models</label>
+        <input id="model-search" type="search" placeholder="Name, maker, or format" autocomplete="off">
+        <div class="filter-chips" role="group" aria-label="Filter by model type">
+          <button class="selected" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="robot" aria-pressed="false">Robots</button>
+          <button type="button" data-filter="body" aria-pressed="false">Body models</button>
+          <button type="button" data-filter="character" aria-pressed="false">Characters</button>
+        </div>
+        <p id="record-count" role="status" aria-live="polite">{{ site.data.models | size }} of {{ site.data.models | size }} records</p>
+        <p id="record-empty" hidden>No models match. Try another name or filter.</p>
+        <p id="archive-status" role="status"></p>
+      </div>
+      <div class="record-list" id="record-list">
+        {% for model in site.data.models %}
+          <a class="record-button{% if model.id == initial.id %} active{% endif %}" data-model-id="{{ model.id }}"
+             href="{{ '/archive/' | append: model.id | append: '/' | relative_url }}"{% if model.id == initial.id %} aria-current="page"{% endif %}>
+            <span class="kind-pip {{ model.kind }}" aria-hidden="true"></span>
+            <span><strong>{{ model.name | escape }}</strong><small>{{ model.maker | escape }}</small></span>
+            <em>{{ model.formats | first }}</em>
+          </a>
+        {% endfor %}
+      </div>
+    </aside>
+    <article class="model-detail" id="model-detail" data-model-id="{{ initial.id }}">
+      {% include model-detail.html model=initial %}
+    </article>
+  </section>
+</main>

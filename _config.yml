@@ -1,0 +1,30 @@
+title: i corpi
+description: A source-first archive of humanoid robot descriptions and parametric human body models.
+url: https://i-corpi.github.io
+baseurl: ""
+repository: i-corpi/i-corpi.github.io
+lang: en
+timezone: America/Los_Angeles
+permalink: pretty
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts
+  - tests
+  - node_modules
+  - dist
+  - .next
+  - .vinext
+  - .wrangler
+  - outputs
+  - work
+  - .bundle
+  - vendor/bundle
+  - .venv
+  - .cache
+  - requirements.txt
+  - requirements-test.txt
+  - requirements-import.txt

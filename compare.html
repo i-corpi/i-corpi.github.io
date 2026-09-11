@@ -1,0 +1,33 @@
+---
+layout: default
+title: Compare
+nav: compare
+permalink: /compare/
+model_data: true
+scripts:
+  - /assets/js/viewer-panel.js
+  - /assets/js/compare.js
+description: Compare humanoid robot and body-model structure, scale, formats, access, and licence side by side.
+---
+{% assign left = site.data.models | where: "id", "unitree-g1" | first %}
+{% assign right = site.data.models | where: "id", "unitree-h2" | first %}
+<main class="page-wrap wide" id="main-content">
+  <div class="page-intro">
+    <div><p class="eyebrow">02 · Compare</p><h1>Put unlike bodies<br>on common ground.</h1></div>
+    <p>Inspect two bodies in 3D and compare their structure, formats, access, and licence. Robot actuators and statistical pose parameters describe different things.</p>
+  </div>
+  <section class="compare-shell" id="compare-app" aria-label="Model comparison">
+    <div class="compare-pickers">
+      <label>Model A<select id="compare-left">{% for model in site.data.models %}<option value="{{ model.id }}"{% if model.id == left.id %} selected{% endif %}>{{ model.name | escape }} — {{ model.maker | escape }}</option>{% endfor %}</select></label>
+      <label>Model B<select id="compare-right">{% for model in site.data.models %}<option value="{{ model.id }}"{% if model.id == right.id %} selected{% endif %}>{{ model.name | escape }} — {{ model.maker | escape }}</option>{% endfor %}</select></label>
+    </div>
+    <div class="compare-figures" id="compare-figures">{% include compare-card.html model=left %}{% include compare-card.html model=right %}</div>
+    <p class="compare-view-note">3D views are framed independently. Use the measurements below to compare scale. Open each panel’s joint controls to inspect articulation. Table values describe the catalog models; procedural or hybrid preview controls may differ.</p>
+    <p class="compare-guide-link"><a href="{{ '/learn/#smpl' | relative_url }}">How do human body models relate to robot descriptions? →</a></p>
+    <div class="compare-note" id="compare-note" hidden><strong>Cross-domain comparison.</strong><p>Robot DoF count movable joints; human body models use pose parameters; character rigs use authored controls. These counts provide context and do not measure equivalent capabilities.</p></div>
+    <div class="table-scroll"><table class="compare-table" id="compare-table">{% include comparison-table.html left=left right=right %}</table></div>
+    <p id="compare-status" role="status" class="visually-hidden"></p>
+    <noscript><p>This default comparison is available without JavaScript. Enable JavaScript to change the selected models and inspect them in 3D.</p></noscript>
+  </section>
+  <template id="compare-viewer-template">{% include viewer-workbench.html %}</template>
+</main>

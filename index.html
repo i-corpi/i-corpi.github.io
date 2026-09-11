@@ -1,0 +1,48 @@
+---
+layout: default
+home: true
+hide_footer: true
+description: Open humanoid robot descriptions and parametric body models, indexed with provenance and exact licence terms.
+---
+{% assign robots = site.data.models | where: "kind", "robot" %}
+{% assign local_models = site.data.models | where: "access", "local" %}
+<main class="landing" id="main-content">
+  <section class="landing-copy">
+    <p class="eyebrow">Open reference · humanoid morphology</p>
+    <h1>Bodies,<br><em>made legible.</em></h1>
+    <p class="landing-deck">Humanoid robot descriptions and parametric bodies, indexed with their structure, provenance, access, and exact licence terms.</p>
+    <div class="landing-actions">
+      <a class="button primary" href="{{ '/archive/' | relative_url }}">Explore {{ site.data.models | size }} records <span>↗</span></a>
+      <a class="button quiet" href="{{ '/gallery/' | relative_url }}">Open gallery</a>
+      <a class="button quiet" href="{{ '/learn/' | relative_url }}">From bodies to behavior →</a>
+    </div>
+  </section>
+
+  <section class="robot-wall" aria-label="All humanoid robot models">
+    {% for model in robots %}
+      <a class="robot-tile" href="{{ '/archive/' | append: model.id | append: '/' | relative_url }}">
+        <div class="figure robot has-image" aria-hidden="true">
+          {% if forloop.index > 4 %}
+            {% include model-image.html model=model sizes="(max-width: 700px) 50vw, 25vw" lazy=true %}
+          {% else %}
+            {% include model-image.html model=model sizes="(max-width: 700px) 50vw, 25vw" %}
+          {% endif %}
+        </div>
+        <span class="robot-tile-number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <div class="robot-tile-caption">
+          <div><strong>{{ model.name }}</strong><small>{{ model.maker }}</small></div>
+          <em>{{ model.dof }} DoF</em>
+        </div>
+      </a>
+    {% endfor %}
+  </section>
+
+  <div class="landing-foot">
+    <p><i></i> {{ local_models | size }} models ready for browser inspection</p>
+    <nav aria-label="Archive shortcuts">
+      <a href="{{ '/compare/' | relative_url }}">Compare <span>→</span></a>
+      <a href="{{ '/about/' | relative_url }}">Method <span>→</span></a>
+      <a href="{{ '/archive/' | relative_url }}">{{ robots | size }} robots <span>→</span></a>
+    </nav>
+  </div>
+</main>

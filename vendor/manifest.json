@@ -1,0 +1,51 @@
+[
+  {
+    "file": "OrbitControls.js",
+    "sha256": "6f3052dd8860a60fe6999260d50558ff54609523724c6e374326228e5590cf55",
+    "upstream": "https://github.com/mrdoob/three.js",
+    "version": "r169",
+    "modifications": "Local relative module imports"
+  },
+  {
+    "file": "STLLoader.js",
+    "sha256": "be2c54987a2b7e5e94690566f1fd4c4a5fe700c3e54d7c5068838ec4ddb65146",
+    "upstream": "https://github.com/mrdoob/three.js",
+    "version": "r169",
+    "modifications": "Local relative module imports"
+  },
+  {
+    "file": "URDFClasses.js",
+    "sha256": "88e47b3d7edaf212187237f9b4d7487281a4f85c0ea713b30589ae7180f9d8cc",
+    "upstream": "https://github.com/gkjohnson/urdf-loaders",
+    "version": null,
+    "modifications": "No source changes recorded"
+  },
+  {
+    "file": "URDFLoader.js",
+    "sha256": "eac8dccaf29125752d52bf9b111792144b5d3dca1e24c8b8b00694f57e5b8138",
+    "upstream": "https://github.com/gkjohnson/urdf-loaders",
+    "version": null,
+    "modifications": "STL-only mesh loader and local relative imports"
+  },
+  {
+    "file": "three.module.js",
+    "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416",
+    "upstream": "https://github.com/mrdoob/three.js",
+    "version": "r169",
+    "modifications": "No source changes recorded"
+  },
+  {
+    "file": "GLTFLoader.js",
+    "sha256": "608636721ceef7908da50bc3941d861ea7543e87fa459f70785c226e6e008136",
+    "upstream": "https://github.com/mrdoob/three.js",
+    "version": "r169",
+    "modifications": "Local relative module imports"
+  },
+  {
+    "file": "BufferGeometryUtils.js",
+    "sha256": "3de832095679e56578beddf70f3e90846a47ec8a886fa8eb21c973cdaef88922",
+    "upstream": "https://github.com/mrdoob/three.js",
+    "version": "r169",
+    "modifications": "Local relative module imports"
+  }
+]

@@ -1,0 +1,99 @@
+{% assign model = include.model %}
+<div class="detail-title">
+  <div>
+    <p class="eyebrow">{% if model.kind == "robot" %}Humanoid robot{% elsif model.kind == "character" %}Procedural character{% else %}Parametric body{% endif %}</p>
+    <h2>{{ model.name | escape }}</h2>
+    <p>{{ model.maker | escape }} · {{ model.country | escape }} · {{ model.year }}</p>
+  </div>
+  <div class="badges"><span>{{ model.formats | join: " · " }}</span><span class="{{ model.access }}">{{ model.accessLabel }}</span></div>
+</div>
+<p class="detail-tagline">{{ model.tagline | escape }}</p>
+<dl class="quick-stats">
+  <div><dt>{% if model.kind == "robot" %}Movable DoF{% else %}Pose DoF{% endif %}</dt><dd>{{ model.dof | default: "Not published" }}</dd></div>
+  <div><dt>{% if model.access == "local" %}Independent joints{% else %}Joints{% endif %}</dt><dd>{{ model.joints | default: "Not published" }}</dd></div>
+  {% if model.kind == "robot" %}
+    <div><dt>Height</dt><dd>{% if model.heightM %}{{ model.heightM }} m{% else %}Not published{% endif %}</dd></div>
+    <div><dt>Mass</dt><dd>{% if model.weightKg %}{{ model.weightKg }} kg{% else %}Not published{% endif %}</dd></div>
+  {% else %}
+    <div><dt>Vertices</dt><dd>{% if model.kind == "character" %}Generated{% else %}{{ model.vertices | default: "Not published" }}{% endif %}</dd></div>
+    <div><dt>Shape space</dt><dd>{{ model.parameters | default: "Not published" }}</dd></div>
+  {% endif %}
+  <div><dt>Licence</dt><dd>{{ model.license | escape }}</dd></div>
+</dl>
+<div class="detail-grid{% if model.hostedPath or model.posePreview %} review-ready{% endif %}">
+  {% if model.hostedPath or model.posePreview %}
+    <section data-model-viewer="{{ model.id }}" aria-label="{{ model.name | escape }} interactive preview">
+      <div class="viewer-poster" data-viewer-poster>
+        <div class="figure {{ model.kind }} has-image">{% include model-image.html model=model %}</div>
+        <div class="viewer-poster-actions">
+          <button class="button primary" type="button" data-load-viewer>{% if model.posePreview %}Open pose demonstrator{% else %}Load interactive model{% endif %}</button>
+          {% if model.posePreview %}
+            <p data-viewer-size>{{ model.previewLabel | escape }}</p>
+            <p>{{ model.previewNote | escape }}{% unless model.kind == "character" %} Official model downloads remain with the rights holder.{% endunless %}</p>
+            {% if model.id == "smpl-h" %}<p><a class="source-link" href="{{ '/attachments/sharpa-wave/PROVENANCE.md' | relative_url }}">Sharpa source, mesh transformations and licence →</a></p>{% endif %}
+          {% else %}
+            <p data-viewer-size>{{ model.assets.previewBytes | divided_by: 1000000.0 | round: 1 }} MB compressed geometry · {{ model.assets.meshCount }} meshes</p>
+          {% endif %}
+          <p data-viewer-message role="status">The image is available immediately. Load 3D when you want to inspect the joints.</p>
+          <noscript><p>Enable JavaScript to use the optional 3D viewer. All specifications and downloads remain available below.</p></noscript>
+        </div>
+      </div>
+      {% include viewer-workbench.html model=model %}
+    </section>
+  {% else %}
+    <div class="preview-fallback">
+      <div class="figure {{ model.kind }}{% if model.image %} has-image{% endif %}">{% include model-image.html model=model %}</div>
+      <p>{% if model.access == "restricted" %}Model weights stay with the rights holder.{% else %}This record links to its upstream model package.{% endif %}</p>
+    </div>
+  {% endif %}
+  <section class="asset-panel" aria-label="Asset record">
+    <p class="eyebrow">Asset record</p>
+    <h3>{% if model.kind == "character" %}Authored for this archive.{% elsif model.access == "local" %}Hosted in this archive.{% elsif model.access == "restricted" %}Kept with the rights holder.{% else %}Public model source.{% endif %}</h3>
+    <p>{{ model.note | escape }}</p>
+    <div class="asset-actions">
+      {% if model.assets.downloadPath %}
+        <a class="button primary" href="{{ model.assets.downloadPath | relative_url }}" download>Download complete package · {{ model.assets.downloadBytes | divided_by: 1000000.0 | round: 1 }} MB</a>
+        <a class="text-link" href="{{ model.hostedPath | relative_url }}" download>URDF only</a>
+      {% else %}
+        <a class="button primary" href="{{ model.modelUrl | relative_url | escape }}" target="_blank" rel="noreferrer">{% if model.access == "restricted" %}Open official download{% else %}Open model source{% endif %} ↗</a>
+      {% endif %}
+      <a class="text-link" href="{{ model.licenseUrl | relative_url }}">Read licence information →</a>
+    </div>
+    <dl class="asset-ledger">
+      <div><dt>Upstream formats</dt><dd>{{ model.upstreamFormats | join: " · " }}</dd></div>
+      <div><dt>Hosted formats</dt><dd>{% if model.hostedFormats.size > 0 %}{{ model.hostedFormats | join: " · " }}{% else %}Metadata only{% endif %}</dd></div>
+      <div><dt>Variants</dt><dd>{{ model.variants | escape }}</dd></div>
+      <div><dt>Source</dt><dd><a href="{{ model.provenance.pinnedSourceUrl | default: model.sourceUrl | relative_url | escape }}" target="_blank" rel="noreferrer">{% if model.kind == "character" %}Character reference{% elsif model.provenance %}Pinned revision{% else %}Upstream project{% endif %} ↗</a></dd></div>
+      {% if model.provenance %}
+        <div><dt>Revision</dt><dd><code>{{ model.provenance.revision }}</code></dd></div>
+        <div><dt>Retrieved</dt><dd>{{ model.provenance.retrievedAt | default: "Not recorded" }}</dd></div>
+        <div><dt>Provenance</dt><dd><a href="{{ model.provenance.recordPath | relative_url }}">Read source and transformation record →</a></dd></div>
+        <div><dt>Transformations</dt><dd>{{ model.provenance.transformations | join: " " | escape }}</dd></div>
+      {% endif %}
+    </dl>
+  </section>
+</div>
+<details class="numbering-notes">
+  <summary>How are these joints numbered?</summary>
+  {% if model.kind == "robot" %}
+    <p>Numbers 1–{{ model.dof }} are this archive’s display labels. We group independently movable URDF joints by body region and sort their source names within each group. Fixed and mimic joints do not receive separate controls. The URDF author supplies the names, axes, limits and hierarchy.</p>
+    <p>These labels are not manufacturer motor IDs, URDF file order or a simulator’s joint-vector order. Identify a joint by its source name and use the target SDK or controller’s documented mapping when commanding hardware.</p>
+  {% elsif model.kind == "character" %}
+    <p>This character’s 16 joint indices are authored for the website: 0 root, 1 chest, 2 neck, 3 head, 4–6 left arm, 7–9 right arm, 10–11 feet, 12 jaw, 13–14 eyes and 15 nose. Each joint has three local rotation controls.</p>
+    <p>These indices are not SMPL indices, official Disney rig identifiers or robot motor IDs. The export includes the complete names, parent hierarchy and authored rest positions.</p>
+  {% else %}
+    <p>Numbers start at 0 and follow the model’s pose-parameter joint order. They are distinct from mesh-vertex indices, detected landmarks and additional joints produced by a joint regressor. One human pose joint normally has three rotation parameters.</p>
+    <p>SMPL and STAR use 0–23. SMPL+H uses body joints 0–21, left fingers 22–36 and right fingers 37–51. SMPL-X inserts jaw and eyes at 22–24, then uses left fingers 25–39 and right fingers 40–54. Hand chains follow index, middle, pinky, ring, thumb order.</p>
+    {% if model.id == "smpl-h" %}<p>Sharpa mode is a hybrid: 22 body joints plus 22 robot joints per hand placement. Its L/R display labels and URDF joint commands are exported separately; they are not native SMPL+H hand parameters.</p>{% endif %}
+  {% endif %}
+  <a class="source-link" href="{{ '/learn/#joint-numbering' | relative_url }}">Read the joint-numbering guide →</a>
+</details>
+<details class="measurement-notes">
+  <summary>Measurement sources and interpretation</summary>
+  <p>Joint counts describe the selected model variant. They are not a capability score. Unknown values are shown as “Not published”; inapplicable fields are identified separately in comparisons.</p>
+  <dl>
+    {% for measurement in model.measurementSources %}
+      <div><dt>{{ measurement[0] }}</dt><dd>{{ measurement[1].basis | escape }}{% if measurement[1].url %} · <a href="{{ measurement[1].url | relative_url }}">Source</a>{% endif %}</dd></div>
+    {% endfor %}
+  </dl>
+</details>

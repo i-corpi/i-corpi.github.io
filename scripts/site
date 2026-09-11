@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
+export GEM_HOME="$ROOT/.bundle/gems"
+export GEM_PATH="$GEM_HOME"
+export PATH="$GEM_HOME/bin:$PATH"
+export BUNDLE_PATH="$ROOT/vendor/bundle"
+export BUNDLE_APP_CONFIG="$ROOT/.bundle"
+export PYTHONDONTWRITEBYTECODE=1
+export PLAYWRIGHT_BROWSERS_PATH="$ROOT/.cache/playwright"
+
+command="${1:-help}"
+if [[ $# -gt 0 ]]; then shift; fi
+
+prepare() {
+  if [[ ! -x .venv/bin/python ]]; then
+    echo "Run ./scripts/site setup first." >&2
+    exit 1
+  fi
+  .venv/bin/python scripts/prepare_assets.py
+}
+
+case "$command" in
+  setup)
+    if ! gem list -i bundler -v 2.4.22 >/dev/null; then
+      gem install bundler -v 2.4.22 --no-document
+    fi
+    bundle _2.4.22_ install
+    python3 -m venv .venv
+    .venv/bin/python -m pip install -r requirements.txt
+    ;;
+  serve)
+    prepare
+    bundle _2.4.22_ exec jekyll serve --host 127.0.0.1 --livereload --force_polling "$@"
+    ;;
+  build)
+    prepare
+    JEKYLL_ENV=production bundle _2.4.22_ exec jekyll build "$@"
+    ;;
+  preview)
+    prepare
+    JEKYLL_ENV=production bundle _2.4.22_ exec jekyll build
+    .venv/bin/python scripts/preview.py "$@"
+    ;;
+  test)
+    prepare
+    JEKYLL_ENV=production bundle _2.4.22_ exec jekyll build
+    .venv/bin/python -m unittest tests/site_test.py -v
+    ;;
+  setup-browser)
+    .venv/bin/python -m pip install -r requirements-test.txt
+    .venv/bin/python -m playwright install chromium
+    ;;
+  test-browser)
+    .venv/bin/python tests/browser_test.py "$@"
+    ;;
+  *)
+    echo "Usage: ./scripts/site {setup|serve|build|preview|test|setup-browser|test-browser}"
+    echo "serve: live reload at http://127.0.0.1:4000/"
+    echo "preview: production output at http://127.0.0.1:4000/"
+    ;;
+esac

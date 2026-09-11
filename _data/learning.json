@@ -1,0 +1,242 @@
+{
+  "checked": "2026-09-11",
+  "formats": [
+    {
+      "name": "URDF",
+      "role": "Robot structure",
+      "contains": "Links, joint frames and limits, visual and collision geometry, and inertial properties.",
+      "use": "Inspect articulation and establish the target skeleton. A robot description alone supplies neither a motion clip nor a trained controller.",
+      "status": "Interactive previews and complete packages in this archive.",
+      "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/URDF-Main.html",
+      "source": "ROS URDF documentation"
+    },
+    {
+      "name": "MJCF",
+      "role": "Physics model",
+      "contains": "MuJoCo bodies, joints, geometry, actuators, sensors, contacts and simulation settings.",
+      "use": "Validate a robot’s motion with dynamics and a controller. Converting a URDF requires checking actuators, collision geometry and physical parameters.",
+      "status": "Useful next simulation format; no MJCF viewer or simulator on this site yet.",
+      "url": "https://mujoco.readthedocs.io/en/stable/modeling.html",
+      "source": "MuJoCo modeling guide"
+    },
+    {
+      "name": "USD / USD physics schemas",
+      "role": "Scene and simulation assembly",
+      "contains": "Composed scene assets, transforms, materials and animation; physics schemas can describe rigid bodies and joints.",
+      "use": "Assemble robots, objects, sensors and environments for simulation workflows. A plain USD scene need not contain physics or robot action semantics.",
+      "status": "A future scene export or simulator handoff.",
+      "url": "https://openusd.org/release/intro.html",
+      "source": "OpenUSD documentation"
+    },
+    {
+      "name": "glTF / GLB",
+      "role": "Web character and animation delivery",
+      "contains": "Meshes, materials, a scene hierarchy, skinning and animation channels. GLB packages glTF assets in a binary container.",
+      "use": "Show skinned people, animals and animated characters efficiently in a browser. Preserve robot joints, limits and actuator metadata separately.",
+      "status": "A useful next browser preview format; not currently imported.",
+      "url": "https://www.khronos.org/gltf/",
+      "source": "Khronos glTF"
+    },
+    {
+      "name": "STL / OBJ / DAE",
+      "role": "Geometry assets",
+      "contains": "STL stores a triangle surface; OBJ can reference materials; DAE can also carry scene, skin and animation data.",
+      "use": "Supply link geometry or interchange assets. An isolated mesh does not establish a robot’s joint graph, limits or motor commands.",
+      "status": "The current robot previews use STL link meshes. Some packages retain upstream DAE assets.",
+      "url": "https://www.khronos.org/collada/",
+      "source": "Khronos COLLADA"
+    },
+    {
+      "name": "BVH / FBX",
+      "role": "Animation interchange",
+      "contains": "BVH stores a skeleton and sampled motion channels. FBX can carry a richer rigged character scene and animation.",
+      "use": "Bring mocap or authored animation into a retargeting workflow. Read rotation order, units, frame rate and rest pose before transferring motion.",
+      "status": "Future motion imports; neither is directly playable on this site yet.",
+      "url": "https://docs.blender.org/manual/en/latest/files/import_export/bvh.html",
+      "source": "Blender BVH import/export",
+      "extraUrl": "https://docs.blender.org/manual/en/latest/files/import_export/fbx.html",
+      "extraSource": "Blender FBX import/export"
+    },
+    {
+      "name": "SMPL-family parameters / NPZ",
+      "role": "Human shape and pose",
+      "contains": "A model-specific parameter schema may include body shape, joint rotations, root translation and sampled motion. NPZ is an array container, not a universal pose schema.",
+      "use": "Represent a human motion source for fitting, analysis or retargeting. Match SMPL, SMPL-H or SMPL-X, the parameter ordering and the licensed model implementation.",
+      "status": "Model-specific pose JSON from the procedural SMPL, SMPL+H, SMPL-X and STAR demonstrators. Sharpa hybrid exports separate body and robot commands. No licensed weights or NPZ importer.",
+      "url": "https://amass.is.tue.mpg.de/",
+      "source": "AMASS project and data"
+    },
+    {
+      "name": "rosbag2 / MCAP",
+      "role": "Synchronized recordings",
+      "contains": "Timestamped messages such as camera observations, joint states, transforms and controller commands. MCAP is one storage format used with rosbag2.",
+      "use": "Record real robot behavior. Recover message schemas, time alignment, calibration and episode boundaries before turning logs into training examples.",
+      "status": "Useful for a future recording-to-episode workflow.",
+      "url": "https://mcap.dev/",
+      "source": "MCAP documentation"
+    },
+    {
+      "name": "RLDS / LeRobotDataset",
+      "role": "Learning episodes",
+      "contains": "Observations, actions and episode metadata. RLDS defines episode/step conventions; LeRobotDataset v3 organizes tabular signals, video and metadata with Parquet, MP4 and JSON.",
+      "use": "Feed policy training and evaluation with an explicit action schema. HDF5 or Zarr can also store arrays, but a container alone does not define units or controller meaning.",
+      "status": "Useful future episode exports; no training pipeline runs in this website.",
+      "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
+      "source": "LeRobotDataset v3 documentation",
+      "extraUrl": "https://github.com/google-research/rlds",
+      "extraSource": "RLDS specification"
+    }
+  ],
+  "goals": [
+    {
+      "id": "all",
+      "label": "Explore all sources",
+      "note": "Start with the behavior you want to learn, then check embodiment, observations and action labels. These sources are complementary; they are not interchangeable training sets."
+    },
+    {
+      "id": "humanoid",
+      "label": "Humanoid motion and tracking",
+      "note": "Human motion can supply reference trajectories or motion priors. Retarget to the chosen robot, then validate contacts, joint limits and tracking in simulation before hardware execution."
+    },
+    {
+      "id": "manipulation",
+      "label": "Robot manipulation policies",
+      "note": "Prioritize demonstrations with robot observations and recorded commands. Match the target’s cameras, gripper, control frame, action mode and frequency; plan to collect target-robot data."
+    },
+    {
+      "id": "human",
+      "label": "Learning from human demonstrations",
+      "note": "Human pose and video can teach intent, perception and motion structure. They do not provide the target robot’s actions; correspondence, retargeting or additional robot supervision is needed."
+    }
+  ],
+  "datasets": [
+    {
+      "id": "amass",
+      "name": "AMASS",
+      "kind": "Human motion reference",
+      "goals": [
+        "humanoid",
+        "human"
+      ],
+      "contains": "Motion-capture collections unified through fitted parametric human body models.",
+      "use": "Human motion priors, motion analysis and reference trajectories for humanoid tracking.",
+      "gap": "No target-robot actuator commands. Match the body-model version, retarget the motion and validate physical feasibility.",
+      "access": "Registration and acceptance of the AMASS research terms. The published licence restricts commercial use and redistribution; model access is separate.",
+      "url": "https://amass.is.tue.mpg.de/",
+      "termsUrl": "https://amass.is.tue.mpg.de/license.html",
+      "termsLabel": "AMASS terms"
+    },
+    {
+      "id": "lafan1",
+      "name": "LaFAN1",
+      "kind": "Skeleton animation",
+      "goals": [
+        "humanoid"
+      ],
+      "contains": "BVH human animation sequences and a motion-transition benchmark.",
+      "use": "Skeleton playback, motion completion and retargeting experiments.",
+      "gap": "No robot observations or motor actions; contact and balance need additional treatment.",
+      "access": "The publisher identifies the dataset as CC BY-NC-ND 4.0. Check those terms before redistributing clips or converted derivatives.",
+      "url": "https://github.com/ubisoft/ubisoft-laforge-animation-dataset",
+      "termsUrl": "https://github.com/ubisoft/ubisoft-laforge-animation-dataset/blob/master/license.txt",
+      "termsLabel": "Dataset licence"
+    },
+    {
+      "id": "egodex",
+      "name": "EgoDex",
+      "kind": "Human video and pose",
+      "goals": [
+        "human"
+      ],
+      "contains": "Egocentric manipulation video, 3D head, upper-body and hand pose annotations, and language annotations.",
+      "use": "Human manipulation understanding and perception or motion representations for learning from people.",
+      "gap": "Human tracking annotations are not robot control labels. Map hands, objects and coordinate frames to the target embodiment.",
+      "access": "Public download links. The publisher labels the dataset CC BY-NC-ND; its code has separate terms.",
+      "url": "https://github.com/apple/ml-egodex",
+      "termsUrl": "https://github.com/apple/ml-egodex#license",
+      "termsLabel": "Dataset and code terms"
+    },
+    {
+      "id": "droid",
+      "name": "DROID",
+      "kind": "Robot demonstrations",
+      "goals": [
+        "manipulation"
+      ],
+      "contains": "Real manipulation episodes with camera observations, robot state, actions and task language; RLDS access is documented.",
+      "use": "Visual manipulation imitation learning and broader scene coverage.",
+      "gap": "Collected on a particular manipulation platform. Inspect action variants, calibration and timing before adapting to a humanoid arm.",
+      "access": "The official project documents public dataset access. Follow the dataset release’s terms and schema, separately from the platform code’s licence.",
+      "url": "https://droid-dataset.github.io/",
+      "termsUrl": "https://droid-dataset.github.io/droid/the-droid-dataset",
+      "termsLabel": "Dataset access and schema"
+    },
+    {
+      "id": "bridge",
+      "name": "BridgeData V2",
+      "kind": "Robot demonstrations",
+      "goals": [
+        "manipulation"
+      ],
+      "contains": "Robot manipulation demonstrations across tasks and environments, with image observations and actions.",
+      "use": "Goal- or language-conditioned manipulation and transfer experiments.",
+      "gap": "The collecting robot and gripper determine what the actions mean. These episodes do not teach whole-body humanoid balance.",
+      "access": "Public download instructions; the project states CC BY 4.0 for the data.",
+      "url": "https://rail-berkeley.github.io/bridgedata/",
+      "termsUrl": "https://rail-berkeley.github.io/bridgedata/#usage",
+      "termsLabel": "Usage and licence"
+    },
+    {
+      "id": "open-x",
+      "name": "Open X-Embodiment",
+      "kind": "Multiple robot datasets",
+      "goals": [
+        "manipulation"
+      ],
+      "contains": "A collection of robot datasets with RLDS conversion and loading tools spanning different embodiments.",
+      "use": "Pretraining across robots and testing transfer between embodiments.",
+      "gap": "A shared episode format does not make every action vector equivalent. Normalize each source’s frames, gripper convention, frequency and action semantics.",
+      "access": "Read the dataset list and each contributing dataset’s terms. There is no single blanket data licence implied by the tooling’s licence.",
+      "url": "https://robotics-transformer-x.github.io/",
+      "termsUrl": "https://github.com/google-deepmind/open_x_embodiment",
+      "termsLabel": "Dataset list and access"
+    }
+  ],
+  "actions": [
+    {
+      "id": "pose",
+      "label": "One pose",
+      "description": "A pose is a configuration at one instant. The demonstrator exports 24 local axis-angle rotations in radians, plus root translation. Shape parameters describe proportions, not movement.",
+      "caution": "A pose has no duration or controller. Euler angles, axis-angle vectors and quaternions must be explicitly identified; they cannot be swapped as raw numbers.",
+      "example": "{\n  \"kind\": \"pose_fragment\",\n  \"model\": \"procedural-smpl24\",\n  \"joint\": \"left_elbow\",\n  \"rotation\": [0, 0, 1.0472],\n  \"representation\": \"axis-angle\",\n  \"units\": \"radians\",\n  \"frame\": \"joint-local\"\n}"
+    },
+    {
+      "id": "motion",
+      "label": "Motion over time",
+      "description": "A clip is a sequence of poses and root transforms with timestamps or a frame rate. Contact labels, when available, help preserve planted feet and object interactions during retargeting.",
+      "caution": "A visually plausible clip is not proof of robot balance or actuator feasibility. Retargeted references still need a tracking controller and physical validation.",
+      "example": "{\n  \"kind\": \"motion_fragment\",\n  \"joint_names\": [\"left_elbow\"],\n  \"timestamps_s\": [0, 0.02, 0.04],\n  \"local_axis_angle_rad\": [\n    [[0, 0, 0]],\n    [[0, 0, 0.1]],\n    [[0, 0, 0.2]]\n  ],\n  \"root_frame\": \"world\"\n}"
+    },
+    {
+      "id": "joint",
+      "label": "Joint-space command",
+      "description": "A controller may accept desired joint positions, velocities or torques. The action vector follows a named joint order and has an explicit unit and control period.",
+      "caution": "Position targets, velocity targets and torque commands are different interfaces. The same numeric vector can produce completely different behavior under a different controller.",
+      "example": "{\n  \"kind\": \"illustrative_robot_command\",\n  \"mode\": \"joint_position_target\",\n  \"joint_names\": [\"shoulder_pitch\", \"elbow_pitch\"],\n  \"target_rad\": [0.2, 0.8],\n  \"control_period_s\": 0.02,\n  \"controller\": \"example-position-controller\"\n}"
+    },
+    {
+      "id": "task-space",
+      "label": "End-effector command",
+      "description": "Manipulation policies often command a hand or gripper pose, pose change or velocity, together with gripper opening. IK or a task-space controller converts this into joint behavior.",
+      "caution": "Declare absolute versus delta motion, the reference frame, rotation convention and gripper encoding. A normalized gripper value is not automatically a distance in metres.",
+      "example": "{\n  \"kind\": \"illustrative_robot_command\",\n  \"mode\": \"end_effector_delta\",\n  \"reference_frame\": \"robot_base\",\n  \"delta_position_m\": [0.01, 0, 0],\n  \"delta_rotation_axis_angle_rad\": [0, 0, 0.02],\n  \"gripper_opening_m\": 0.04,\n  \"control_period_s\": 0.1\n}"
+    },
+    {
+      "id": "episode",
+      "label": "Demonstration episode",
+      "description": "An episode aligns observations, commands and outcomes over time. Cameras and joint state are observations; the executed controller command is the action. Task language provides a goal. A learned policy predicts actions from observations and goals.",
+      "caution": "Record what was commanded as well as what happened. Joint state alone does not reveal the commanded action. Reward, success and termination labels are dataset-specific and may be absent.",
+      "example": "{\n  \"kind\": \"episode_step_fragment\",\n  \"timestamp_s\": 1.2,\n  \"observation\": {\n    \"camera_frame\": \"front/000060\",\n    \"joint_position_rad\": [0.18, 0.75]\n  },\n  \"action\": {\n    \"mode\": \"joint_position_target\",\n    \"target_rad\": [0.2, 0.8]\n  },\n  \"task\": \"reach toward the cup\",\n  \"is_last\": false\n}"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+---
+layout: default
+title: From bodies to behavior
+nav: learn
+permalink: /learn/
+description: Understand how robot descriptions, SMPL bodies, motion formats, retargeting and demonstration datasets connect to robot learning.
+scripts:
+  - /assets/js/learning.js
+---
+<main class="page-wrap learn-wrap" id="main-content">
+  <div class="page-intro">
+    <div><p class="eyebrow">04 · Learn</p><h1>From bodies<br>to behavior.</h1></div>
+    <p>A body describes what can move. Motion describes how it changes. A controller makes a robot follow an action. Explore how those pieces connect—and which data can teach each part.</p>
+  </div>
+  <nav class="learn-jump" aria-label="Guide topics">
+    <a href="#smpl">Where SMPL fits</a><a href="#joint-numbering">Joint numbers</a><a href="#formats">Formats</a><a href="#actions">Actions</a><a href="#datasets">Training data</a><a href="#retargeting">Retargeting</a>
+  </nav>
+
+  <section class="learn-section" id="smpl" aria-labelledby="smpl-title">
+    <div class="learn-heading"><p class="eyebrow">01 · Bodies</p><h2 id="smpl-title">SMPL is the human side of the archive.</h2></div>
+    <div class="learn-columns">
+      <div>
+        <p>A URDF describes a robot’s rigid links and joints. SMPL describes a deformable human body: a skeleton, a skinned surface, learned shape variation and pose-dependent surface corrections. It provides a common human representation for fitting people and expressing motion that can later be transferred to a robot.</p>
+        <p>SMPL’s basic layout has 24 joints. SMPL-H adds articulated hands; SMPL-X extends the body with hands and expressive face controls. Their parameter layouts differ, so an importer must know which model produced a file. <a class="source-link" href="https://smpl.is.tue.mpg.de/">SMPL project ↗</a> · <a class="source-link" href="https://smpl-x.is.tue.mpg.de/">SMPL-X project ↗</a></p>
+      </div>
+      <aside class="learn-callout">
+        <p class="eyebrow">Try it here</p>
+        <h3>Pose the human reference.</h3>
+        <p>SMPL, SMPL+H, SMPL-X and STAR have procedural pose demonstrators with joint maps, local rotation controls and pose export. SMPL+H also offers a Sharpa Wave robot-hand mode. These previews do not load licensed body meshes, learned shape spaces or skin weights.</p>
+        <a class="button primary" href="{{ '/archive/smpl/' | relative_url }}">Open pose demonstrator →</a>
+        <p><a class="source-link" href="{{ '/archive/smpl-h/' | relative_url }}">SMPL+H / Sharpa hands →</a> · <a class="source-link" href="{{ '/archive/smpl-x/' | relative_url }}">SMPL-X →</a> · <a class="source-link" href="{{ '/archive/star/' | relative_url }}">STAR →</a></p>
+        <a class="source-link" href="{{ '/compare/?a=smpl&b=unitree-g1' | relative_url }}">Compare a human layout with G1 →</a>
+      </aside>
+    </div>
+    <ol class="learning-flow" aria-label="Human motion to robot learning workflow">
+      <li><span>01</span><strong>Human reference</strong><p>Pose or motion from a body model, capture session or animation.</p></li>
+      <li><span>02</span><strong>Target robot</strong><p>A joint graph, link geometry, limits and physical properties.</p></li>
+      <li><span>03</span><strong>Retarget &amp; validate</strong><p>Match frames and reach; solve contacts; test a tracking controller.</p></li>
+      <li><span>04</span><strong>Collect &amp; learn</strong><p>Record observations and executed actions; train and evaluate a policy.</p></li>
+    </ol>
+    <p class="learn-note">The archive currently supports body inspection and procedural posing. Motion import, automatic retargeting, physics simulation and policy training are future capabilities.</p>
+  </section>
+
+  <section class="learn-section" id="joint-numbering" aria-labelledby="numbering-title">
+    <div class="learn-heading"><p class="eyebrow">Joint conventions</p><h2 id="numbering-title">A number needs a named index set.</h2></div>
+    <div class="learn-columns">
+      <div><p>URDF joints have names, types, parent/child links, local frames, axes and limits. The author—often the robot manufacturer—chooses those names and coordinates. URDF does not prescribe a universal numerical motor-ID order. ROS JointState pairs named joints with values; controller and simulator vector orderings must be checked separately.</p>
+        <p>This site gives independently controllable robot joints display numbers starting at 1, grouped by body region and then sorted by joint name. Fixed joints and mimic joints have no independent sliders. These numbers help operate the map; they must not be sent to a robot as motor addresses.</p>
+        <p><a class="source-link" href="https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/URDF-Main.html">URDF structure ↗</a> · <a class="source-link" href="https://github.com/ros2/common_interfaces/blob/rolling/sensor_msgs/msg/JointState.msg">ROS JointState definition ↗</a></p>
+      </div>
+      <aside class="learn-callout"><h3>Human model indices are part of a parameter layout.</h3><p>SMPL-family models use a defined pose-joint order. Those indices differ from mesh vertex numbers, OpenPose/COCO landmarks, fingertips added by a joint selector, or dense facial landmarks. A model can output more landmarks than it has articulated pose joints.</p><p>The demonstrators label pose joints from 0 and export their names, parents, authored rest positions and rotation convention. Matching indices is only one step: rest frames and coordinate conventions must also agree.</p><a class="source-link" href="https://github.com/vchoutas/smplx/blob/main/smplx/joint_names.py">Authors’ joint names ↗</a> · <a class="source-link" href="https://github.com/vchoutas/smplx/blob/main/smplx/body_models.py">Model parameter layouts ↗</a></aside>
+    </div>
+    <div class="table-scroll"><table class="compare-table">
+      <caption>Pose-parameter indices used by the procedural demonstrators</caption>
+      <thead><tr><th scope="col">Layout</th><th scope="col">Pose joints</th><th scope="col">Index ranges</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">SMPL / STAR</th><td>24 · 72 rotation values</td><td>0–21 body through wrists; 22–23 hand endpoints.</td></tr>
+        <tr><th scope="row">SMPL+H</th><td>52 · 156 rotation values</td><td>0–21 body; 22–36 left fingers; 37–51 right fingers.</td></tr>
+        <tr><th scope="row">SMPL-X</th><td>55 · 165 rotation values</td><td>0–21 body; 22 jaw; 23–24 eyes; 25–39 left fingers; 40–54 right fingers.</td></tr>
+        <tr><th scope="row">Sharpa hybrid</th><td>22 body joints + 44 robot joints</td><td>Body 0–21 with three rotations each; L1–L22 and R1–R22 identify scalar URDF joint controls in each hand panel.</td></tr>
+        <tr><th scope="row">Olaf character study</th><td>16 · 48 rotation values</td><td>Site-authored indices 0–15 for the snow body, arms, feet, head, jaw, eyes and carrot nose. These are not a Disney production rig’s indices.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="learn-note">Human finger chains are ordered index, middle, pinky, ring, thumb, with three articulated joints per finger. Pose counts above include global/root orientation; translation, shape, expression and hand PCA compression are separate. STAR’s compatibility is described by its <a class="source-link" href="https://star.is.tue.mpg.de/">official project</a>.</p>
+    <p class="learn-note">The <a class="source-link" href="https://las-manos.github.io/archive/#sharpa-wave">Sharpa asset from las manos</a> supplies actual robot-hand kinematics. It is a right-hand browser bundle with converted/decimated visual meshes and no collision geometry. The left placement is a visual mirror. Mounting it on a procedural body demonstrates articulation; no human-to-robot finger retargeting, tactile sensing or dynamics is simulated.</p>
+  </section>
+
+  <section class="learn-section" id="formats" aria-labelledby="formats-title">
+    <div class="learn-heading"><p class="eyebrow">02 · Representation</p><h2 id="formats-title">Choose a format for the job.</h2></div>
+    <p class="learn-lede">Keep the robot description, display assets, motion and learning episodes connected by metadata. Each answers a different question; a file extension alone cannot tell you whether the data is ready for a controller.</p>
+    <div class="format-grid">
+      {% for format in site.data.learning.formats %}
+      <article class="format-card">
+        <p class="eyebrow">{{ format.role | escape }}</p><h3>{{ format.name | escape }}</h3>
+        <p>{{ format["contains"] | escape }}</p>
+        <p>{{ format.use | escape }}</p>
+        <p class="format-status">{{ format.status | escape }}</p>
+        <a class="source-link" href="{{ format.url | escape }}">{{ format.source | escape }} ↗</a>{% if format.extraUrl %} · <a class="source-link" href="{{ format.extraUrl | escape }}">{{ format.extraSource | escape }} ↗</a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <div class="learn-callout format-priority">
+      <h3>A useful expansion path for i corpi</h3>
+      <p>First add <strong>glTF/GLB</strong> for animated people, animals and characters, then <strong>named motion sequences</strong> with a timeline and contact annotations. Add <strong>MJCF</strong> assets for simulation handoff and an <strong>episode schema</strong> for robot demonstrations. Keep source provenance, units and coordinate conventions attached at every step.</p>
+    </div>
+  </section>
+
+  <section class="learn-section" id="actions" aria-labelledby="actions-title">
+    <div class="learn-heading"><p class="eyebrow">03 · Actions</p><h2 id="actions-title">What does “raise an arm” mean in data?</h2></div>
+    <p class="learn-lede">It could be a single pose, a timed motion, a controller target or a task instruction. The examples below use small illustrative fragments, not executable commands for any catalog robot.</p>
+    <div class="learn-filter" data-action-filter hidden>
+      <label for="action-representation">Explore a representation</label>
+      <select id="action-representation">{% for action in site.data.learning.actions %}<option value="{{ action.id }}">{{ action.label | escape }}</option>{% endfor %}</select>
+    </div>
+    <div id="action-examples" aria-live="polite">
+      {% for action in site.data.learning.actions %}
+      <article class="action-example" data-action-example="{{ action.id }}">
+        <div><h3>{{ action.label | escape }}</h3><p>{{ action.description | escape }}</p><p class="learn-note">{{ action.caution | escape }}</p></div>
+        <pre aria-label="{{ action.label | escape }} example"><code>{{ action.example | escape }}</code></pre>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="learn-note">For an interchange contract, preserve model/version, joint names and order, rest frames, units, rotation convention, timestamps, root frame, controller mode and data provenance. Episode conventions: <a class="source-link" href="https://github.com/google-research/rlds">RLDS ↗</a> · <a class="source-link" href="https://huggingface.co/docs/lerobot/lerobot-dataset-v3">LeRobotDataset ↗</a>.</p>
+  </section>
+
+  <section class="learn-section" id="datasets" aria-labelledby="datasets-title">
+    <div class="learn-heading"><p class="eyebrow">04 · Learning data</p><h2 id="datasets-title">Start with the behavior you want to learn.</h2></div>
+    <p class="learn-lede">These are source recommendations with different kinds of supervision. The site links to their publishers; it does not mirror datasets or imply that a dataset will directly control every robot in the archive.</p>
+    <div class="dataset-tools" data-dataset-filter hidden>
+      <div class="learn-filter"><label for="learning-goal">Learning goal</label>
+        <select id="learning-goal">{% for goal in site.data.learning.goals %}<option value="{{ goal.id }}">{{ goal.label | escape }}</option>{% endfor %}</select>
+      </div>
+      <p id="dataset-count" role="status"></p>
+    </div>
+    <div class="goal-notes">{% for goal in site.data.learning.goals %}<p data-goal-note="{{ goal.id }}"{% unless forloop.first %} hidden{% endunless %}>{{ goal.note | escape }}</p>{% endfor %}</div>
+    <div class="dataset-grid" id="dataset-results">
+      {% for dataset in site.data.learning.datasets %}
+      <article class="dataset-card" data-dataset="{{ dataset.id }}" data-goals="{{ dataset.goals | join: ' ' }}">
+        <p class="eyebrow">{{ dataset.kind | escape }}</p><h3>{{ dataset.name | escape }}</h3>
+        <dl>
+          <div><dt>What you get</dt><dd>{{ dataset["contains"] | escape }}</dd></div>
+          <div><dt>Useful for</dt><dd>{{ dataset.use | escape }}</dd></div>
+          <div><dt>What remains</dt><dd>{{ dataset.gap | escape }}</dd></div>
+          <div><dt>Access &amp; terms</dt><dd>{{ dataset.access | escape }}</dd></div>
+        </dl>
+        <div class="dataset-links"><a class="source-link" href="{{ dataset.url | escape }}">Official source ↗</a><a class="source-link" href="{{ dataset.termsUrl | escape }}">{{ dataset.termsLabel | escape }} ↗</a></div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="learn-columns dataset-next">
+      <article class="learn-callout"><h3>Collect on the target robot.</h3><p>Teleoperation can give you aligned camera views, joint state and the actual commands used by your controller. Record calibration, control rate, task and episode boundaries. Keep evaluation tasks, scenes or objects separate from training so repeated demonstrations do not inflate results.</p><a class="source-link" href="https://droid-dataset.github.io/droid">DROID collection platform ↗</a></article>
+      <article class="learn-callout"><h3>Generate and test in simulation.</h3><p>A simulator can produce observations and actions while a policy or controller performs tasks. Demonstration expansion tools can increase task variation, but they require a compatible robot, environment and action interface. Simulation performance still needs validation on the real platform.</p><a class="source-link" href="https://isaac-sim.github.io/IsaacLab/main/source/overview/imitation-learning/index.html">Isaac Lab imitation-learning workflows ↗</a></article>
+    </div>
+    <p class="learn-note">Source documentation checked {{ site.data.learning.checked }}. Access and terms can change; the linked publisher’s release governs use. Dataset terms and software licences are distinct.</p>
+  </section>
+
+  <section class="learn-section" id="retargeting" aria-labelledby="retargeting-title">
+    <div class="learn-heading"><p class="eyebrow">05 · Transfer</p><h2 id="retargeting-title">Different bodies share principles, not identical controls.</h2></div>
+    <div class="learn-columns">
+      <div>
+        <p>A character starts with a mesh and a joint hierarchy. Skin weights let vertices follow multiple bones; animation changes the bones over time. A rigid robot link follows its link transform. A stylized person may add twist bones and facial blend shapes. A quadruped has different limb roles, spine motion and contact timing.</p>
+        <p>Retargeting begins by aligning units, up/forward axes and reference poses. Map corresponding joints or chains, transfer relative movement into the target’s frames, then use inverse kinematics to preserve important reaches and contacts while respecting target proportions and limits.</p>
+        <p>A human walk cannot simply become a dog gait by renaming bones. Animal motion data, gait design or a suitable controller must supply the missing behavior. <a class="source-link" href="https://smal.is.tue.mpg.de/">SMAL</a> offers a related parametric model for several quadruped families; it is not a universal creature rig.</p>
+      </div>
+      <aside class="learn-callout">
+        <h3>What changes when the target is a robot?</h3>
+        <p>Matching a hand position is only the kinematic step. The robot also needs a controller that respects joint velocity and torque limits, self-collision, balance and contact forces. Inspecting a pose in the viewer does not simulate those constraints.</p>
+        <p>A useful next website feature would show the source motion, target motion, joint correspondence and contact or limit errors together. That would make the transfer understandable before exporting it to a simulator.</p>
+        <a class="source-link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/ik-rig-animation-retargeting-in-unreal-engine">IK retargeting concepts ↗</a><br>
+        <a class="source-link" href="https://docs.blender.org/manual/en/latest/animation/armatures/skinning/index.html">Skinning fundamentals ↗</a>
+        <p>Try the <a class="source-link" href="{{ '/archive/olaf/' | relative_url }}">Olaf snowman study</a> to inspect an authored character rig with different proportions and joint ordering. Its front and side maps show the actual shapes and rotation pivots. Walking combines whole-character translation with alternating foot placement: rotating the feet alone cannot move the character forward. Pose export includes these local translation offsets. Its rigid procedural surfaces illustrate hierarchical animation; it is not an official Disney model or a physical robot simulation.</p>
+      </aside>
+    </div>
+  </section>
+</main>

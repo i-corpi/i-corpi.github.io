@@ -1,0 +1,6 @@
+<article>
+  <div class="compare-model-visual"><div class="figure {{ include.model.kind }}{% if include.model.image %} has-image{% endif %}">{% include model-image.html model=include.model %}</div></div>
+  <p class="eyebrow">{% if include.model.kind == "robot" %}Humanoid robot{% else %}Parametric body{% endif %}</p>
+  <h2><a href="{{ '/archive/' | append: include.model.id | append: '/' | relative_url }}">{{ include.model.name | escape }}</a></h2>
+  <p>{{ include.model.tagline | escape }}</p>
+</article>
